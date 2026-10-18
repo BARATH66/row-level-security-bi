@@ -88,6 +88,43 @@ These match the Power BI results. Irrigation water used for the irrigation opera
 - **Hiding a dashboard needs a feature flag.** Per-dashboard role access (`DASHBOARD_RBAC`) was not enabled here, so, as in Power BI, security restricts the data, not which dashboards open.
 - **Users need access to the datasets.** Operator roles get the datasource permissions for the Salem datasets only; RLS then narrows the rows.
 
+## Embedding the dashboards in a web page
+
+[`embed/index.html`](embed/index.html) is a single page with two dropdowns, **User** and **Dashboard**, a divider, and the selected dashboard embedded below. Changing either dropdown re-embeds the dashboard for that user. Row-level security is passed in the **guest token** that Superset issues for the embedded session.
+
+![Embedded page, irrigation operator](screenshots/08-embedded-irrigation-operator.jpg)
+
+The same dashboard for the Air Quality operator is empty:
+
+![Embedded page, Air Quality operator](screenshots/09-embedded-air-operator-no-data.jpg)
+
+### How it works
+
+1. The page loads the Superset **embedded SDK** and calls `embedDashboard(...)` with the dashboard's embed id.
+2. The SDK asks the page for a guest token. The page calls a small helper, `embed/serve.py`, with only the user's email and the dashboard name.
+3. The helper logs in with a **service account** and calls `POST /api/v1/security/guest_token/`, sending the dashboard, a user name and an **`rls`** list, for example `[{"clause": "domain_code IN ('AQ', 'ENG')"}]`.
+4. Superset adds that clause to every query in the embedded dashboard for that session.
+
+The helper decides the clause itself from `data/security_user_access.csv`, the same mapping used everywhere else: `ALL` gives no clause, a list of domains gives `domain_code IN (...)`, and a user not in the table gets `1 = 0` (no rows). The browser never sends a clause, so it cannot ask for more access. The service password stays in the helper and never reaches the page.
+
+### Setting it up
+
+| Step | What to do |
+|---|---|
+| Service account | A Superset role with only **`can_grant_guest_token`** and **`can_read`** on `SecurityRestApi`, and one user with that role. It needs no dashboard or data access |
+| Enable embedding | For each dashboard call `POST /api/v1/dashboard/{id}/embedded` with `{"allowed_domains": ["http://localhost:4173"]}`. The response holds the embed id, saved in [`embed/dashboards.json`](embed/dashboards.json) |
+| Allowed origin | Serve the page from an origin your Superset allows to frame dashboards (its CSP `frame-ancestors` list) and list the same origin in `allowed_domains`. Here it is `http://localhost:4173` |
+| Run the helper | `SUPERSET_URL=... SVC_USER=... SVC_PASSWORD=... python embed/serve.py`, then open `http://localhost:4173` |
+
+`embed/dashboards.json` holds embed ids for one Superset instance. Create new ones with the call above when you use another instance.
+
+### Things to know
+
+- **Token timing.** Superset stamps the token's `iat` with fractional seconds, and the SDK checks it straight away, which fails with "token is not yet valid". The helper waits 1.2 seconds before returning the token.
+- **Links inside embedded dashboards.** The Home, Summary and Analysis links in the dashboards point to normal Superset pages and do not work inside the embed. Use the Dashboard dropdown.
+- **Guest users bypass role rules.** Embedded sessions use the guest role, so the RLS rules in `sql/02_rls_rules.sql` (attached to the `salem_*` roles) do not apply to them. The guest-token `rls` clause is what restricts them.
+- **Load time.** The first load takes about a minute on this setup; keep the tab visible.
+
 ## Dark theme
 
 The Salem dashboards use Superset's built-in **dark** theme so they stay black whatever the viewer's Light/Dark setting is (the Power BI report is black too). The theme is stored on the dashboard (`theme_id`), and an export zip does not carry it. After importing, set it again: in the dashboard's properties choose the dark theme if your instance has theme administration on, or point the dashboards at the system dark theme in the metadata database:
@@ -107,4 +144,4 @@ The dashboards were built on a Superset build with free-form dashboard layout. O
 ## What is verified
 
 - Superset 6.1.0 in Docker: tables and views load, all 13 dashboards render with data, the static and dynamic rules return the results in the table above, and the screenshots come from the running dashboards.
-- Not verified: embedding, guest tokens, scheduled reports, other Superset versions, large data volumes.
+- Not verified: scheduled reports, other Superset versions, large data volumes.

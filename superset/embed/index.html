@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salem Smart City - Embedded Dashboards</title>
+<style>
+  :root { --bg:#000; --panel:#121212; --line:#2b2b2b; --text:#f3f4f6; --muted:#a1a1aa; --accent:#0e9aa7; }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body { background: var(--bg); color: var(--text); font: 14px/1.4 "Segoe UI", system-ui, sans-serif; display: flex; flex-direction: column; }
+  header { padding: 14px 20px 0; }
+  h1 { margin: 0 0 12px; font-size: 20px; font-weight: 600; }
+  h1 small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 8px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; }
+  label { display: flex; flex-direction: column; gap: 4px; color: var(--muted); font-size: 12px; }
+  select { min-width: 260px; padding: 8px 10px; background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 6px; font-size: 14px; }
+  select:focus { outline: 2px solid var(--accent); }
+  .note { color: var(--muted); font-size: 12px; padding-bottom: 8px; }
+  .note b { color: var(--text); font-weight: 600; }
+  .note code { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 14px 20px 0; }
+  main { flex: 1; min-height: 0; padding: 12px 20px 20px; }
+  #dash { height: 100%; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); position: relative; }
+  #dash iframe { width: 100%; height: 100%; border: 0; display: block; }
+  #msg { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); pointer-events: none; text-align: center; padding: 20px; }
+  #msg.err { color: #f87171; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Salem Smart City <small>embedded Superset dashboards with row-level security</small></h1>
+  <div class="controls">
+    <label>User
+      <select id="user" aria-label="User"></select>
+    </label>
+    <label>Dashboard
+      <select id="dashboard" aria-label="Dashboard"></select>
+    </label>
+    <div class="note" id="note"></div>
+  </div>
+</header>
+<hr>
+<main>
+  <div id="dash"><div id="msg">Loading...</div></div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@superset-ui/embedded-sdk@0.4.0/bundle/index.js"></script>
+<script>
+(async () => {
+  const $ = id => document.getElementById(id);
+  const userSel = $("user"), dashSel = $("dashboard"), note = $("note"), box = $("dash");
+  let cfg, current = 0, embedded = null;
+
+  const setMsg = (text, err = false) => {
+    let m = $("msg");
+    if (!m) { m = document.createElement("div"); m.id = "msg"; box.appendChild(m); }
+    m.textContent = text; m.className = err ? "err" : "";
+  };
+
+  cfg = await fetch("/api/config").then(r => r.json());
+  cfg.users.forEach(u => userSel.add(new Option(u.name + "  (" + u.email + ")", u.email)));
+  cfg.dashboards.forEach(d => dashSel.add(new Option(d.title.replace(/^Salem \| /, ""), d.slug)));
+
+  const params = new URLSearchParams(location.search);
+  if (params.get("user")) userSel.value = params.get("user");
+  if (params.get("dashboard")) dashSel.value = params.get("dashboard");
+
+  async function show() {
+    const run = ++current;
+    const user = cfg.users.find(u => u.email === userSel.value);
+    const dash = cfg.dashboards.find(d => d.slug === dashSel.value);
+    const scope = user.domains.length ? (user.domains.includes("ALL") ? "all domains" : user.domains.join(", ")) : "no domains";
+    note.innerHTML = "Viewing as <b>" + user.name + "</b> &middot; access: <code>" + scope + "</code>";
+    history.replaceState(null, "", "?user=" + encodeURIComponent(user.email) + "&dashboard=" + dash.slug);
+
+    if (embedded && embedded.unmount) { try { embedded.unmount(); } catch (e) {} }
+    box.innerHTML = ""; setMsg("Loading " + dash.title.replace(/^Salem \| /, "") + " as " + user.name + "...");
+    const mount = document.createElement("div"); mount.style.cssText = "height:100%"; box.appendChild(mount);
+    try {
+      embedded = await supersetEmbeddedSdk.embedDashboard({
+        id: dash.uuid,
+        supersetDomain: cfg.supersetUrl,
+        mountPoint: mount,
+        // the helper picks the RLS clause from the selected user; the browser only names the user and dashboard
+        fetchGuestToken: async () => {
+          const r = await fetch("/api/token?user=" + encodeURIComponent(user.email) + "&dashboard=" + encodeURIComponent(dash.slug));
+          const j = await r.json();
+          if (!r.ok) throw new Error(j.error || r.statusText);
+          return j.token;
+        },
+        dashboardUiConfig: { hideTitle: true, hideChartControls: false, filters: { expanded: false } }
+      });
+      if (run !== current) return;
+      const m = $("msg"); if (m) m.remove();
+    } catch (e) {
+      if (run === current) setMsg("Could not load the dashboard: " + e.message, true);
+    }
+  }
+
+  userSel.addEventListener("change", show);
+  dashSel.addEventListener("change", show);
+  show();
+})();
+</script>
+</body>
+</html>

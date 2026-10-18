@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "salem-overview",
+    "title": "Salem Smart City",
+    "uuid": "d260fb9e-1665-4d0e-9d67-6ce0e2986841"
+  },
+  {
+    "slug": "salem-aq-summary",
+    "title": "Salem | Air Quality - Summary",
+    "uuid": "b975bf61-c55f-43e7-ad29-5731c87c3503"
+  },
+  {
+    "slug": "salem-aq-analysis",
+    "title": "Salem | Air Quality - Analysis",
+    "uuid": "cb399aa4-7de9-45d3-bf69-47969fc82a30"
+  },
+  {
+    "slug": "salem-swm-summary",
+    "title": "Salem | Solid Waste Management - Summary",
+    "uuid": "2cc35835-69b4-41d3-b2ea-ff7b50b72d63"
+  },
+  {
+    "slug": "salem-swm-analysis",
+    "title": "Salem | Solid Waste Management - Analysis",
+    "uuid": "318a2c49-9a15-48bd-b243-3579b2296104"
+  },
+  {
+    "slug": "salem-wtr-summary",
+    "title": "Salem | Water Management - Summary",
+    "uuid": "8a6f8319-74b8-4f25-83b1-509fe30118c0"
+  },
+  {
+    "slug": "salem-wtr-analysis",
+    "title": "Salem | Water Management - Analysis",
+    "uuid": "5872fd55-d244-4897-8c54-0fe6fee75247"
+  },
+  {
+    "slug": "salem-eng-summary",
+    "title": "Salem | Energy Management - Summary",
+    "uuid": "d53c9b72-7200-4582-91ef-c0b981539ab1"
+  },
+  {
+    "slug": "salem-eng-analysis",
+    "title": "Salem | Energy Management - Analysis",
+    "uuid": "bb018249-9865-4ec7-873f-3a0e9ef89528"
+  },
+  {
+    "slug": "salem-irr-summary",
+    "title": "Salem | Smart Irrigation - Summary",
+    "uuid": "86436414-d70c-4307-b0e4-6ea88f3d9b3a"
+  },
+  {
+    "slug": "salem-irr-analysis",
+    "title": "Salem | Smart Irrigation - Analysis",
+    "uuid": "f8bd82a5-3392-4407-b9b5-7038adf08878"
+  },
+  {
+    "slug": "salem-sur-summary",
+    "title": "Salem | City Surveillance - Summary",
+    "uuid": "802133f1-70ff-4c1c-9cd7-1e12c8f8b481"
+  },
+  {
+    "slug": "salem-sur-analysis",
+    "title": "Salem | City Surveillance - Analysis",
+    "uuid": "faa857d2-0b4e-4f3d-8b8e-dfc580e63748"
+  }
+]

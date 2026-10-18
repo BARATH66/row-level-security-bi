@@ -51,7 +51,7 @@ Expected result in every tool: manager sees 6 domains, irrigation operator 1, sh
 README.md          this guide
 docs/              threat model, testing checklist, data model, DAX measures
 powerbi/           Salem project: static RLS + dynamic RLS, DAX, screenshots
-superset/          Superset implementation: dashboards export, SQL, RLS rules, screenshots
+superset/          Superset implementation: dashboards export, SQL, RLS rules, embedded page, screenshots
 data/              shared mapping table
 ```
 
