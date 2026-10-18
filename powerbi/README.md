@@ -183,18 +183,28 @@ RLS hides **rows of data**, not **pages**. An operator can still click the Overv
 
 ## Screenshots
 
-*(Add images to `screenshots/` and link them here.)*
+**The manager Overview: six domain cards, each with its own chart.**
+
+Static RLS project:
+
+![Overview, static RLS project](screenshots/04-overview-manager-static.png)
+
+Dynamic RLS project (same report, one `DynamicAccess` role):
+
+![Overview, dynamic RLS project](screenshots/04-overview-manager-dynamic.png)
+
+*Still to add (put the files in `screenshots/`):*
 
 | Suggested file | What it shows |
 |---|---|
 | `01-model-view.png` | The data model: how the tables connect |
 | `02-roles-static.png` | Manage roles with the seven static roles |
 | `03-role-dynamic.png` | The `DynamicAccess` role and its DAX |
-| `04-overview-manager.png` | The manager Overview with six cards |
 | `05-view-as-dialog.png` | The View as dialog, ticked correctly |
 | `06-operator-irrigation.png` | A page seen as the irrigation operator |
 | `07-operator-overview-blocked.png` | The restricted message for an operator |
 | `08-unknown-user.png` | An unknown user sees nothing |
+
 
 ## What has been checked
 
