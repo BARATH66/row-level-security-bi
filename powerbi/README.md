@@ -183,27 +183,49 @@ RLS hides **rows of data**, not **pages**. An operator can still click the Overv
 
 ## Screenshots
 
-**The manager Overview: six domain cards, each with its own chart.**
+### The model
 
-Static RLS project:
+All eight fact tables connect to the shared lookup tables, so one rule on `DimCategory` secures everything.
+
+![Model view](screenshots/01-model-view.png)
+
+### Static RLS: seven roles
+
+Each role holds one fixed rule, for example `DimCategory[DomainCode] = "IRR"`.
+
+![Manage roles, static project](screenshots/02-roles-static.png)
+
+### Dynamic RLS: one role
+
+`DynamicAccess` looks the signed-in user up in the hidden `SecurityUserAccess` table.
+
+![Manage roles, dynamic project](screenshots/03-role-dynamic.png)
+
+### The manager Overview
+
+Six domain cards, each with its own chart. Static project first, then dynamic.
 
 ![Overview, static RLS project](screenshots/04-overview-manager-static.png)
 
-Dynamic RLS project (same report, one `DynamicAccess` role):
-
 ![Overview, dynamic RLS project](screenshots/04-overview-manager-dynamic.png)
 
-*Still to add (put the files in `screenshots/`):*
+### Testing with View as
 
-| Suggested file | What it shows |
-|---|---|
-| `01-model-view.png` | The data model: how the tables connect |
-| `02-roles-static.png` | Manage roles with the seven static roles |
-| `03-role-dynamic.png` | The `DynamicAccess` role and its DAX |
-| `05-view-as-dialog.png` | The View as dialog, ticked correctly |
-| `06-operator-irrigation.png` | A page seen as the irrigation operator |
-| `07-operator-overview-blocked.png` | The restricted message for an operator |
-| `08-unknown-user.png` | An unknown user sees nothing |
+Tick the role **and** Other user, then type an email from the mapping table.
+
+![View as roles dialog](screenshots/05-view-as-dialog.png)
+
+The irrigation operator sees only irrigation (note the `DomainCode is IRR` filter and the "Now viewing as" bar):
+
+![Irrigation operator view](screenshots/06-operator-irrigation.png)
+
+The same operator gets a blank Overview:
+
+![Operator Overview blocked](screenshots/07-operator-overview-blocked.png)
+
+An email that is not in the table sees nothing:
+
+![Unknown user sees nothing](screenshots/08-unknown-user.png)
 
 
 ## What has been checked
