@@ -5,7 +5,7 @@ How to restrict who sees which rows in a BI tool, shown as a **concept first, to
 | Tool | Status | Where |
 |---|---|---|
 | Power BI | Built and tested in Desktop (static and dynamic) | [`powerbi/`](powerbi/README.md) |
-| Apache Superset | Draft configuration, **not yet tested** | [`superset/`](superset/README.md) |
+| Apache Superset | Built and tested (static and dynamic) | [`superset/`](superset/README.md) |
 | Tableau / Looker / Metabase | Not started (see roadmap) | n/a |
 
 > Data is synthetic. The scenario is a smart-city control room for Salem, Tamil Nadu, with six domains (air quality, solid waste, water, energy, irrigation, surveillance). Managers see everything; each operator sees only their domain.
@@ -51,7 +51,7 @@ Expected result in every tool: manager sees 6 domains, irrigation operator 1, sh
 README.md          this guide
 docs/              threat model, testing checklist, data model, DAX measures
 powerbi/           Salem project: static RLS + dynamic RLS, DAX, screenshots
-superset/          Superset RLS rules (SQL + Jinja), role mapping
+superset/          Superset implementation: dashboards export, SQL, RLS rules, screenshots
 data/              shared mapping table
 ```
 
