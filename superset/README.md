@@ -10,14 +10,14 @@ The same smart-city report as the Power BI project, rebuilt in **Apache Superset
 |---|---|
 | Dashboards | 13: **Salem Smart City** (Overview) + Summary and Analysis for each of Air Quality, Solid Waste, Water, Energy, Smart Irrigation, City Surveillance |
 | Datasets | 8 (one per reporting view), with saved metrics that match the Power BI measures |
-| Charts | about 130: KPIs (big number), line, area, bar, donut, treemap, table |
+| Charts | about 130: KPIs (big number), line, area, bar, donut, treemap, table (the Overview has 20) |
 | RLS rules | 7: six static (one per operator role) + one dynamic |
 | Roles | `salem_manager`, six `salem_op_*` operator roles, `salem_dynamic` |
 | Navigation | Overview cards link to each domain's Summary; every domain dashboard has Home / Summary / Analysis links |
 
 ## Screenshots
 
-Manager: the Overview, six domain cards, a different chart type in each.
+Manager: the Overview, six domain cards (two KPIs and a different chart type in each) plus open alarms and open incidents by domain.
 
 ![Overview, manager](screenshots/01-overview-manager.jpg)
 
@@ -35,7 +35,7 @@ A domain dashboard (Air Quality, Summary and Analysis):
 
 ![Irrigation operator, Air Quality dashboard](screenshots/05-aq-summary-irrigation-operator-no-data.jpg)
 
-On the Overview, the same operator gets data only on the Smart Irrigation card:
+On the Overview, the same operator gets data only on the Smart Irrigation card, and the by-domain charts show only that domain:
 
 ![Overview, irrigation operator](screenshots/06-overview-irrigation-operator.jpg)
 
