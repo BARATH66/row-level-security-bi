@@ -135,13 +135,74 @@ The helper decides the clause itself from `data/security_user_access.csv`, the s
 
 ## Dark theme
 
-The Salem dashboards use Superset's built-in **dark** theme so they stay black whatever the viewer's Light/Dark setting is (the Power BI report is black too). The theme is stored on the dashboard (`theme_id`), and an export zip does not carry it. After importing, set it again: in the dashboard's properties choose the dark theme if your instance has theme administration on, or point the dashboards at the system dark theme in the metadata database:
+The Salem dashboards use Superset's built-in **dark** theme so they stay black whatever the viewer's Light/Dark setting is (the Power BI report is black too). The theme is stored on the dashboard (`theme_id`), and an export zip does not carry it, so set it again after importing.
+
+### Option 1: in the Superset UI
+
+If your instance has theme administration turned on, open the dashboard, **Edit properties**, and pick the dark theme. Many installs do not show this, in which case use option 2.
+
+### Option 2: in the metadata database
+
+Superset keeps its own settings (dashboards, charts, users, themes) in a **metadata database**, separate from your data. Two of its tables matter here:
+
+| Table | What it holds |
+|---|---|
+| `themes` | The available themes. Superset adds two system themes itself: `THEME_DEFAULT` (light) and `THEME_DARK` |
+| `dashboards` | Every dashboard, including a `theme_id` column that points at `themes.id` |
+
+The Salem data lives in a different database (`salem_demo`), so the `themes` table does **not** exist there, and running a query on it in SQL Lab against `salem_demo` fails with `relation "themes" does not exist`. You have to run it against the metadata database, which is not listed in SQL Lab unless someone adds it as a connection.
+
+Run this once the dashboards are imported:
 
 ```sql
+-- see the themes
+SELECT id, theme_name, is_system FROM themes;
+
+-- pin the Salem dashboards to the dark theme
 UPDATE dashboards
 SET theme_id = (SELECT id FROM themes WHERE theme_name = 'THEME_DARK')
 WHERE slug LIKE 'salem-%';
+
+-- check
+SELECT slug, theme_id FROM dashboards WHERE slug LIKE 'salem-%' ORDER BY slug;
 ```
+
+Reload the dashboard in the browser afterwards.
+
+#### How to connect to the metadata database
+
+**A. From the command line (simplest, nothing to configure).** Run `psql` inside the Postgres container that hosts Superset's metadata. Replace the names with yours:
+
+```bash
+docker exec -it <postgres-container> psql -U <metadata-user> -d <metadata-database>
+```
+
+or run one statement:
+
+```bash
+docker exec <postgres-container> psql -U <metadata-user> -d <metadata-database> -c "SELECT id, theme_name FROM themes;"
+```
+
+In Superset's stock Docker setup the database, user and password are all `superset`. Yours may differ, so check the Postgres settings in the compose file or its `.env`.
+
+**B. From SQL Lab (adds a connection).** Only do this on a development instance, because it exposes every internal table to SQL Lab users, including user accounts.
+
+1. **Settings > Database Connections > + Database > PostgreSQL.**
+2. Enter the host (the Postgres service name, for example `postgres`), port `5432`, the **metadata database name**, and the Postgres **username and password**. A wrong username or password gives "The password provided for username ... is incorrect".
+3. Open **Advanced > SQL Lab** and tick **Expose database in SQL Lab**. Tick **Allow DML** as well, or the `UPDATE` is blocked.
+4. Choose that connection in SQL Lab and run the SQL above.
+5. Delete the connection when you are finished.
+
+If you want less exposure, create a dedicated Postgres user that can read only the two tables you need, and connect with it instead:
+
+```sql
+CREATE ROLE theme_reader LOGIN PASSWORD '<choose-one>';
+GRANT CONNECT ON DATABASE <metadata-database> TO theme_reader;
+GRANT USAGE ON SCHEMA public TO theme_reader;
+GRANT SELECT ON themes, dashboards TO theme_reader;
+```
+
+That user can read the themes but cannot run the `UPDATE`. Run the `UPDATE` as the main user (option A) or grant `UPDATE (theme_id) ON dashboards` as well.
 
 ## Reusing the dashboards
 
