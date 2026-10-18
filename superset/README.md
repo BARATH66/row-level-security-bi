@@ -88,6 +88,16 @@ These match the Power BI results. Irrigation water used for the irrigation opera
 - **Hiding a dashboard needs a feature flag.** Per-dashboard role access (`DASHBOARD_RBAC`) was not enabled here, so, as in Power BI, security restricts the data, not which dashboards open.
 - **Users need access to the datasets.** Operator roles get the datasource permissions for the Salem datasets only; RLS then narrows the rows.
 
+## Dark theme
+
+The Salem dashboards use Superset's built-in **dark** theme so they stay black whatever the viewer's Light/Dark setting is (the Power BI report is black too). The theme is stored on the dashboard (`theme_id`), and an export zip does not carry it. After importing, set it again: in the dashboard's properties choose the dark theme if your instance has theme administration on, or point the dashboards at the system dark theme in the metadata database:
+
+```sql
+UPDATE dashboards
+SET theme_id = (SELECT id FROM themes WHERE theme_name = 'THEME_DARK')
+WHERE slug LIKE 'salem-%';
+```
+
 ## Reusing the dashboards
 
 [`dashboards/salem_dashboards_export.zip`](dashboards/salem_dashboards_export.zip) is a Superset export of the 13 dashboards, their charts and datasets, and the database connection (password masked). To import it: create a PostgreSQL database with the schema and data above, then **Settings > Import dashboards**, upload the zip, and enter the database password when asked. Roles, users and RLS rules are not part of an export, so recreate them from `sql/02_rls_rules.sql`.
