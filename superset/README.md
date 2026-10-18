@@ -2,7 +2,7 @@
 
 The same smart-city report as the Power BI project, rebuilt in **Apache Superset 6.1.0 (Docker)** on the same data, with the same two security designs. Thirteen dashboards, six domains, managers see everything and each operator sees only their domain.
 
-> The data is the same synthetic sample data as the Power BI projects. Zone names are the real Salem Corporation zones; the numbers are not real.
+ The data is the same synthetic sample data as the Power BI projects. Zone names are the real Salem Corporation zones; the numbers are not real.
 
 ## What was built
 
