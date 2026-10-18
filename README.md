@@ -61,13 +61,6 @@ data/              shared mapping table
 - Admins and report owners often bypass RLS. Test with a plain viewer.
 - A client-side filter is not security. Enforce it in the model or the query layer.
 
-## Roadmap
-
-- [x] Power BI static and dynamic RLS
-- [ ] Superset implementation tested end to end
-- [ ] Column-level security notes
-- [ ] A third tool (Tableau or Metabase) if there is demand
-
 ## License
 
 MIT, see [LICENSE](LICENSE).
