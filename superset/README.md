@@ -10,7 +10,7 @@ The same smart-city report as the Power BI project, rebuilt in **Apache Superset
 |---|---|
 | Dashboards | 13: **Salem Smart City** (Overview) + Summary and Analysis for each of Air Quality, Solid Waste, Water, Energy, Smart Irrigation, City Surveillance |
 | Datasets | 8 (one per reporting view), with saved metrics that match the Power BI measures |
-| Charts | about 140: KPIs (big number), line, area, bar, donut, treemap, table |
+| Charts | about 130: KPIs (big number), line, area, bar, donut, treemap, table |
 | RLS rules | 7: six static (one per operator role) + one dynamic |
 | Roles | `salem_manager`, six `salem_op_*` operator roles, `salem_dynamic` |
 | Navigation | Overview cards link to each domain's Summary; every domain dashboard has Home / Summary / Analysis links |
