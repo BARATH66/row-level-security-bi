@@ -98,6 +98,14 @@ The same dashboard for the Air Quality operator is empty:
 
 ![Embedded page, Air Quality operator](screenshots/09-embedded-air-operator-no-data.jpg)
 
+The Overview for the **City Manager** (access: all domains) shows every domain:
+
+![Embedded Overview, City Manager](screenshots/11-embedded-overview-manager.png)
+
+The same Overview for the **Air Quality Operator** (access: `AQ`) shows data only for Air Quality; every other card says "No data":
+
+![Embedded Overview, Air Quality Operator](screenshots/10-embedded-overview-air-operator.png)
+
 ### How it works
 
 1. The page loads the Superset **embedded SDK** and calls `embedDashboard(...)` with the dashboard's embed id.
