@@ -1,0 +1,80 @@
+table DimDate
+	lineageTag: bcee179e-adf7-5306-85d9-488238982d5a
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: dd-MMM-yyyy
+		lineageTag: e6644979-9da5-53d3-b8f8-ae47694fc7ff
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		lineageTag: 04cc18b9-24ff-569f-8301-0adefcb28406
+		summarizeBy: none
+		sourceColumn: Year
+
+	column MonthNum
+		dataType: int64
+		isHidden
+		lineageTag: c0c64cab-2e92-5fb9-b584-8b2caed3734e
+		summarizeBy: none
+		sourceColumn: MonthNum
+
+	column MonthName
+		dataType: string
+		lineageTag: c9823866-a32e-5b16-bb64-3e7a7b3eb90f
+		summarizeBy: none
+		sourceColumn: MonthName
+		sortByColumn: MonthNum
+
+	column YearMonth
+		dataType: int64
+		isHidden
+		lineageTag: ed2e7e18-40ca-54a1-90b3-1e2252b2272e
+		summarizeBy: none
+		sourceColumn: YearMonth
+
+	column MonthYear
+		dataType: string
+		lineageTag: 333be5d6-4690-5d87-a7b8-7f0338e43072
+		summarizeBy: none
+		sourceColumn: MonthYear
+		sortByColumn: YearMonth
+
+	column DayName
+		dataType: string
+		lineageTag: 637744b0-bb02-5d56-912f-41db339ad3a6
+		summarizeBy: none
+		sourceColumn: DayName
+
+	column WeekdayNum
+		dataType: int64
+		isHidden
+		lineageTag: b81e5820-a81d-5061-9916-1d93362748bd
+		summarizeBy: none
+		sourceColumn: WeekdayNum
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+				    Dates = List.Dates(#date(2026, 1, 1), 365, #duration(1, 0, 0, 0)),
+				    ToTable = Table.FromList(Dates, Splitter.SplitByNothing(), {"Date"}),
+				    TypedDate = Table.TransformColumnTypes(ToTable, {{"Date", type date}}),
+				    AddYear = Table.AddColumn(TypedDate, "Year", each Date.Year([Date]), Int64.Type),
+				    AddMonthNum = Table.AddColumn(AddYear, "MonthNum", each Date.Month([Date]), Int64.Type),
+				    AddMonthName = Table.AddColumn(AddMonthNum, "MonthName", each Date.ToText([Date], "MMM", "en-US"), type text),
+				    AddYearMonth = Table.AddColumn(AddMonthName, "YearMonth", each Date.Year([Date]) * 100 + Date.Month([Date]), Int64.Type),
+				    AddMonthYear = Table.AddColumn(AddYearMonth, "MonthYear", each Date.ToText([Date], "MMM yyyy", "en-US"), type text),
+				    AddDayName = Table.AddColumn(AddMonthYear, "DayName", each Date.ToText([Date], "ddd", "en-US"), type text),
+				    AddWeekday = Table.AddColumn(AddDayName, "WeekdayNum", each Date.DayOfWeek([Date], Day.Monday) + 1, Int64.Type)
+				in
+				    AddWeekday
+
+	annotation PBI_ResultType = Table
+

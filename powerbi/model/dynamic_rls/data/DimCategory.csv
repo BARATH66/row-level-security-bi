@@ -1,0 +1,7 @@
+CategoryKey,DomainCode,DomainName,SortOrder,Department,Description,ThemeColor
+1,AQ,Air Quality,1,Environment & Pollution Control,"Ambient air-quality monitoring stations (PM2.5, PM10, NO2, SO2, CO, AQI).",#0E9AA7
+2,SWM,Solid Waste Management,2,Sanitation & Solid Waste,"Door-to-door and bulk waste collection, segregation and processing.",#6B8E23
+3,WTR,Water Management,3,Water Supply & Drainage,"Cauvery (Mettur) bulk supply, distribution pressure, leakage and quality.",#1F77B4
+4,ENG,Energy Management,4,Electrical & Street Lighting,"Municipal energy consumption, rooftop solar, power factor and street lighting.",#E08A00
+5,IRR,Smart Irrigation,5,Parks & Horticulture,"Soil-moisture driven irrigation of parks, medians, nurseries and lake fronts.",#2E8B57
+6,SUR,City Surveillance,6,Police & Public Safety,"CCTV, ANPR and PTZ cameras: uptime, detected events, violations and response.",#6C4BB0

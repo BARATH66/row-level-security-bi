@@ -1,0 +1,1299 @@
+Date,TenantID,CategoryKey,IncidentID,IncidentStatusID,Priority,IncidentType,ResolutionHours
+2026-04-17,2,1,IN-00001,3,P2,Open burning,57.6
+2026-04-17,2,4,IN-00002,3,P2,Transformer failure,9.7
+2026-04-17,4,3,IN-00003,3,P1,Contaminated supply complaint,2.5
+2026-04-17,4,6,IN-00004,3,P3,Footage request,22.3
+2026-04-18,1,1,IN-00005,3,P2,Open burning,64.1
+2026-04-18,1,2,IN-00006,3,P1,Missed collection complaint,30.0
+2026-04-18,1,4,IN-00007,3,P3,Transformer failure,53.6
+2026-04-18,1,5,IN-00008,3,P2,Overwatering,45.2
+2026-04-18,1,6,IN-00009,3,P2,Vandalised camera,39.3
+2026-04-18,2,3,IN-00010,3,P1,Contaminated supply complaint,14.7
+2026-04-18,3,1,IN-00011,3,P2,Open burning,33.7
+2026-04-18,3,5,IN-00012,3,P3,Overwatering,65.5
+2026-04-18,4,3,IN-00013,3,P2,Pipe burst,70.8
+2026-04-19,1,3,IN-00014,3,P3,Contaminated supply complaint,14.2
+2026-04-19,2,4,IN-00015,3,P3,Transformer failure,61.5
+2026-04-19,3,1,IN-00016,3,P3,Open burning,42.4
+2026-04-19,3,2,IN-00017,3,P2,Missed collection complaint,37.2
+2026-04-19,3,6,IN-00018,3,P3,Footage request,42.2
+2026-04-19,4,3,IN-00019,3,P1,Pipe burst,6.4
+2026-04-19,4,6,IN-00020,3,P2,Footage request,42.1
+2026-04-20,1,3,IN-00021,3,P2,Contaminated supply complaint,2.5
+2026-04-20,2,4,IN-00022,3,P3,Power outage,31.0
+2026-04-20,3,6,IN-00023,3,P3,Footage request,41.1
+2026-04-20,4,3,IN-00024,3,P2,Pipe burst,18.4
+2026-04-21,1,3,IN-00025,3,P3,Pipe burst,53.1
+2026-04-21,1,4,IN-00026,3,P2,Power outage,58.5
+2026-04-21,2,5,IN-00027,3,P2,Sprinkler damage,49.7
+2026-04-21,2,6,IN-00028,3,P3,Footage request,39.2
+2026-04-21,3,1,IN-00029,3,P3,Dust complaint,17.0
+2026-04-21,3,4,IN-00030,3,P3,Power outage,14.0
+2026-04-21,4,3,IN-00031,3,P3,Pipe burst,34.5
+2026-04-21,4,4,IN-00032,3,P3,Power outage,66.6
+2026-04-21,4,6,IN-00033,3,P3,Footage request,20.9
+2026-04-22,1,1,IN-00034,3,P3,Dust complaint,15.1
+2026-04-22,1,3,IN-00035,3,P3,Contaminated supply complaint,46.9
+2026-04-22,1,5,IN-00036,3,P3,Sprinkler damage,61.8
+2026-04-22,2,1,IN-00037,7,P3,Open burning,
+2026-04-22,2,2,IN-00038,3,P2,Missed collection complaint,20.9
+2026-04-22,2,3,IN-00039,3,P1,Contaminated supply complaint,54.3
+2026-04-22,2,4,IN-00040,3,P3,Transformer failure,71.7
+2026-04-22,2,5,IN-00041,3,P2,Sprinkler damage,61.6
+2026-04-22,3,2,IN-00042,3,P3,Missed collection complaint,41.7
+2026-04-22,3,3,IN-00043,3,P3,Contaminated supply complaint,49.9
+2026-04-22,3,4,IN-00044,3,P2,Power outage,37.3
+2026-04-22,4,4,IN-00045,3,P2,Transformer failure,15.0
+2026-04-22,4,5,IN-00046,3,P3,Sprinkler damage,36.8
+2026-04-23,1,4,IN-00047,3,P2,Power outage,50.0
+2026-04-23,1,6,IN-00048,3,P3,Footage request,59.5
+2026-04-23,2,1,IN-00049,3,P2,Open burning,45.3
+2026-04-23,2,5,IN-00050,3,P3,Sprinkler damage,50.9
+2026-04-23,3,5,IN-00051,3,P2,Overwatering,26.2
+2026-04-24,2,3,IN-00052,3,P2,Contaminated supply complaint,51.5
+2026-04-24,2,6,IN-00053,3,P3,Footage request,19.1
+2026-04-24,3,1,IN-00054,3,P3,Open burning,20.9
+2026-04-24,3,3,IN-00055,3,P3,Pipe burst,43.8
+2026-04-24,4,1,IN-00056,3,P3,Open burning,67.7
+2026-04-25,1,4,IN-00057,3,P2,Transformer failure,39.6
+2026-04-25,2,1,IN-00058,7,P3,Dust complaint,
+2026-04-25,2,4,IN-00059,3,P3,Transformer failure,34.5
+2026-04-25,2,6,IN-00060,3,P3,Footage request,37.1
+2026-04-25,3,1,IN-00061,3,P3,Dust complaint,51.2
+2026-04-25,3,4,IN-00062,3,P3,Transformer failure,54.5
+2026-04-25,3,5,IN-00063,3,P3,Overwatering,9.4
+2026-04-25,3,6,IN-00064,3,P3,Footage request,2.3
+2026-04-25,4,4,IN-00065,3,P2,Power outage,70.9
+2026-04-25,4,5,IN-00066,3,P3,Sprinkler damage,51.5
+2026-04-26,1,6,IN-00067,3,P3,Vandalised camera,11.9
+2026-04-26,2,2,IN-00068,3,P2,Garbage blackspot,64.0
+2026-04-26,2,5,IN-00069,3,P3,Overwatering,8.7
+2026-04-26,3,1,IN-00070,3,P3,Open burning,30.3
+2026-04-26,3,2,IN-00071,3,P3,Garbage blackspot,43.2
+2026-04-26,3,5,IN-00072,3,P1,Sprinkler damage,32.8
+2026-04-26,3,6,IN-00073,3,P2,Footage request,16.3
+2026-04-26,4,4,IN-00074,3,P2,Power outage,68.7
+2026-04-26,4,5,IN-00075,3,P2,Overwatering,32.8
+2026-04-27,1,1,IN-00076,3,P3,Dust complaint,66.9
+2026-04-27,1,5,IN-00077,3,P2,Sprinkler damage,69.2
+2026-04-27,1,6,IN-00078,3,P3,Vandalised camera,68.8
+2026-04-27,2,5,IN-00079,3,P2,Overwatering,40.5
+2026-04-27,3,4,IN-00080,3,P3,Transformer failure,32.4
+2026-04-27,4,2,IN-00081,3,P2,Missed collection complaint,41.0
+2026-04-27,4,4,IN-00082,3,P3,Transformer failure,42.5
+2026-04-28,1,6,IN-00083,3,P1,Vandalised camera,56.3
+2026-04-28,3,3,IN-00084,3,P2,Pipe burst,11.5
+2026-04-28,3,6,IN-00085,3,P1,Vandalised camera,10.5
+2026-04-28,4,2,IN-00086,3,P3,Missed collection complaint,18.3
+2026-04-28,4,4,IN-00087,3,P3,Transformer failure,53.7
+2026-04-28,4,5,IN-00088,3,P3,Sprinkler damage,23.3
+2026-04-28,4,6,IN-00089,3,P3,Vandalised camera,50.8
+2026-04-29,1,3,IN-00090,3,P2,Contaminated supply complaint,48.7
+2026-04-29,1,4,IN-00091,3,P1,Power outage,35.5
+2026-04-29,1,6,IN-00092,3,P3,Vandalised camera,22.8
+2026-04-29,2,1,IN-00093,3,P2,Dust complaint,41.4
+2026-04-29,2,4,IN-00094,3,P2,Power outage,14.0
+2026-04-29,2,6,IN-00095,3,P3,Footage request,28.8
+2026-04-29,3,2,IN-00096,3,P3,Garbage blackspot,51.2
+2026-04-29,3,3,IN-00097,7,P3,Contaminated supply complaint,
+2026-04-29,3,5,IN-00098,3,P3,Overwatering,63.5
+2026-04-29,4,2,IN-00099,3,P2,Garbage blackspot,39.2
+2026-04-30,2,3,IN-00100,3,P2,Contaminated supply complaint,10.4
+2026-04-30,2,4,IN-00101,3,P3,Power outage,18.3
+2026-04-30,3,1,IN-00102,3,P2,Dust complaint,62.2
+2026-04-30,4,3,IN-00103,3,P3,Pipe burst,42.3
+2026-04-30,4,5,IN-00104,3,P2,Sprinkler damage,66.1
+2026-05-01,1,2,IN-00105,3,P2,Garbage blackspot,17.0
+2026-05-01,1,3,IN-00106,3,P2,Contaminated supply complaint,25.0
+2026-05-01,2,1,IN-00107,3,P3,Open burning,67.3
+2026-05-01,2,3,IN-00108,3,P3,Pipe burst,3.2
+2026-05-01,3,1,IN-00109,3,P3,Dust complaint,64.7
+2026-05-01,3,3,IN-00110,3,P3,Pipe burst,48.6
+2026-05-01,3,5,IN-00111,3,P2,Sprinkler damage,43.1
+2026-05-01,4,1,IN-00112,3,P3,Open burning,12.0
+2026-05-01,4,3,IN-00113,3,P3,Contaminated supply complaint,56.4
+2026-05-01,4,5,IN-00114,7,P2,Sprinkler damage,
+2026-05-02,1,5,IN-00115,3,P3,Sprinkler damage,18.9
+2026-05-02,2,1,IN-00116,3,P2,Open burning,16.1
+2026-05-02,2,2,IN-00117,3,P2,Garbage blackspot,48.1
+2026-05-02,3,1,IN-00118,7,P3,Open burning,
+2026-05-02,3,5,IN-00119,3,P1,Overwatering,40.9
+2026-05-02,4,4,IN-00120,3,P2,Power outage,70.7
+2026-05-02,4,5,IN-00121,3,P2,Overwatering,44.2
+2026-05-03,1,4,IN-00122,3,P3,Transformer failure,65.2
+2026-05-03,1,6,IN-00123,3,P2,Vandalised camera,15.9
+2026-05-03,2,5,IN-00124,3,P1,Sprinkler damage,44.2
+2026-05-03,3,1,IN-00125,3,P3,Dust complaint,12.0
+2026-05-03,3,2,IN-00126,3,P3,Missed collection complaint,23.9
+2026-05-03,3,5,IN-00127,3,P3,Sprinkler damage,38.6
+2026-05-03,3,6,IN-00128,7,P2,Footage request,
+2026-05-03,4,3,IN-00129,3,P2,Pipe burst,71.6
+2026-05-03,4,4,IN-00130,3,P3,Transformer failure,64.1
+2026-05-03,4,5,IN-00131,3,P3,Overwatering,25.8
+2026-05-03,4,6,IN-00132,3,P2,Footage request,66.2
+2026-05-04,4,3,IN-00133,3,P2,Pipe burst,59.5
+2026-05-05,1,1,IN-00134,3,P3,Open burning,3.3
+2026-05-05,1,2,IN-00135,3,P3,Missed collection complaint,38.9
+2026-05-05,1,6,IN-00136,3,P2,Vandalised camera,24.9
+2026-05-05,2,6,IN-00137,3,P3,Footage request,39.7
+2026-05-05,3,1,IN-00138,3,P2,Dust complaint,54.7
+2026-05-05,3,3,IN-00139,3,P3,Contaminated supply complaint,28.5
+2026-05-05,3,5,IN-00140,3,P3,Overwatering,45.3
+2026-05-05,4,1,IN-00141,3,P3,Open burning,8.8
+2026-05-05,4,2,IN-00142,3,P1,Missed collection complaint,59.8
+2026-05-05,4,6,IN-00143,3,P2,Vandalised camera,35.3
+2026-05-06,1,1,IN-00144,7,P2,Dust complaint,
+2026-05-06,1,3,IN-00145,3,P3,Contaminated supply complaint,55.4
+2026-05-06,1,5,IN-00146,3,P3,Sprinkler damage,33.2
+2026-05-06,2,4,IN-00147,3,P3,Power outage,15.2
+2026-05-06,2,5,IN-00148,5,P3,Overwatering,
+2026-05-06,3,5,IN-00149,3,P2,Overwatering,27.9
+2026-05-06,4,4,IN-00150,3,P2,Transformer failure,23.7
+2026-05-06,4,5,IN-00151,3,P1,Overwatering,57.4
+2026-05-07,1,2,IN-00152,3,P3,Garbage blackspot,28.0
+2026-05-07,1,3,IN-00153,3,P3,Contaminated supply complaint,46.6
+2026-05-07,1,6,IN-00154,7,P2,Vandalised camera,
+2026-05-07,2,1,IN-00155,3,P1,Open burning,71.4
+2026-05-07,2,2,IN-00156,3,P1,Garbage blackspot,61.6
+2026-05-07,2,4,IN-00157,3,P2,Transformer failure,38.5
+2026-05-07,4,4,IN-00158,3,P3,Power outage,45.3
+2026-05-08,1,5,IN-00159,3,P2,Sprinkler damage,31.9
+2026-05-08,1,6,IN-00160,3,P2,Vandalised camera,70.4
+2026-05-08,2,5,IN-00161,3,P2,Overwatering,54.5
+2026-05-08,2,6,IN-00162,3,P2,Vandalised camera,59.4
+2026-05-08,3,1,IN-00163,3,P3,Open burning,57.2
+2026-05-08,3,4,IN-00164,3,P3,Power outage,10.8
+2026-05-08,4,5,IN-00165,3,P3,Sprinkler damage,22.4
+2026-05-09,3,4,IN-00166,3,P1,Power outage,25.2
+2026-05-09,3,5,IN-00167,3,P1,Overwatering,59.7
+2026-05-09,4,1,IN-00168,3,P3,Dust complaint,59.0
+2026-05-09,4,4,IN-00169,3,P2,Power outage,36.8
+2026-05-09,4,5,IN-00170,3,P3,Overwatering,9.6
+2026-05-10,2,4,IN-00171,3,P2,Transformer failure,31.5
+2026-05-10,2,5,IN-00172,3,P3,Sprinkler damage,9.5
+2026-05-10,2,6,IN-00173,3,P2,Footage request,33.2
+2026-05-10,3,4,IN-00174,3,P3,Transformer failure,36.9
+2026-05-10,3,5,IN-00175,3,P2,Overwatering,33.3
+2026-05-11,1,1,IN-00176,3,P2,Open burning,40.5
+2026-05-11,1,6,IN-00177,3,P3,Vandalised camera,55.4
+2026-05-11,3,2,IN-00178,3,P2,Garbage blackspot,6.8
+2026-05-11,3,5,IN-00179,3,P2,Overwatering,59.6
+2026-05-11,4,1,IN-00180,3,P2,Open burning,44.8
+2026-05-11,4,3,IN-00181,3,P2,Contaminated supply complaint,24.0
+2026-05-11,4,5,IN-00182,3,P2,Sprinkler damage,71.1
+2026-05-12,1,6,IN-00183,7,P3,Vandalised camera,
+2026-05-12,2,2,IN-00184,3,P2,Garbage blackspot,55.7
+2026-05-12,2,4,IN-00185,7,P3,Transformer failure,
+2026-05-12,3,5,IN-00186,3,P3,Overwatering,48.1
+2026-05-12,3,6,IN-00187,3,P2,Vandalised camera,71.3
+2026-05-12,4,5,IN-00188,3,P3,Overwatering,48.1
+2026-05-13,1,1,IN-00189,3,P3,Dust complaint,59.4
+2026-05-13,1,2,IN-00190,3,P2,Missed collection complaint,62.5
+2026-05-13,2,1,IN-00191,3,P2,Dust complaint,9.9
+2026-05-13,2,3,IN-00192,3,P3,Pipe burst,37.7
+2026-05-13,2,6,IN-00193,3,P2,Footage request,52.5
+2026-05-13,3,1,IN-00194,3,P2,Open burning,54.2
+2026-05-13,3,2,IN-00195,3,P3,Garbage blackspot,54.6
+2026-05-13,3,4,IN-00196,3,P3,Power outage,61.6
+2026-05-13,4,3,IN-00197,3,P2,Contaminated supply complaint,71.3
+2026-05-14,1,4,IN-00198,3,P3,Transformer failure,32.7
+2026-05-14,3,2,IN-00199,7,P2,Garbage blackspot,
+2026-05-14,3,4,IN-00200,3,P2,Transformer failure,62.8
+2026-05-14,4,1,IN-00201,3,P3,Dust complaint,57.2
+2026-05-14,4,5,IN-00202,3,P3,Overwatering,32.5
+2026-05-14,4,6,IN-00203,3,P3,Vandalised camera,15.3
+2026-05-15,1,3,IN-00204,3,P2,Contaminated supply complaint,46.0
+2026-05-15,1,4,IN-00205,3,P1,Transformer failure,6.3
+2026-05-15,1,6,IN-00206,3,P2,Vandalised camera,17.4
+2026-05-15,2,1,IN-00207,3,P1,Dust complaint,37.1
+2026-05-15,2,2,IN-00208,3,P3,Missed collection complaint,9.3
+2026-05-15,2,3,IN-00209,3,P3,Pipe burst,69.9
+2026-05-15,2,6,IN-00210,3,P2,Footage request,58.3
+2026-05-15,3,4,IN-00211,3,P1,Power outage,17.2
+2026-05-15,4,1,IN-00212,3,P3,Open burning,39.8
+2026-05-16,1,2,IN-00213,3,P2,Garbage blackspot,6.7
+2026-05-16,1,3,IN-00214,3,P2,Pipe burst,8.1
+2026-05-16,1,4,IN-00215,3,P2,Transformer failure,15.5
+2026-05-16,2,2,IN-00216,3,P3,Missed collection complaint,22.4
+2026-05-16,2,5,IN-00217,3,P3,Overwatering,38.2
+2026-05-16,3,3,IN-00218,3,P2,Pipe burst,31.1
+2026-05-16,3,5,IN-00219,3,P2,Overwatering,51.6
+2026-05-16,3,6,IN-00220,3,P2,Vandalised camera,40.9
+2026-05-16,4,1,IN-00221,3,P2,Dust complaint,36.2
+2026-05-16,4,2,IN-00222,3,P2,Missed collection complaint,16.9
+2026-05-16,4,6,IN-00223,3,P3,Vandalised camera,17.0
+2026-05-17,1,3,IN-00224,3,P2,Contaminated supply complaint,40.0
+2026-05-17,1,5,IN-00225,3,P3,Overwatering,37.9
+2026-05-17,2,6,IN-00226,3,P3,Vandalised camera,60.9
+2026-05-17,3,2,IN-00227,3,P2,Garbage blackspot,70.2
+2026-05-17,4,2,IN-00228,3,P3,Missed collection complaint,17.3
+2026-05-17,4,3,IN-00229,3,P2,Pipe burst,64.3
+2026-05-17,4,4,IN-00230,3,P2,Transformer failure,69.2
+2026-05-17,4,5,IN-00231,3,P3,Sprinkler damage,45.9
+2026-05-18,1,1,IN-00232,3,P2,Open burning,29.3
+2026-05-18,1,2,IN-00233,3,P2,Garbage blackspot,28.5
+2026-05-18,1,6,IN-00234,3,P3,Footage request,36.1
+2026-05-18,3,1,IN-00235,3,P2,Open burning,63.9
+2026-05-18,3,3,IN-00236,3,P2,Pipe burst,34.2
+2026-05-18,4,1,IN-00237,3,P3,Dust complaint,35.0
+2026-05-18,4,5,IN-00238,3,P3,Sprinkler damage,6.8
+2026-05-19,1,5,IN-00239,3,P2,Overwatering,19.7
+2026-05-19,1,6,IN-00240,3,P2,Footage request,61.6
+2026-05-19,2,1,IN-00241,3,P2,Open burning,17.7
+2026-05-19,3,1,IN-00242,3,P2,Dust complaint,31.5
+2026-05-19,3,6,IN-00243,3,P3,Vandalised camera,42.6
+2026-05-19,4,5,IN-00244,3,P2,Overwatering,48.5
+2026-05-19,4,6,IN-00245,3,P3,Vandalised camera,57.5
+2026-05-20,1,3,IN-00246,3,P1,Pipe burst,50.6
+2026-05-20,1,6,IN-00247,3,P2,Vandalised camera,41.8
+2026-05-20,2,3,IN-00248,3,P3,Pipe burst,37.5
+2026-05-20,3,1,IN-00249,3,P3,Dust complaint,54.9
+2026-05-20,3,2,IN-00250,3,P3,Missed collection complaint,34.5
+2026-05-20,4,1,IN-00251,3,P3,Dust complaint,6.1
+2026-05-20,4,3,IN-00252,3,P2,Pipe burst,48.5
+2026-05-20,4,4,IN-00253,3,P2,Transformer failure,35.5
+2026-05-20,4,6,IN-00254,3,P2,Vandalised camera,37.7
+2026-05-21,1,3,IN-00255,3,P3,Pipe burst,48.5
+2026-05-21,2,6,IN-00256,3,P3,Footage request,57.3
+2026-05-21,3,2,IN-00257,3,P1,Missed collection complaint,43.0
+2026-05-21,4,6,IN-00258,3,P3,Vandalised camera,24.0
+2026-05-22,2,2,IN-00259,3,P3,Missed collection complaint,35.5
+2026-05-22,2,5,IN-00260,3,P3,Overwatering,59.0
+2026-05-22,2,6,IN-00261,3,P2,Vandalised camera,60.8
+2026-05-22,3,3,IN-00262,3,P3,Pipe burst,68.5
+2026-05-22,4,5,IN-00263,3,P2,Overwatering,64.8
+2026-05-23,1,3,IN-00264,3,P3,Pipe burst,32.2
+2026-05-23,2,1,IN-00265,3,P3,Dust complaint,43.2
+2026-05-23,2,5,IN-00266,3,P2,Overwatering,60.1
+2026-05-23,3,1,IN-00267,3,P2,Dust complaint,61.1
+2026-05-23,3,4,IN-00268,3,P1,Power outage,43.8
+2026-05-23,4,1,IN-00269,3,P2,Open burning,66.5
+2026-05-23,4,5,IN-00270,3,P3,Overwatering,5.5
+2026-05-23,4,6,IN-00271,3,P2,Footage request,35.0
+2026-05-24,1,3,IN-00272,3,P2,Contaminated supply complaint,11.6
+2026-05-24,1,6,IN-00273,3,P2,Vandalised camera,20.8
+2026-05-24,2,1,IN-00274,3,P2,Dust complaint,45.1
+2026-05-24,2,5,IN-00275,3,P3,Overwatering,35.4
+2026-05-24,2,6,IN-00276,3,P2,Footage request,38.0
+2026-05-24,3,2,IN-00277,3,P3,Garbage blackspot,26.6
+2026-05-24,3,3,IN-00278,3,P2,Pipe burst,16.2
+2026-05-24,4,2,IN-00279,3,P3,Missed collection complaint,23.2
+2026-05-24,4,6,IN-00280,3,P3,Footage request,66.4
+2026-05-25,2,2,IN-00281,3,P1,Garbage blackspot,54.7
+2026-05-25,3,1,IN-00282,3,P2,Open burning,26.8
+2026-05-25,4,1,IN-00283,3,P3,Dust complaint,20.6
+2026-05-25,4,4,IN-00284,3,P3,Transformer failure,36.2
+2026-05-25,4,5,IN-00285,3,P3,Sprinkler damage,19.8
+2026-05-25,4,6,IN-00286,3,P3,Vandalised camera,35.3
+2026-05-26,1,4,IN-00287,3,P3,Power outage,37.2
+2026-05-26,2,1,IN-00288,3,P2,Open burning,6.8
+2026-05-26,2,2,IN-00289,3,P3,Garbage blackspot,20.0
+2026-05-26,2,3,IN-00290,3,P3,Contaminated supply complaint,9.9
+2026-05-26,3,3,IN-00291,3,P3,Contaminated supply complaint,44.5
+2026-05-26,4,6,IN-00292,3,P2,Vandalised camera,20.5
+2026-05-27,1,3,IN-00293,3,P3,Contaminated supply complaint,48.8
+2026-05-27,1,5,IN-00294,3,P1,Sprinkler damage,22.6
+2026-05-28,1,4,IN-00295,3,P2,Transformer failure,33.6
+2026-05-28,2,3,IN-00296,3,P2,Pipe burst,24.2
+2026-05-28,3,2,IN-00297,3,P3,Missed collection complaint,24.0
+2026-05-28,3,4,IN-00298,3,P2,Power outage,56.5
+2026-05-28,3,5,IN-00299,3,P2,Overwatering,45.2
+2026-05-28,4,5,IN-00300,3,P1,Overwatering,48.6
+2026-05-28,4,6,IN-00301,3,P3,Footage request,33.3
+2026-05-29,1,1,IN-00302,3,P3,Dust complaint,25.2
+2026-05-29,1,4,IN-00303,3,P2,Transformer failure,14.4
+2026-05-29,1,5,IN-00304,3,P2,Overwatering,66.7
+2026-05-29,2,2,IN-00305,3,P1,Garbage blackspot,59.1
+2026-05-29,2,4,IN-00306,3,P3,Transformer failure,67.6
+2026-05-29,2,5,IN-00307,3,P2,Overwatering,8.7
+2026-05-29,3,1,IN-00308,3,P3,Dust complaint,50.8
+2026-05-29,3,2,IN-00309,3,P1,Missed collection complaint,65.5
+2026-05-29,3,5,IN-00310,3,P2,Sprinkler damage,67.0
+2026-05-29,4,3,IN-00311,3,P1,Pipe burst,56.4
+2026-05-30,1,4,IN-00312,3,P3,Power outage,2.3
+2026-05-30,1,5,IN-00313,3,P3,Overwatering,25.7
+2026-05-30,2,1,IN-00314,3,P3,Dust complaint,71.4
+2026-05-30,2,6,IN-00315,3,P1,Vandalised camera,22.8
+2026-05-30,3,3,IN-00316,3,P3,Pipe burst,6.9
+2026-05-30,3,6,IN-00317,3,P2,Vandalised camera,3.1
+2026-05-30,4,1,IN-00318,3,P3,Dust complaint,6.7
+2026-05-30,4,3,IN-00319,3,P2,Pipe burst,70.4
+2026-05-30,4,4,IN-00320,3,P2,Power outage,33.8
+2026-05-30,4,5,IN-00321,3,P3,Sprinkler damage,32.2
+2026-05-31,2,5,IN-00322,3,P3,Sprinkler damage,63.2
+2026-05-31,2,6,IN-00323,3,P3,Footage request,6.4
+2026-05-31,4,3,IN-00324,3,P2,Contaminated supply complaint,14.3
+2026-05-31,4,6,IN-00325,3,P3,Footage request,48.3
+2026-06-01,1,4,IN-00326,3,P3,Power outage,15.9
+2026-06-01,1,6,IN-00327,3,P2,Vandalised camera,20.7
+2026-06-01,2,5,IN-00328,3,P2,Sprinkler damage,13.4
+2026-06-01,3,5,IN-00329,3,P3,Overwatering,3.7
+2026-06-01,3,6,IN-00330,3,P1,Footage request,59.7
+2026-06-01,4,1,IN-00331,3,P3,Dust complaint,9.8
+2026-06-01,4,5,IN-00332,3,P3,Sprinkler damage,23.9
+2026-06-02,2,1,IN-00333,3,P3,Open burning,64.6
+2026-06-02,2,3,IN-00334,3,P3,Contaminated supply complaint,40.4
+2026-06-02,3,3,IN-00335,3,P2,Pipe burst,68.2
+2026-06-02,3,6,IN-00336,3,P3,Footage request,57.2
+2026-06-03,1,5,IN-00337,3,P3,Sprinkler damage,56.4
+2026-06-03,3,1,IN-00338,3,P2,Dust complaint,66.8
+2026-06-03,3,2,IN-00339,3,P3,Garbage blackspot,31.6
+2026-06-03,3,6,IN-00340,3,P3,Footage request,57.5
+2026-06-03,4,3,IN-00341,3,P3,Contaminated supply complaint,71.3
+2026-06-04,1,6,IN-00342,3,P3,Vandalised camera,36.4
+2026-06-04,2,6,IN-00343,7,P3,Vandalised camera,
+2026-06-04,3,1,IN-00344,3,P2,Open burning,28.8
+2026-06-04,4,5,IN-00345,3,P2,Overwatering,7.0
+2026-06-05,1,2,IN-00346,7,P2,Missed collection complaint,
+2026-06-05,1,4,IN-00347,3,P2,Power outage,47.2
+2026-06-05,2,2,IN-00348,3,P3,Garbage blackspot,8.7
+2026-06-05,2,5,IN-00349,3,P2,Overwatering,18.0
+2026-06-05,2,6,IN-00350,3,P2,Footage request,30.3
+2026-06-05,3,2,IN-00351,7,P2,Missed collection complaint,
+2026-06-05,4,4,IN-00352,3,P3,Power outage,56.4
+2026-06-06,1,3,IN-00353,3,P2,Contaminated supply complaint,31.3
+2026-06-06,1,5,IN-00354,3,P3,Sprinkler damage,50.5
+2026-06-06,3,3,IN-00355,3,P3,Pipe burst,60.1
+2026-06-06,3,4,IN-00356,3,P3,Transformer failure,63.8
+2026-06-06,4,2,IN-00357,3,P3,Garbage blackspot,5.4
+2026-06-07,1,1,IN-00358,3,P2,Dust complaint,50.4
+2026-06-07,1,3,IN-00359,3,P3,Pipe burst,43.7
+2026-06-07,2,1,IN-00360,3,P2,Dust complaint,47.0
+2026-06-07,2,6,IN-00361,3,P2,Footage request,9.4
+2026-06-07,4,3,IN-00362,3,P3,Pipe burst,6.9
+2026-06-07,4,6,IN-00363,3,P1,Footage request,17.1
+2026-06-08,2,4,IN-00364,3,P2,Transformer failure,36.7
+2026-06-08,3,1,IN-00365,3,P2,Open burning,42.9
+2026-06-09,1,1,IN-00366,3,P2,Dust complaint,5.5
+2026-06-09,1,6,IN-00367,3,P3,Vandalised camera,52.9
+2026-06-09,2,5,IN-00368,3,P3,Overwatering,44.4
+2026-06-09,3,5,IN-00369,7,P2,Sprinkler damage,
+2026-06-09,4,3,IN-00370,7,P3,Pipe burst,
+2026-06-10,1,1,IN-00371,3,P3,Dust complaint,36.5
+2026-06-10,1,2,IN-00372,3,P1,Garbage blackspot,66.8
+2026-06-10,1,4,IN-00373,3,P2,Power outage,16.6
+2026-06-10,1,5,IN-00374,3,P1,Sprinkler damage,64.8
+2026-06-10,2,2,IN-00375,3,P3,Garbage blackspot,41.9
+2026-06-10,2,5,IN-00376,3,P2,Overwatering,9.0
+2026-06-10,3,2,IN-00377,3,P2,Garbage blackspot,32.4
+2026-06-10,4,1,IN-00378,3,P1,Dust complaint,41.5
+2026-06-10,4,6,IN-00379,3,P3,Footage request,55.1
+2026-06-11,1,1,IN-00380,3,P3,Dust complaint,56.9
+2026-06-11,2,6,IN-00381,3,P2,Vandalised camera,62.7
+2026-06-11,3,2,IN-00382,3,P3,Garbage blackspot,45.3
+2026-06-11,4,2,IN-00383,3,P3,Garbage blackspot,8.4
+2026-06-11,4,3,IN-00384,3,P3,Pipe burst,13.4
+2026-06-11,4,5,IN-00385,3,P2,Overwatering,64.3
+2026-06-11,4,6,IN-00386,3,P3,Footage request,60.6
+2026-06-12,1,1,IN-00387,3,P3,Open burning,34.1
+2026-06-12,2,1,IN-00388,3,P3,Dust complaint,54.3
+2026-06-12,2,3,IN-00389,3,P3,Pipe burst,22.4
+2026-06-12,2,5,IN-00390,3,P3,Overwatering,24.4
+2026-06-12,3,4,IN-00391,3,P3,Power outage,13.2
+2026-06-12,3,6,IN-00392,3,P3,Footage request,33.6
+2026-06-12,4,3,IN-00393,3,P3,Contaminated supply complaint,50.6
+2026-06-13,1,5,IN-00394,3,P3,Sprinkler damage,6.9
+2026-06-13,4,3,IN-00395,3,P2,Contaminated supply complaint,13.4
+2026-06-13,4,6,IN-00396,3,P1,Vandalised camera,41.8
+2026-06-14,1,1,IN-00397,3,P3,Open burning,3.9
+2026-06-14,1,3,IN-00398,3,P1,Contaminated supply complaint,49.2
+2026-06-14,1,5,IN-00399,3,P3,Sprinkler damage,36.0
+2026-06-14,2,3,IN-00400,3,P2,Pipe burst,18.6
+2026-06-14,2,4,IN-00401,3,P2,Power outage,47.7
+2026-06-14,3,1,IN-00402,3,P3,Open burning,39.3
+2026-06-14,3,4,IN-00403,3,P2,Transformer failure,19.8
+2026-06-14,3,5,IN-00404,3,P3,Overwatering,61.2
+2026-06-14,4,4,IN-00405,3,P2,Power outage,9.6
+2026-06-15,1,1,IN-00406,3,P2,Open burning,7.3
+2026-06-15,1,2,IN-00407,5,P3,Garbage blackspot,
+2026-06-15,2,3,IN-00408,3,P2,Pipe burst,42.6
+2026-06-15,2,5,IN-00409,3,P3,Sprinkler damage,31.3
+2026-06-15,3,1,IN-00410,7,P2,Dust complaint,
+2026-06-15,3,2,IN-00411,3,P2,Missed collection complaint,66.3
+2026-06-15,3,3,IN-00412,3,P3,Contaminated supply complaint,39.7
+2026-06-15,3,4,IN-00413,3,P2,Transformer failure,17.2
+2026-06-15,4,3,IN-00414,3,P3,Contaminated supply complaint,53.0
+2026-06-15,4,4,IN-00415,3,P1,Power outage,28.7
+2026-06-16,1,1,IN-00416,3,P3,Open burning,14.3
+2026-06-16,1,2,IN-00417,3,P3,Missed collection complaint,58.9
+2026-06-16,1,5,IN-00418,3,P2,Overwatering,52.6
+2026-06-16,2,1,IN-00419,3,P2,Dust complaint,10.4
+2026-06-16,2,6,IN-00420,3,P1,Vandalised camera,40.0
+2026-06-16,3,4,IN-00421,3,P3,Power outage,72.0
+2026-06-16,4,2,IN-00422,3,P1,Garbage blackspot,24.9
+2026-06-17,1,2,IN-00423,3,P3,Garbage blackspot,56.4
+2026-06-17,2,1,IN-00424,3,P3,Dust complaint,70.4
+2026-06-17,2,2,IN-00425,3,P2,Garbage blackspot,34.0
+2026-06-17,2,6,IN-00426,3,P3,Vandalised camera,27.4
+2026-06-17,3,1,IN-00427,3,P2,Open burning,17.6
+2026-06-17,3,4,IN-00428,3,P3,Transformer failure,28.9
+2026-06-17,3,6,IN-00429,3,P1,Footage request,68.4
+2026-06-18,1,2,IN-00430,3,P2,Garbage blackspot,41.3
+2026-06-18,1,4,IN-00431,3,P3,Transformer failure,8.7
+2026-06-18,2,2,IN-00432,3,P2,Garbage blackspot,3.2
+2026-06-18,3,2,IN-00433,3,P2,Missed collection complaint,34.0
+2026-06-18,3,5,IN-00434,3,P3,Sprinkler damage,49.8
+2026-06-18,4,1,IN-00435,3,P3,Open burning,39.4
+2026-06-18,4,3,IN-00436,3,P3,Pipe burst,25.8
+2026-06-19,1,5,IN-00437,3,P3,Sprinkler damage,57.2
+2026-06-19,2,1,IN-00438,3,P3,Dust complaint,47.0
+2026-06-19,2,2,IN-00439,3,P2,Missed collection complaint,33.8
+2026-06-19,2,3,IN-00440,3,P2,Pipe burst,7.1
+2026-06-19,2,6,IN-00441,3,P3,Vandalised camera,49.9
+2026-06-19,3,2,IN-00442,3,P1,Garbage blackspot,29.7
+2026-06-19,3,4,IN-00443,3,P2,Transformer failure,61.9
+2026-06-19,4,5,IN-00444,3,P2,Overwatering,36.1
+2026-06-19,4,6,IN-00445,3,P3,Vandalised camera,41.6
+2026-06-20,2,1,IN-00446,3,P1,Open burning,29.1
+2026-06-20,2,4,IN-00447,3,P3,Transformer failure,16.3
+2026-06-20,3,5,IN-00448,3,P3,Overwatering,42.9
+2026-06-20,4,2,IN-00449,3,P2,Garbage blackspot,2.0
+2026-06-21,3,1,IN-00450,3,P3,Open burning,9.8
+2026-06-21,3,2,IN-00451,3,P2,Missed collection complaint,16.1
+2026-06-21,3,6,IN-00452,3,P3,Vandalised camera,2.6
+2026-06-21,4,2,IN-00453,3,P1,Missed collection complaint,12.8
+2026-06-21,4,4,IN-00454,3,P2,Power outage,8.8
+2026-06-21,4,5,IN-00455,3,P3,Sprinkler damage,2.1
+2026-06-22,1,3,IN-00456,3,P2,Contaminated supply complaint,70.7
+2026-06-22,2,2,IN-00457,3,P3,Missed collection complaint,20.7
+2026-06-22,2,6,IN-00458,3,P1,Footage request,49.2
+2026-06-22,3,2,IN-00459,3,P3,Missed collection complaint,12.2
+2026-06-22,3,3,IN-00460,3,P2,Contaminated supply complaint,46.9
+2026-06-22,4,1,IN-00461,3,P2,Dust complaint,68.1
+2026-06-22,4,3,IN-00462,3,P1,Contaminated supply complaint,17.4
+2026-06-23,2,1,IN-00463,3,P2,Open burning,6.4
+2026-06-23,3,1,IN-00464,3,P2,Dust complaint,4.7
+2026-06-23,3,2,IN-00465,3,P2,Missed collection complaint,36.8
+2026-06-23,3,4,IN-00466,3,P2,Power outage,3.5
+2026-06-23,3,5,IN-00467,3,P2,Sprinkler damage,28.4
+2026-06-24,1,2,IN-00468,3,P1,Garbage blackspot,27.6
+2026-06-24,2,3,IN-00469,3,P3,Contaminated supply complaint,57.5
+2026-06-24,3,2,IN-00470,3,P3,Missed collection complaint,40.3
+2026-06-24,3,5,IN-00471,3,P3,Sprinkler damage,9.3
+2026-06-24,3,6,IN-00472,3,P1,Vandalised camera,71.1
+2026-06-24,4,2,IN-00473,3,P3,Missed collection complaint,30.5
+2026-06-24,4,4,IN-00474,3,P3,Transformer failure,22.7
+2026-06-24,4,6,IN-00475,3,P3,Footage request,63.1
+2026-06-25,1,4,IN-00476,3,P3,Power outage,17.2
+2026-06-25,1,5,IN-00477,3,P3,Sprinkler damage,50.6
+2026-06-25,2,2,IN-00478,3,P3,Missed collection complaint,7.7
+2026-06-25,2,4,IN-00479,3,P2,Transformer failure,50.6
+2026-06-25,4,2,IN-00480,3,P3,Garbage blackspot,58.9
+2026-06-25,4,5,IN-00481,3,P2,Sprinkler damage,47.5
+2026-06-26,1,3,IN-00482,3,P3,Pipe burst,58.1
+2026-06-26,1,4,IN-00483,3,P3,Power outage,10.1
+2026-06-26,1,6,IN-00484,3,P2,Footage request,56.7
+2026-06-26,2,4,IN-00485,3,P2,Transformer failure,29.0
+2026-06-26,4,6,IN-00486,3,P2,Footage request,23.5
+2026-06-27,1,2,IN-00487,3,P3,Missed collection complaint,52.0
+2026-06-27,1,5,IN-00488,7,P2,Overwatering,
+2026-06-27,2,4,IN-00489,3,P3,Power outage,42.7
+2026-06-27,2,5,IN-00490,3,P3,Overwatering,13.6
+2026-06-27,4,1,IN-00491,3,P3,Dust complaint,27.6
+2026-06-27,4,2,IN-00492,3,P3,Missed collection complaint,70.0
+2026-06-27,4,3,IN-00493,3,P2,Pipe burst,18.8
+2026-06-27,4,5,IN-00494,3,P3,Overwatering,33.4
+2026-06-27,4,6,IN-00495,3,P3,Vandalised camera,43.4
+2026-06-28,1,4,IN-00496,3,P2,Transformer failure,7.0
+2026-06-28,2,2,IN-00497,3,P2,Missed collection complaint,6.2
+2026-06-28,3,1,IN-00498,3,P1,Open burning,51.3
+2026-06-28,3,2,IN-00499,3,P3,Missed collection complaint,57.1
+2026-06-28,3,3,IN-00500,3,P3,Contaminated supply complaint,41.1
+2026-06-28,3,5,IN-00501,3,P1,Overwatering,8.4
+2026-06-28,3,6,IN-00502,3,P3,Vandalised camera,46.7
+2026-06-28,4,1,IN-00503,3,P3,Dust complaint,59.8
+2026-06-28,4,3,IN-00504,3,P2,Pipe burst,71.5
+2026-06-28,4,5,IN-00505,3,P2,Sprinkler damage,55.0
+2026-06-28,4,6,IN-00506,3,P2,Footage request,62.3
+2026-06-29,2,5,IN-00507,3,P3,Sprinkler damage,19.9
+2026-06-29,3,1,IN-00508,3,P2,Dust complaint,55.4
+2026-06-29,4,1,IN-00509,3,P2,Open burning,13.4
+2026-06-29,4,2,IN-00510,3,P1,Missed collection complaint,20.1
+2026-06-29,4,3,IN-00511,3,P2,Pipe burst,3.0
+2026-06-29,4,5,IN-00512,3,P3,Sprinkler damage,42.6
+2026-06-29,4,6,IN-00513,3,P1,Footage request,7.5
+2026-06-30,1,4,IN-00514,3,P3,Power outage,14.1
+2026-06-30,2,2,IN-00515,3,P3,Missed collection complaint,55.6
+2026-06-30,2,3,IN-00516,3,P3,Pipe burst,29.3
+2026-06-30,2,4,IN-00517,3,P3,Transformer failure,39.3
+2026-06-30,3,5,IN-00518,3,P3,Sprinkler damage,5.9
+2026-06-30,3,6,IN-00519,3,P3,Vandalised camera,27.3
+2026-07-01,1,1,IN-00520,3,P3,Dust complaint,44.9
+2026-07-01,1,2,IN-00521,3,P2,Garbage blackspot,53.5
+2026-07-01,1,4,IN-00522,3,P3,Power outage,46.8
+2026-07-01,1,6,IN-00523,3,P3,Vandalised camera,17.9
+2026-07-01,2,2,IN-00524,3,P3,Garbage blackspot,34.3
+2026-07-01,2,3,IN-00525,3,P3,Pipe burst,28.4
+2026-07-01,2,4,IN-00526,3,P3,Power outage,54.2
+2026-07-01,2,6,IN-00527,3,P2,Footage request,7.7
+2026-07-01,3,2,IN-00528,3,P2,Missed collection complaint,32.1
+2026-07-01,3,4,IN-00529,7,P3,Transformer failure,
+2026-07-01,4,1,IN-00530,3,P1,Dust complaint,66.0
+2026-07-02,1,2,IN-00531,3,P2,Garbage blackspot,25.0
+2026-07-02,2,2,IN-00532,3,P2,Garbage blackspot,16.8
+2026-07-02,2,5,IN-00533,3,P3,Sprinkler damage,50.5
+2026-07-02,2,6,IN-00534,3,P1,Footage request,29.3
+2026-07-02,3,1,IN-00535,3,P3,Dust complaint,33.0
+2026-07-02,3,2,IN-00536,3,P3,Garbage blackspot,10.9
+2026-07-02,3,3,IN-00537,3,P3,Pipe burst,30.8
+2026-07-02,3,4,IN-00538,3,P2,Power outage,56.5
+2026-07-02,4,2,IN-00539,3,P2,Garbage blackspot,31.3
+2026-07-02,4,4,IN-00540,3,P3,Power outage,39.2
+2026-07-02,4,6,IN-00541,3,P1,Vandalised camera,50.8
+2026-07-03,1,3,IN-00542,3,P2,Pipe burst,64.0
+2026-07-03,2,3,IN-00543,3,P2,Pipe burst,44.1
+2026-07-03,2,5,IN-00544,3,P3,Sprinkler damage,41.3
+2026-07-03,3,4,IN-00545,3,P2,Power outage,61.0
+2026-07-03,4,5,IN-00546,3,P3,Overwatering,54.2
+2026-07-04,2,4,IN-00547,3,P3,Transformer failure,67.3
+2026-07-04,3,4,IN-00548,3,P2,Transformer failure,63.3
+2026-07-04,3,5,IN-00549,3,P2,Sprinkler damage,45.6
+2026-07-04,4,5,IN-00550,3,P3,Sprinkler damage,30.5
+2026-07-04,4,6,IN-00551,3,P1,Footage request,30.8
+2026-07-05,1,2,IN-00552,3,P1,Missed collection complaint,52.4
+2026-07-05,1,3,IN-00553,3,P2,Pipe burst,30.9
+2026-07-05,3,6,IN-00554,3,P3,Footage request,23.6
+2026-07-05,4,3,IN-00555,3,P3,Pipe burst,32.6
+2026-07-05,4,5,IN-00556,3,P2,Overwatering,71.3
+2026-07-06,1,1,IN-00557,3,P3,Open burning,17.9
+2026-07-06,1,3,IN-00558,3,P2,Pipe burst,34.6
+2026-07-06,1,4,IN-00559,3,P3,Transformer failure,33.9
+2026-07-06,2,3,IN-00560,3,P3,Pipe burst,13.7
+2026-07-06,2,6,IN-00561,3,P2,Vandalised camera,42.5
+2026-07-06,3,3,IN-00562,3,P1,Pipe burst,47.0
+2026-07-06,4,1,IN-00563,3,P2,Open burning,13.8
+2026-07-06,4,5,IN-00564,3,P3,Overwatering,57.9
+2026-07-07,1,2,IN-00565,3,P1,Missed collection complaint,27.8
+2026-07-07,1,4,IN-00566,3,P3,Transformer failure,9.6
+2026-07-07,2,5,IN-00567,3,P2,Overwatering,36.5
+2026-07-07,2,6,IN-00568,3,P3,Vandalised camera,16.2
+2026-07-07,3,3,IN-00569,3,P3,Contaminated supply complaint,9.2
+2026-07-07,3,5,IN-00570,3,P3,Overwatering,63.9
+2026-07-08,1,3,IN-00571,3,P3,Contaminated supply complaint,34.1
+2026-07-08,2,2,IN-00572,3,P3,Garbage blackspot,55.9
+2026-07-08,2,4,IN-00573,3,P2,Transformer failure,57.3
+2026-07-08,2,6,IN-00574,3,P2,Vandalised camera,36.1
+2026-07-08,3,6,IN-00575,3,P1,Vandalised camera,27.7
+2026-07-09,1,2,IN-00576,3,P3,Missed collection complaint,31.1
+2026-07-09,1,4,IN-00577,3,P2,Transformer failure,13.1
+2026-07-09,1,5,IN-00578,3,P3,Overwatering,22.1
+2026-07-09,1,6,IN-00579,3,P3,Vandalised camera,30.4
+2026-07-09,2,1,IN-00580,3,P3,Open burning,34.1
+2026-07-09,2,3,IN-00581,3,P3,Pipe burst,45.5
+2026-07-09,2,5,IN-00582,3,P3,Sprinkler damage,52.6
+2026-07-09,3,1,IN-00583,3,P1,Open burning,59.1
+2026-07-09,3,2,IN-00584,3,P2,Garbage blackspot,34.1
+2026-07-09,3,5,IN-00585,3,P1,Overwatering,42.2
+2026-07-09,4,2,IN-00586,3,P3,Garbage blackspot,23.0
+2026-07-09,4,6,IN-00587,3,P3,Vandalised camera,60.7
+2026-07-10,1,1,IN-00588,3,P3,Dust complaint,61.5
+2026-07-10,1,2,IN-00589,3,P3,Garbage blackspot,41.1
+2026-07-10,1,3,IN-00590,3,P2,Contaminated supply complaint,32.4
+2026-07-10,3,2,IN-00591,3,P2,Garbage blackspot,60.9
+2026-07-10,3,5,IN-00592,3,P2,Overwatering,10.3
+2026-07-10,3,6,IN-00593,3,P3,Footage request,58.3
+2026-07-10,4,3,IN-00594,3,P2,Pipe burst,10.6
+2026-07-10,4,5,IN-00595,3,P2,Overwatering,26.3
+2026-07-10,4,6,IN-00596,5,P2,Vandalised camera,
+2026-07-11,1,2,IN-00597,3,P2,Missed collection complaint,67.7
+2026-07-11,1,5,IN-00598,3,P3,Overwatering,10.5
+2026-07-11,2,1,IN-00599,3,P3,Open burning,14.0
+2026-07-11,2,4,IN-00600,3,P3,Transformer failure,41.8
+2026-07-11,3,3,IN-00601,3,P2,Contaminated supply complaint,48.3
+2026-07-11,3,5,IN-00602,3,P3,Overwatering,62.1
+2026-07-11,4,1,IN-00603,3,P2,Dust complaint,55.7
+2026-07-11,4,4,IN-00604,3,P2,Transformer failure,26.8
+2026-07-12,1,4,IN-00605,3,P2,Power outage,44.9
+2026-07-12,1,5,IN-00606,3,P3,Sprinkler damage,34.9
+2026-07-12,2,1,IN-00607,3,P3,Open burning,71.0
+2026-07-12,2,5,IN-00608,3,P2,Overwatering,71.1
+2026-07-12,3,3,IN-00609,3,P3,Pipe burst,16.6
+2026-07-12,3,4,IN-00610,3,P1,Power outage,39.6
+2026-07-12,3,5,IN-00611,3,P2,Overwatering,56.0
+2026-07-12,3,6,IN-00612,3,P2,Footage request,3.3
+2026-07-12,4,2,IN-00613,3,P3,Missed collection complaint,55.3
+2026-07-13,1,4,IN-00614,3,P3,Power outage,10.3
+2026-07-13,3,6,IN-00615,3,P3,Footage request,37.8
+2026-07-13,4,5,IN-00616,3,P3,Sprinkler damage,62.9
+2026-07-14,1,2,IN-00617,3,P3,Garbage blackspot,45.0
+2026-07-14,1,4,IN-00618,3,P3,Power outage,13.5
+2026-07-14,2,2,IN-00619,3,P2,Garbage blackspot,8.2
+2026-07-14,3,1,IN-00620,3,P1,Open burning,26.3
+2026-07-14,3,2,IN-00621,3,P3,Missed collection complaint,68.4
+2026-07-14,3,4,IN-00622,3,P3,Transformer failure,44.9
+2026-07-14,4,1,IN-00623,3,P3,Open burning,70.2
+2026-07-14,4,2,IN-00624,3,P1,Garbage blackspot,29.2
+2026-07-14,4,4,IN-00625,3,P3,Power outage,6.2
+2026-07-15,1,2,IN-00626,3,P2,Missed collection complaint,52.7
+2026-07-15,1,5,IN-00627,3,P3,Sprinkler damage,40.1
+2026-07-15,2,6,IN-00628,3,P3,Vandalised camera,23.3
+2026-07-15,3,3,IN-00629,3,P2,Pipe burst,61.7
+2026-07-15,3,4,IN-00630,3,P2,Power outage,8.4
+2026-07-15,3,5,IN-00631,3,P3,Overwatering,17.5
+2026-07-16,2,2,IN-00632,3,P2,Missed collection complaint,66.4
+2026-07-16,2,6,IN-00633,3,P3,Footage request,46.8
+2026-07-16,3,2,IN-00634,7,P3,Garbage blackspot,
+2026-07-16,3,3,IN-00635,3,P2,Contaminated supply complaint,37.2
+2026-07-16,4,2,IN-00636,3,P1,Garbage blackspot,55.7
+2026-07-16,4,3,IN-00637,3,P3,Pipe burst,67.7
+2026-07-16,4,6,IN-00638,3,P2,Footage request,65.0
+2026-07-17,1,3,IN-00639,7,P2,Pipe burst,
+2026-07-17,1,5,IN-00640,3,P2,Sprinkler damage,27.5
+2026-07-17,2,2,IN-00641,3,P2,Garbage blackspot,61.6
+2026-07-17,2,3,IN-00642,3,P3,Pipe burst,43.8
+2026-07-17,2,4,IN-00643,3,P3,Transformer failure,10.8
+2026-07-17,4,4,IN-00644,3,P2,Transformer failure,24.4
+2026-07-18,1,2,IN-00645,3,P3,Missed collection complaint,51.9
+2026-07-18,1,6,IN-00646,3,P2,Footage request,60.3
+2026-07-18,2,1,IN-00647,3,P1,Dust complaint,65.2
+2026-07-18,3,2,IN-00648,3,P2,Missed collection complaint,22.7
+2026-07-18,3,3,IN-00649,3,P1,Contaminated supply complaint,56.8
+2026-07-18,3,6,IN-00650,3,P3,Vandalised camera,49.8
+2026-07-18,4,4,IN-00651,3,P3,Power outage,30.5
+2026-07-18,4,5,IN-00652,3,P2,Sprinkler damage,70.8
+2026-07-18,4,6,IN-00653,3,P3,Footage request,68.0
+2026-07-19,1,1,IN-00654,3,P2,Dust complaint,60.2
+2026-07-19,1,6,IN-00655,3,P2,Vandalised camera,63.9
+2026-07-19,2,4,IN-00656,3,P3,Transformer failure,14.8
+2026-07-19,3,3,IN-00657,3,P2,Contaminated supply complaint,66.9
+2026-07-19,4,1,IN-00658,3,P3,Open burning,50.7
+2026-07-19,4,2,IN-00659,3,P1,Garbage blackspot,63.9
+2026-07-19,4,4,IN-00660,3,P2,Power outage,9.7
+2026-07-19,4,5,IN-00661,3,P1,Sprinkler damage,36.5
+2026-07-19,4,6,IN-00662,3,P3,Footage request,63.8
+2026-07-20,1,1,IN-00663,3,P2,Open burning,20.3
+2026-07-20,1,2,IN-00664,3,P2,Missed collection complaint,43.4
+2026-07-20,1,3,IN-00665,3,P3,Pipe burst,47.2
+2026-07-20,1,5,IN-00666,3,P3,Overwatering,19.5
+2026-07-20,1,6,IN-00667,3,P2,Footage request,3.0
+2026-07-20,2,4,IN-00668,3,P3,Power outage,49.3
+2026-07-20,2,5,IN-00669,3,P3,Overwatering,16.0
+2026-07-21,1,2,IN-00670,3,P2,Missed collection complaint,68.6
+2026-07-21,1,4,IN-00671,3,P2,Power outage,55.0
+2026-07-21,2,3,IN-00672,3,P2,Contaminated supply complaint,9.8
+2026-07-21,3,1,IN-00673,3,P3,Dust complaint,3.2
+2026-07-21,3,3,IN-00674,3,P2,Pipe burst,13.6
+2026-07-21,3,4,IN-00675,3,P3,Power outage,7.6
+2026-07-21,4,4,IN-00676,3,P2,Power outage,22.8
+2026-07-21,4,5,IN-00677,3,P2,Sprinkler damage,16.0
+2026-07-22,1,2,IN-00678,3,P3,Missed collection complaint,18.6
+2026-07-22,1,5,IN-00679,3,P3,Sprinkler damage,33.0
+2026-07-22,2,1,IN-00680,7,P3,Open burning,
+2026-07-22,2,5,IN-00681,3,P3,Sprinkler damage,51.1
+2026-07-22,3,3,IN-00682,3,P2,Contaminated supply complaint,50.0
+2026-07-22,3,5,IN-00683,3,P3,Overwatering,47.4
+2026-07-22,4,1,IN-00684,3,P2,Dust complaint,57.2
+2026-07-22,4,2,IN-00685,3,P2,Missed collection complaint,65.1
+2026-07-22,4,4,IN-00686,3,P3,Transformer failure,3.5
+2026-07-23,1,6,IN-00687,3,P3,Footage request,40.3
+2026-07-23,2,3,IN-00688,3,P1,Pipe burst,16.3
+2026-07-23,2,4,IN-00689,3,P2,Transformer failure,34.2
+2026-07-23,2,5,IN-00690,3,P3,Sprinkler damage,69.0
+2026-07-23,3,2,IN-00691,3,P2,Missed collection complaint,17.0
+2026-07-23,3,4,IN-00692,3,P1,Transformer failure,62.2
+2026-07-23,4,4,IN-00693,3,P3,Transformer failure,32.3
+2026-07-24,1,1,IN-00694,3,P2,Dust complaint,54.0
+2026-07-24,1,5,IN-00695,3,P2,Overwatering,15.5
+2026-07-24,2,1,IN-00696,3,P2,Dust complaint,52.7
+2026-07-24,2,2,IN-00697,3,P3,Garbage blackspot,38.5
+2026-07-24,2,3,IN-00698,7,P3,Pipe burst,
+2026-07-24,4,3,IN-00699,3,P1,Contaminated supply complaint,3.4
+2026-07-25,2,1,IN-00700,3,P3,Dust complaint,23.6
+2026-07-25,2,2,IN-00701,3,P3,Missed collection complaint,27.3
+2026-07-25,2,4,IN-00702,3,P3,Power outage,29.9
+2026-07-25,2,5,IN-00703,3,P3,Overwatering,57.2
+2026-07-25,2,6,IN-00704,3,P1,Vandalised camera,25.3
+2026-07-25,3,1,IN-00705,3,P3,Open burning,14.2
+2026-07-25,3,4,IN-00706,3,P2,Transformer failure,43.4
+2026-07-25,4,1,IN-00707,3,P1,Dust complaint,48.2
+2026-07-25,4,3,IN-00708,3,P3,Contaminated supply complaint,2.2
+2026-07-25,4,5,IN-00709,3,P2,Overwatering,37.9
+2026-07-25,4,6,IN-00710,3,P3,Footage request,57.0
+2026-07-26,2,4,IN-00711,3,P3,Transformer failure,26.4
+2026-07-26,3,1,IN-00712,3,P3,Dust complaint,3.3
+2026-07-26,3,2,IN-00713,3,P3,Missed collection complaint,16.6
+2026-07-26,3,3,IN-00714,3,P2,Pipe burst,42.9
+2026-07-26,3,4,IN-00715,3,P1,Transformer failure,11.4
+2026-07-26,4,2,IN-00716,3,P1,Garbage blackspot,18.5
+2026-07-26,4,4,IN-00717,3,P2,Transformer failure,23.9
+2026-07-27,1,5,IN-00718,3,P2,Overwatering,43.0
+2026-07-27,2,4,IN-00719,3,P2,Transformer failure,57.7
+2026-07-27,2,5,IN-00720,3,P2,Sprinkler damage,11.0
+2026-07-27,3,2,IN-00721,3,P2,Garbage blackspot,19.7
+2026-07-27,3,4,IN-00722,3,P3,Transformer failure,38.8
+2026-07-27,3,5,IN-00723,5,P2,Overwatering,
+2026-07-27,4,1,IN-00724,3,P2,Open burning,15.1
+2026-07-27,4,6,IN-00725,3,P1,Vandalised camera,40.6
+2026-07-28,1,3,IN-00726,3,P3,Pipe burst,3.0
+2026-07-28,1,5,IN-00727,3,P2,Sprinkler damage,69.3
+2026-07-28,2,5,IN-00728,3,P2,Sprinkler damage,9.7
+2026-07-28,3,5,IN-00729,3,P3,Overwatering,64.7
+2026-07-28,3,6,IN-00730,3,P3,Vandalised camera,58.8
+2026-07-28,4,6,IN-00731,3,P3,Vandalised camera,18.0
+2026-07-29,1,6,IN-00732,3,P3,Vandalised camera,67.2
+2026-07-29,3,6,IN-00733,3,P2,Footage request,10.6
+2026-07-29,4,5,IN-00734,3,P1,Overwatering,16.3
+2026-07-30,1,1,IN-00735,3,P3,Dust complaint,23.1
+2026-07-30,2,2,IN-00736,3,P3,Missed collection complaint,7.8
+2026-07-30,3,1,IN-00737,3,P2,Open burning,3.2
+2026-07-30,3,3,IN-00738,3,P3,Pipe burst,18.6
+2026-07-30,3,6,IN-00739,3,P2,Footage request,30.4
+2026-07-30,4,2,IN-00740,3,P1,Missed collection complaint,6.6
+2026-07-30,4,4,IN-00741,3,P2,Power outage,19.3
+2026-07-31,1,1,IN-00742,3,P3,Dust complaint,38.1
+2026-07-31,2,5,IN-00743,3,P2,Sprinkler damage,70.1
+2026-07-31,3,1,IN-00744,3,P3,Dust complaint,12.2
+2026-07-31,3,2,IN-00745,3,P2,Missed collection complaint,47.4
+2026-07-31,3,4,IN-00746,3,P3,Power outage,4.2
+2026-07-31,3,5,IN-00747,3,P2,Sprinkler damage,2.7
+2026-07-31,3,6,IN-00748,3,P3,Footage request,70.7
+2026-07-31,4,4,IN-00749,3,P2,Power outage,54.2
+2026-08-01,1,3,IN-00750,3,P3,Pipe burst,41.9
+2026-08-01,2,2,IN-00751,3,P2,Garbage blackspot,56.7
+2026-08-01,2,3,IN-00752,3,P3,Contaminated supply complaint,22.2
+2026-08-01,2,4,IN-00753,3,P2,Power outage,54.2
+2026-08-01,2,6,IN-00754,3,P3,Vandalised camera,25.3
+2026-08-01,3,5,IN-00755,3,P3,Sprinkler damage,36.8
+2026-08-02,1,5,IN-00756,3,P3,Sprinkler damage,33.3
+2026-08-02,2,1,IN-00757,3,P1,Open burning,6.7
+2026-08-02,2,3,IN-00758,3,P2,Pipe burst,30.3
+2026-08-02,3,5,IN-00759,7,P2,Overwatering,
+2026-08-02,4,2,IN-00760,3,P3,Missed collection complaint,51.7
+2026-08-02,4,3,IN-00761,3,P2,Pipe burst,54.9
+2026-08-02,4,4,IN-00762,3,P3,Transformer failure,61.1
+2026-08-03,1,5,IN-00763,3,P3,Overwatering,60.4
+2026-08-03,1,6,IN-00764,3,P3,Footage request,18.9
+2026-08-03,2,4,IN-00765,3,P3,Transformer failure,27.7
+2026-08-03,2,6,IN-00766,3,P3,Footage request,17.1
+2026-08-03,3,1,IN-00767,3,P2,Open burning,48.2
+2026-08-03,3,6,IN-00768,3,P3,Footage request,28.2
+2026-08-04,1,6,IN-00769,3,P3,Footage request,45.2
+2026-08-04,3,3,IN-00770,3,P3,Contaminated supply complaint,34.0
+2026-08-04,3,5,IN-00771,3,P2,Overwatering,54.5
+2026-08-04,3,6,IN-00772,3,P2,Vandalised camera,3.6
+2026-08-04,4,4,IN-00773,3,P3,Transformer failure,13.0
+2026-08-05,1,3,IN-00774,3,P2,Pipe burst,67.9
+2026-08-05,2,5,IN-00775,3,P2,Overwatering,46.8
+2026-08-05,3,1,IN-00776,3,P2,Dust complaint,42.7
+2026-08-05,3,3,IN-00777,7,P2,Contaminated supply complaint,
+2026-08-05,4,3,IN-00778,3,P1,Contaminated supply complaint,36.7
+2026-08-06,1,6,IN-00779,3,P2,Vandalised camera,14.2
+2026-08-06,2,2,IN-00780,3,P3,Missed collection complaint,37.9
+2026-08-06,2,3,IN-00781,3,P3,Pipe burst,46.0
+2026-08-06,3,1,IN-00782,3,P1,Dust complaint,13.6
+2026-08-06,3,4,IN-00783,3,P3,Transformer failure,19.1
+2026-08-06,3,6,IN-00784,3,P3,Vandalised camera,12.0
+2026-08-06,4,3,IN-00785,3,P3,Contaminated supply complaint,38.5
+2026-08-07,1,6,IN-00786,3,P3,Vandalised camera,62.7
+2026-08-07,3,1,IN-00787,3,P2,Open burning,69.6
+2026-08-07,3,4,IN-00788,3,P2,Power outage,2.2
+2026-08-07,3,5,IN-00789,3,P2,Overwatering,47.4
+2026-08-07,4,2,IN-00790,3,P2,Missed collection complaint,43.2
+2026-08-07,4,3,IN-00791,3,P2,Contaminated supply complaint,5.8
+2026-08-07,4,4,IN-00792,3,P3,Power outage,6.6
+2026-08-08,1,1,IN-00793,3,P1,Open burning,27.4
+2026-08-08,1,3,IN-00794,3,P3,Contaminated supply complaint,31.6
+2026-08-08,1,4,IN-00795,3,P3,Transformer failure,54.8
+2026-08-08,1,6,IN-00796,3,P3,Footage request,45.3
+2026-08-08,4,1,IN-00797,3,P1,Open burning,25.1
+2026-08-08,4,4,IN-00798,3,P3,Power outage,40.5
+2026-08-08,4,6,IN-00799,3,P2,Vandalised camera,10.8
+2026-08-09,1,1,IN-00800,3,P2,Open burning,44.4
+2026-08-09,1,4,IN-00801,3,P2,Transformer failure,39.0
+2026-08-09,2,3,IN-00802,3,P1,Contaminated supply complaint,53.7
+2026-08-09,3,1,IN-00803,3,P3,Open burning,48.1
+2026-08-09,3,6,IN-00804,3,P3,Vandalised camera,50.8
+2026-08-09,4,1,IN-00805,3,P1,Open burning,23.5
+2026-08-09,4,6,IN-00806,3,P2,Vandalised camera,59.4
+2026-08-10,2,1,IN-00807,3,P1,Dust complaint,2.1
+2026-08-10,2,5,IN-00808,3,P2,Sprinkler damage,19.1
+2026-08-10,3,1,IN-00809,3,P3,Open burning,37.0
+2026-08-10,3,6,IN-00810,3,P3,Vandalised camera,56.8
+2026-08-10,4,1,IN-00811,3,P3,Dust complaint,47.0
+2026-08-10,4,6,IN-00812,3,P3,Footage request,60.9
+2026-08-11,1,2,IN-00813,3,P2,Garbage blackspot,60.0
+2026-08-11,2,2,IN-00814,3,P3,Missed collection complaint,41.3
+2026-08-11,2,4,IN-00815,3,P3,Power outage,20.7
+2026-08-11,2,5,IN-00816,3,P3,Overwatering,58.5
+2026-08-11,2,6,IN-00817,3,P3,Vandalised camera,29.0
+2026-08-11,3,3,IN-00818,3,P3,Contaminated supply complaint,24.0
+2026-08-11,4,6,IN-00819,3,P2,Footage request,24.6
+2026-08-12,1,2,IN-00820,3,P2,Garbage blackspot,50.2
+2026-08-12,2,1,IN-00821,3,P2,Open burning,59.2
+2026-08-12,2,4,IN-00822,3,P3,Power outage,25.0
+2026-08-12,2,6,IN-00823,3,P3,Vandalised camera,60.5
+2026-08-12,3,2,IN-00824,3,P1,Missed collection complaint,15.4
+2026-08-12,3,3,IN-00825,7,P2,Contaminated supply complaint,
+2026-08-12,3,4,IN-00826,3,P1,Transformer failure,24.0
+2026-08-12,4,1,IN-00827,3,P3,Dust complaint,54.7
+2026-08-12,4,2,IN-00828,3,P2,Missed collection complaint,40.3
+2026-08-12,4,4,IN-00829,3,P2,Transformer failure,19.0
+2026-08-12,4,5,IN-00830,3,P2,Overwatering,14.2
+2026-08-13,1,2,IN-00831,3,P2,Missed collection complaint,42.9
+2026-08-13,2,3,IN-00832,3,P3,Pipe burst,40.0
+2026-08-13,2,4,IN-00833,3,P3,Transformer failure,11.4
+2026-08-13,2,5,IN-00834,3,P3,Sprinkler damage,24.3
+2026-08-13,2,6,IN-00835,3,P2,Footage request,36.0
+2026-08-13,3,1,IN-00836,3,P3,Dust complaint,4.3
+2026-08-13,4,2,IN-00837,3,P3,Garbage blackspot,5.6
+2026-08-13,4,4,IN-00838,3,P3,Transformer failure,50.9
+2026-08-13,4,6,IN-00839,3,P3,Footage request,56.6
+2026-08-14,1,2,IN-00840,3,P3,Missed collection complaint,45.9
+2026-08-14,1,3,IN-00841,3,P2,Pipe burst,67.3
+2026-08-14,2,1,IN-00842,3,P3,Open burning,53.4
+2026-08-14,2,2,IN-00843,3,P3,Garbage blackspot,41.0
+2026-08-14,2,4,IN-00844,3,P3,Transformer failure,3.9
+2026-08-14,2,5,IN-00845,7,P2,Sprinkler damage,
+2026-08-14,3,2,IN-00846,3,P2,Missed collection complaint,12.9
+2026-08-14,4,2,IN-00847,3,P3,Garbage blackspot,8.8
+2026-08-14,4,4,IN-00848,3,P2,Power outage,16.9
+2026-08-14,4,6,IN-00849,3,P1,Footage request,17.1
+2026-08-15,1,4,IN-00850,3,P3,Transformer failure,12.9
+2026-08-15,1,5,IN-00851,3,P2,Overwatering,56.1
+2026-08-15,2,4,IN-00852,3,P2,Power outage,22.5
+2026-08-15,3,5,IN-00853,3,P3,Sprinkler damage,19.2
+2026-08-15,4,6,IN-00854,3,P2,Vandalised camera,36.9
+2026-08-16,1,1,IN-00855,3,P2,Open burning,7.2
+2026-08-16,1,3,IN-00856,3,P3,Contaminated supply complaint,34.4
+2026-08-16,1,6,IN-00857,3,P3,Vandalised camera,61.8
+2026-08-16,2,1,IN-00858,3,P2,Dust complaint,55.7
+2026-08-16,2,3,IN-00859,3,P3,Contaminated supply complaint,62.4
+2026-08-16,2,4,IN-00860,3,P2,Transformer failure,30.2
+2026-08-16,3,3,IN-00861,3,P2,Contaminated supply complaint,63.6
+2026-08-16,4,2,IN-00862,3,P2,Missed collection complaint,44.6
+2026-08-16,4,3,IN-00863,3,P2,Contaminated supply complaint,69.4
+2026-08-16,4,5,IN-00864,3,P3,Sprinkler damage,24.4
+2026-08-16,4,6,IN-00865,3,P3,Footage request,16.9
+2026-08-17,1,4,IN-00866,3,P3,Power outage,32.4
+2026-08-17,2,5,IN-00867,3,P2,Sprinkler damage,40.7
+2026-08-17,2,6,IN-00868,3,P3,Vandalised camera,35.6
+2026-08-17,4,5,IN-00869,3,P3,Overwatering,16.3
+2026-08-18,1,5,IN-00870,3,P2,Overwatering,32.7
+2026-08-18,1,6,IN-00871,3,P3,Footage request,56.6
+2026-08-18,2,1,IN-00872,3,P3,Dust complaint,4.7
+2026-08-18,2,3,IN-00873,3,P3,Contaminated supply complaint,35.1
+2026-08-18,2,5,IN-00874,3,P2,Sprinkler damage,6.8
+2026-08-18,2,6,IN-00875,3,P2,Vandalised camera,38.6
+2026-08-18,3,1,IN-00876,3,P3,Dust complaint,48.1
+2026-08-18,3,3,IN-00877,3,P3,Contaminated supply complaint,33.0
+2026-08-18,3,4,IN-00878,3,P3,Power outage,8.5
+2026-08-18,4,2,IN-00879,3,P2,Missed collection complaint,25.8
+2026-08-19,1,1,IN-00880,3,P2,Dust complaint,19.9
+2026-08-19,1,2,IN-00881,3,P3,Garbage blackspot,36.5
+2026-08-19,1,5,IN-00882,3,P2,Sprinkler damage,71.7
+2026-08-19,2,2,IN-00883,3,P3,Garbage blackspot,63.0
+2026-08-19,2,3,IN-00884,3,P3,Pipe burst,20.6
+2026-08-19,2,4,IN-00885,3,P3,Transformer failure,42.2
+2026-08-19,3,2,IN-00886,3,P2,Garbage blackspot,68.5
+2026-08-19,3,3,IN-00887,3,P2,Pipe burst,5.3
+2026-08-19,3,6,IN-00888,3,P3,Footage request,12.1
+2026-08-19,4,3,IN-00889,3,P2,Pipe burst,61.7
+2026-08-19,4,5,IN-00890,3,P3,Overwatering,40.3
+2026-08-20,1,3,IN-00891,3,P2,Contaminated supply complaint,70.9
+2026-08-20,2,1,IN-00892,3,P1,Open burning,53.7
+2026-08-20,2,3,IN-00893,3,P2,Contaminated supply complaint,16.8
+2026-08-20,3,2,IN-00894,3,P2,Garbage blackspot,8.6
+2026-08-20,3,5,IN-00895,3,P1,Overwatering,27.1
+2026-08-20,4,3,IN-00896,3,P3,Pipe burst,24.2
+2026-08-21,2,1,IN-00897,3,P2,Open burning,3.5
+2026-08-21,2,6,IN-00898,7,P3,Vandalised camera,
+2026-08-21,3,1,IN-00899,3,P3,Dust complaint,60.7
+2026-08-21,3,4,IN-00900,3,P2,Transformer failure,71.9
+2026-08-22,2,3,IN-00901,3,P1,Contaminated supply complaint,25.1
+2026-08-22,2,4,IN-00902,3,P3,Power outage,58.7
+2026-08-22,3,3,IN-00903,7,P2,Pipe burst,
+2026-08-22,3,5,IN-00904,3,P1,Overwatering,51.2
+2026-08-22,4,6,IN-00905,3,P2,Footage request,63.7
+2026-08-23,1,2,IN-00906,3,P2,Garbage blackspot,42.1
+2026-08-23,1,3,IN-00907,3,P3,Contaminated supply complaint,38.2
+2026-08-23,2,1,IN-00908,3,P3,Open burning,3.0
+2026-08-23,2,5,IN-00909,3,P3,Sprinkler damage,31.3
+2026-08-23,3,6,IN-00910,3,P1,Vandalised camera,37.3
+2026-08-23,4,2,IN-00911,3,P3,Garbage blackspot,20.0
+2026-08-23,4,3,IN-00912,3,P1,Pipe burst,57.8
+2026-08-23,4,5,IN-00913,3,P3,Sprinkler damage,8.9
+2026-08-23,4,6,IN-00914,3,P2,Footage request,55.4
+2026-08-24,1,2,IN-00915,3,P3,Missed collection complaint,6.9
+2026-08-24,1,5,IN-00916,3,P2,Overwatering,50.2
+2026-08-24,1,6,IN-00917,3,P3,Footage request,67.7
+2026-08-24,2,1,IN-00918,3,P3,Dust complaint,48.0
+2026-08-24,2,2,IN-00919,3,P3,Missed collection complaint,60.5
+2026-08-24,2,4,IN-00920,3,P3,Transformer failure,64.9
+2026-08-24,2,5,IN-00921,3,P1,Sprinkler damage,68.0
+2026-08-24,2,6,IN-00922,3,P2,Vandalised camera,6.6
+2026-08-24,3,1,IN-00923,3,P1,Open burning,54.2
+2026-08-24,3,2,IN-00924,3,P3,Missed collection complaint,30.4
+2026-08-24,4,1,IN-00925,3,P3,Open burning,31.7
+2026-08-24,4,4,IN-00926,3,P2,Transformer failure,58.0
+2026-08-25,1,3,IN-00927,3,P3,Pipe burst,29.4
+2026-08-25,1,5,IN-00928,3,P3,Overwatering,11.6
+2026-08-25,2,5,IN-00929,3,P2,Sprinkler damage,51.1
+2026-08-25,3,1,IN-00930,3,P3,Open burning,43.4
+2026-08-25,3,4,IN-00931,3,P3,Power outage,52.0
+2026-08-25,4,1,IN-00932,3,P3,Open burning,3.3
+2026-08-25,4,2,IN-00933,3,P3,Garbage blackspot,6.1
+2026-08-25,4,5,IN-00934,3,P2,Sprinkler damage,41.7
+2026-08-25,4,6,IN-00935,3,P3,Footage request,51.2
+2026-08-26,1,2,IN-00936,3,P3,Missed collection complaint,68.9
+2026-08-26,2,1,IN-00937,3,P1,Dust complaint,36.0
+2026-08-26,2,2,IN-00938,3,P3,Garbage blackspot,23.9
+2026-08-26,2,4,IN-00939,3,P1,Power outage,51.1
+2026-08-26,2,6,IN-00940,3,P3,Vandalised camera,52.4
+2026-08-26,3,3,IN-00941,3,P2,Pipe burst,14.0
+2026-08-26,4,2,IN-00942,3,P3,Garbage blackspot,20.0
+2026-08-26,4,3,IN-00943,5,P3,Contaminated supply complaint,
+2026-08-26,4,5,IN-00944,3,P3,Overwatering,44.5
+2026-08-26,4,6,IN-00945,3,P1,Vandalised camera,7.4
+2026-08-27,1,3,IN-00946,3,P3,Contaminated supply complaint,10.7
+2026-08-27,2,1,IN-00947,3,P3,Dust complaint,27.3
+2026-08-27,2,4,IN-00948,3,P1,Power outage,41.0
+2026-08-27,2,6,IN-00949,3,P1,Footage request,68.4
+2026-08-27,3,6,IN-00950,7,P3,Vandalised camera,
+2026-08-27,4,2,IN-00951,3,P3,Garbage blackspot,31.3
+2026-08-27,4,4,IN-00952,3,P3,Power outage,62.0
+2026-08-27,4,6,IN-00953,3,P2,Vandalised camera,52.0
+2026-08-28,1,2,IN-00954,3,P2,Missed collection complaint,28.5
+2026-08-28,2,2,IN-00955,3,P2,Garbage blackspot,41.2
+2026-08-28,3,2,IN-00956,3,P2,Missed collection complaint,69.6
+2026-08-28,3,3,IN-00957,3,P2,Contaminated supply complaint,4.6
+2026-08-28,3,4,IN-00958,3,P3,Transformer failure,16.9
+2026-08-28,4,1,IN-00959,3,P3,Open burning,50.4
+2026-08-28,4,3,IN-00960,3,P3,Contaminated supply complaint,24.2
+2026-08-28,4,5,IN-00961,3,P3,Sprinkler damage,44.5
+2026-08-29,1,6,IN-00962,3,P3,Vandalised camera,31.5
+2026-08-29,3,4,IN-00963,3,P3,Power outage,18.1
+2026-08-29,4,2,IN-00964,3,P2,Missed collection complaint,4.8
+2026-08-29,4,3,IN-00965,3,P3,Contaminated supply complaint,58.7
+2026-08-29,4,4,IN-00966,3,P3,Power outage,4.2
+2026-08-29,4,5,IN-00967,3,P3,Sprinkler damage,6.9
+2026-08-30,1,3,IN-00968,3,P2,Pipe burst,19.4
+2026-08-30,1,6,IN-00969,3,P3,Footage request,4.7
+2026-08-30,2,1,IN-00970,3,P2,Open burning,56.6
+2026-08-30,2,2,IN-00971,3,P3,Garbage blackspot,53.6
+2026-08-30,2,4,IN-00972,3,P3,Transformer failure,64.3
+2026-08-30,3,2,IN-00973,3,P2,Garbage blackspot,44.0
+2026-08-30,3,4,IN-00974,3,P3,Power outage,40.0
+2026-08-30,3,5,IN-00975,3,P3,Sprinkler damage,58.7
+2026-08-30,4,1,IN-00976,3,P3,Open burning,40.1
+2026-08-30,4,2,IN-00977,3,P2,Missed collection complaint,51.2
+2026-08-30,4,3,IN-00978,3,P1,Pipe burst,64.3
+2026-08-30,4,6,IN-00979,3,P2,Footage request,9.0
+2026-08-31,2,5,IN-00980,3,P3,Overwatering,9.1
+2026-08-31,3,2,IN-00981,3,P1,Garbage blackspot,13.2
+2026-08-31,3,5,IN-00982,3,P2,Overwatering,7.3
+2026-08-31,3,6,IN-00983,3,P2,Vandalised camera,37.7
+2026-08-31,4,1,IN-00984,3,P2,Open burning,68.1
+2026-08-31,4,2,IN-00985,3,P2,Missed collection complaint,15.6
+2026-09-01,1,3,IN-00986,3,P3,Pipe burst,63.0
+2026-09-01,1,4,IN-00987,3,P3,Transformer failure,49.4
+2026-09-01,1,6,IN-00988,3,P2,Footage request,15.0
+2026-09-01,2,2,IN-00989,3,P1,Missed collection complaint,53.5
+2026-09-01,2,4,IN-00990,3,P3,Power outage,27.0
+2026-09-01,3,1,IN-00991,3,P2,Dust complaint,69.7
+2026-09-01,3,3,IN-00992,3,P3,Contaminated supply complaint,17.7
+2026-09-01,3,4,IN-00993,3,P2,Power outage,16.6
+2026-09-01,4,1,IN-00994,3,P2,Open burning,52.3
+2026-09-01,4,4,IN-00995,3,P3,Power outage,67.4
+2026-09-02,1,2,IN-00996,3,P3,Missed collection complaint,53.1
+2026-09-02,1,3,IN-00997,3,P2,Contaminated supply complaint,43.3
+2026-09-02,1,6,IN-00998,3,P2,Footage request,69.7
+2026-09-02,2,1,IN-00999,3,P3,Dust complaint,15.9
+2026-09-02,2,2,IN-01000,3,P3,Missed collection complaint,18.9
+2026-09-02,2,4,IN-01001,3,P2,Power outage,12.9
+2026-09-02,2,6,IN-01002,3,P3,Vandalised camera,23.4
+2026-09-02,3,3,IN-01003,3,P3,Pipe burst,65.1
+2026-09-02,4,4,IN-01004,3,P3,Power outage,32.0
+2026-09-03,1,3,IN-01005,3,P3,Contaminated supply complaint,45.3
+2026-09-03,1,6,IN-01006,3,P2,Vandalised camera,13.3
+2026-09-03,2,3,IN-01007,3,P3,Contaminated supply complaint,8.6
+2026-09-03,2,4,IN-01008,3,P3,Transformer failure,48.5
+2026-09-03,3,4,IN-01009,3,P3,Transformer failure,13.9
+2026-09-03,4,1,IN-01010,3,P2,Open burning,15.8
+2026-09-03,4,4,IN-01011,3,P3,Transformer failure,29.0
+2026-09-04,1,1,IN-01012,3,P3,Open burning,54.5
+2026-09-04,2,6,IN-01013,3,P1,Footage request,71.0
+2026-09-04,3,3,IN-01014,3,P3,Contaminated supply complaint,40.4
+2026-09-04,4,5,IN-01015,3,P1,Sprinkler damage,30.4
+2026-09-05,1,2,IN-01016,3,P2,Missed collection complaint,51.6
+2026-09-05,1,4,IN-01017,3,P3,Power outage,57.5
+2026-09-05,3,6,IN-01018,5,P3,Footage request,
+2026-09-05,4,3,IN-01019,3,P2,Contaminated supply complaint,26.8
+2026-09-05,4,4,IN-01020,3,P2,Power outage,24.5
+2026-09-06,2,1,IN-01021,3,P1,Open burning,53.1
+2026-09-06,2,4,IN-01022,3,P3,Power outage,39.4
+2026-09-06,4,1,IN-01023,3,P3,Open burning,40.3
+2026-09-06,4,4,IN-01024,3,P1,Transformer failure,33.1
+2026-09-07,1,6,IN-01025,3,P3,Footage request,66.1
+2026-09-07,2,1,IN-01026,3,P3,Open burning,60.9
+2026-09-07,2,6,IN-01027,3,P2,Footage request,27.0
+2026-09-07,4,3,IN-01028,3,P3,Pipe burst,57.6
+2026-09-07,4,4,IN-01029,3,P2,Power outage,37.3
+2026-09-07,4,5,IN-01030,3,P3,Overwatering,2.0
+2026-09-07,4,6,IN-01031,3,P2,Footage request,2.4
+2026-09-08,1,2,IN-01032,3,P2,Missed collection complaint,65.1
+2026-09-08,1,3,IN-01033,3,P3,Pipe burst,56.3
+2026-09-08,1,5,IN-01034,3,P3,Sprinkler damage,55.6
+2026-09-08,2,6,IN-01035,3,P3,Vandalised camera,50.4
+2026-09-08,3,4,IN-01036,3,P1,Transformer failure,57.7
+2026-09-08,4,1,IN-01037,5,P3,Open burning,
+2026-09-08,4,2,IN-01038,3,P3,Missed collection complaint,42.5
+2026-09-08,4,6,IN-01039,3,P3,Footage request,42.4
+2026-09-09,1,5,IN-01040,3,P3,Overwatering,48.7
+2026-09-09,2,1,IN-01041,3,P3,Open burning,54.6
+2026-09-09,2,6,IN-01042,3,P1,Vandalised camera,11.9
+2026-09-09,3,2,IN-01043,3,P2,Missed collection complaint,45.9
+2026-09-09,3,3,IN-01044,3,P3,Contaminated supply complaint,31.9
+2026-09-09,3,4,IN-01045,3,P2,Power outage,66.7
+2026-09-09,3,6,IN-01046,3,P3,Vandalised camera,70.2
+2026-09-09,4,3,IN-01047,3,P2,Pipe burst,18.0
+2026-09-10,1,5,IN-01048,3,P2,Overwatering,60.6
+2026-09-10,2,1,IN-01049,3,P2,Open burning,26.9
+2026-09-10,3,5,IN-01050,3,P3,Overwatering,57.7
+2026-09-10,4,1,IN-01051,3,P2,Open burning,38.4
+2026-09-10,4,4,IN-01052,3,P1,Transformer failure,48.5
+2026-09-11,1,2,IN-01053,3,P2,Missed collection complaint,38.3
+2026-09-11,1,4,IN-01054,3,P3,Power outage,33.4
+2026-09-11,1,5,IN-01055,3,P2,Sprinkler damage,35.5
+2026-09-11,2,2,IN-01056,3,P3,Missed collection complaint,7.2
+2026-09-11,3,1,IN-01057,3,P3,Dust complaint,17.2
+2026-09-11,3,3,IN-01058,3,P3,Contaminated supply complaint,10.4
+2026-09-12,2,4,IN-01059,3,P3,Transformer failure,61.5
+2026-09-12,4,3,IN-01060,3,P2,Pipe burst,22.0
+2026-09-13,1,2,IN-01061,3,P1,Missed collection complaint,39.2
+2026-09-13,2,1,IN-01062,3,P2,Open burning,19.8
+2026-09-13,2,6,IN-01063,3,P3,Footage request,56.4
+2026-09-13,3,2,IN-01064,3,P3,Garbage blackspot,57.0
+2026-09-13,3,6,IN-01065,3,P3,Vandalised camera,27.9
+2026-09-13,4,1,IN-01066,3,P3,Dust complaint,29.7
+2026-09-13,4,4,IN-01067,3,P1,Transformer failure,3.6
+2026-09-14,2,5,IN-01068,3,P2,Sprinkler damage,7.7
+2026-09-14,3,6,IN-01069,3,P3,Vandalised camera,34.2
+2026-09-15,1,1,IN-01070,3,P3,Dust complaint,42.0
+2026-09-15,1,2,IN-01071,3,P2,Garbage blackspot,48.6
+2026-09-15,1,6,IN-01072,7,P2,Vandalised camera,
+2026-09-15,2,5,IN-01073,3,P2,Sprinkler damage,43.9
+2026-09-15,2,6,IN-01074,3,P3,Footage request,30.1
+2026-09-15,4,2,IN-01075,3,P2,Missed collection complaint,46.7
+2026-09-15,4,6,IN-01076,3,P2,Footage request,57.1
+2026-09-16,1,3,IN-01077,3,P2,Contaminated supply complaint,60.8
+2026-09-16,2,1,IN-01078,3,P2,Dust complaint,70.3
+2026-09-16,2,2,IN-01079,3,P2,Missed collection complaint,5.1
+2026-09-16,3,3,IN-01080,3,P1,Pipe burst,3.3
+2026-09-16,3,4,IN-01081,7,P2,Transformer failure,
+2026-09-16,3,5,IN-01082,3,P2,Overwatering,66.6
+2026-09-16,4,1,IN-01083,3,P1,Dust complaint,31.2
+2026-09-16,4,2,IN-01084,3,P1,Missed collection complaint,8.6
+2026-09-16,4,4,IN-01085,3,P3,Power outage,2.3
+2026-09-17,1,2,IN-01086,3,P2,Missed collection complaint,55.7
+2026-09-17,1,3,IN-01087,3,P3,Pipe burst,18.9
+2026-09-17,2,4,IN-01088,7,P2,Power outage,
+2026-09-17,2,5,IN-01089,3,P3,Sprinkler damage,5.3
+2026-09-17,4,3,IN-01090,3,P1,Pipe burst,53.2
+2026-09-18,1,6,IN-01091,3,P3,Footage request,68.2
+2026-09-18,2,5,IN-01092,3,P2,Overwatering,19.8
+2026-09-18,3,1,IN-01093,5,P2,Dust complaint,
+2026-09-18,4,5,IN-01094,5,P3,Sprinkler damage,
+2026-09-19,1,2,IN-01095,5,P3,Garbage blackspot,
+2026-09-19,2,3,IN-01096,7,P1,Contaminated supply complaint,
+2026-09-19,2,4,IN-01097,3,P1,Transformer failure,33.1
+2026-09-19,3,1,IN-01098,3,P3,Open burning,26.0
+2026-09-19,3,2,IN-01099,3,P3,Garbage blackspot,54.8
+2026-09-19,3,3,IN-01100,7,P1,Contaminated supply complaint,
+2026-09-19,4,5,IN-01101,3,P1,Overwatering,59.3
+2026-09-20,1,3,IN-01102,3,P2,Pipe burst,34.2
+2026-09-20,1,5,IN-01103,3,P2,Sprinkler damage,7.5
+2026-09-20,2,1,IN-01104,3,P3,Open burning,11.5
+2026-09-20,2,5,IN-01105,7,P1,Overwatering,
+2026-09-20,3,3,IN-01106,3,P3,Pipe burst,65.0
+2026-09-20,3,5,IN-01107,3,P2,Sprinkler damage,3.6
+2026-09-20,3,6,IN-01108,7,P1,Vandalised camera,
+2026-09-20,4,1,IN-01109,7,P3,Dust complaint,
+2026-09-20,4,3,IN-01110,7,P3,Pipe burst,
+2026-09-21,1,1,IN-01111,3,P2,Dust complaint,25.5
+2026-09-21,1,4,IN-01112,7,P2,Transformer failure,
+2026-09-21,3,1,IN-01113,3,P2,Dust complaint,7.9
+2026-09-21,3,4,IN-01114,3,P1,Transformer failure,47.7
+2026-09-21,4,3,IN-01115,3,P3,Pipe burst,39.9
+2026-09-21,4,6,IN-01116,7,P3,Vandalised camera,
+2026-09-22,1,1,IN-01117,3,P2,Open burning,71.6
+2026-09-22,2,2,IN-01118,3,P3,Missed collection complaint,62.5
+2026-09-22,2,3,IN-01119,3,P3,Contaminated supply complaint,38.4
+2026-09-22,2,4,IN-01120,5,P2,Transformer failure,
+2026-09-22,2,6,IN-01121,3,P3,Footage request,29.4
+2026-09-22,3,4,IN-01122,7,P1,Transformer failure,
+2026-09-22,4,2,IN-01123,3,P1,Missed collection complaint,57.5
+2026-09-22,4,5,IN-01124,3,P3,Overwatering,19.9
+2026-09-22,4,6,IN-01125,5,P2,Vandalised camera,
+2026-09-23,1,2,IN-01126,3,P3,Missed collection complaint,6.5
+2026-09-23,2,1,IN-01127,3,P2,Open burning,37.2
+2026-09-23,3,1,IN-01128,3,P1,Open burning,38.0
+2026-09-23,3,2,IN-01129,3,P2,Garbage blackspot,22.5
+2026-09-23,4,2,IN-01130,3,P3,Garbage blackspot,27.8
+2026-09-23,4,4,IN-01131,7,P3,Power outage,
+2026-09-23,4,6,IN-01132,3,P2,Footage request,2.2
+2026-09-24,1,5,IN-01133,3,P2,Overwatering,7.5
+2026-09-24,3,6,IN-01134,3,P2,Footage request,5.9
+2026-09-24,4,1,IN-01135,3,P2,Dust complaint,21.9
+2026-09-25,1,2,IN-01136,3,P3,Garbage blackspot,69.0
+2026-09-25,1,4,IN-01137,7,P2,Power outage,
+2026-09-25,2,2,IN-01138,3,P3,Garbage blackspot,40.0
+2026-09-25,2,3,IN-01139,3,P3,Pipe burst,32.6
+2026-09-25,2,4,IN-01140,3,P2,Power outage,41.6
+2026-09-25,2,5,IN-01141,3,P2,Overwatering,25.0
+2026-09-25,2,6,IN-01142,7,P2,Vandalised camera,
+2026-09-25,3,4,IN-01143,7,P1,Transformer failure,
+2026-09-25,3,6,IN-01144,3,P2,Footage request,38.1
+2026-09-25,4,1,IN-01145,7,P2,Open burning,
+2026-09-25,4,6,IN-01146,7,P3,Vandalised camera,
+2026-09-26,1,1,IN-01147,7,P2,Dust complaint,
+2026-09-26,2,4,IN-01148,3,P3,Power outage,32.4
+2026-09-26,3,1,IN-01149,3,P3,Dust complaint,37.9
+2026-09-26,3,5,IN-01150,5,P1,Overwatering,
+2026-09-26,4,2,IN-01151,7,P3,Garbage blackspot,
+2026-09-26,4,3,IN-01152,3,P3,Contaminated supply complaint,29.5
+2026-09-26,4,4,IN-01153,3,P3,Power outage,36.0
+2026-09-27,1,2,IN-01154,3,P3,Missed collection complaint,53.7
+2026-09-27,1,3,IN-01155,5,P3,Pipe burst,
+2026-09-27,3,3,IN-01156,3,P2,Contaminated supply complaint,42.3
+2026-09-27,3,4,IN-01157,3,P2,Transformer failure,53.9
+2026-09-27,4,1,IN-01158,7,P3,Open burning,
+2026-09-28,1,3,IN-01159,7,P2,Contaminated supply complaint,
+2026-09-28,1,4,IN-01160,5,P2,Power outage,
+2026-09-28,1,5,IN-01161,3,P3,Sprinkler damage,54.9
+2026-09-28,1,6,IN-01162,3,P2,Vandalised camera,21.8
+2026-09-28,3,1,IN-01163,3,P1,Dust complaint,66.1
+2026-09-28,3,4,IN-01164,3,P1,Transformer failure,13.3
+2026-09-28,4,1,IN-01165,7,P1,Open burning,
+2026-09-29,1,1,IN-01166,5,P3,Open burning,
+2026-09-29,1,6,IN-01167,3,P2,Vandalised camera,52.1
+2026-09-29,2,1,IN-01168,3,P2,Open burning,58.7
+2026-09-29,3,3,IN-01169,7,P3,Contaminated supply complaint,
+2026-09-29,4,2,IN-01170,3,P3,Missed collection complaint,45.1
+2026-09-29,4,3,IN-01171,5,P3,Contaminated supply complaint,
+2026-09-30,1,6,IN-01172,3,P2,Footage request,63.6
+2026-09-30,2,1,IN-01173,7,P3,Dust complaint,
+2026-09-30,2,3,IN-01174,3,P3,Pipe burst,9.1
+2026-09-30,3,2,IN-01175,3,P2,Garbage blackspot,66.9
+2026-09-30,4,3,IN-01176,5,P1,Contaminated supply complaint,
+2026-09-30,4,5,IN-01177,3,P3,Sprinkler damage,61.1
+2026-09-30,4,6,IN-01178,5,P2,Vandalised camera,
+2026-10-01,1,1,IN-01179,3,P3,Open burning,31.0
+2026-10-01,1,2,IN-01180,3,P2,Missed collection complaint,42.5
+2026-10-01,1,3,IN-01181,3,P2,Pipe burst,44.0
+2026-10-01,2,2,IN-01182,5,P3,Garbage blackspot,
+2026-10-01,2,5,IN-01183,3,P1,Overwatering,62.0
+2026-10-01,3,1,IN-01184,3,P1,Open burning,63.1
+2026-10-01,4,4,IN-01185,3,P3,Power outage,44.6
+2026-10-02,1,4,IN-01186,7,P2,Transformer failure,
+2026-10-02,1,5,IN-01187,3,P3,Sprinkler damage,44.5
+2026-10-02,3,1,IN-01188,3,P3,Open burning,35.4
+2026-10-02,3,2,IN-01189,3,P2,Missed collection complaint,60.7
+2026-10-02,3,3,IN-01190,3,P2,Contaminated supply complaint,12.5
+2026-10-02,4,3,IN-01191,3,P2,Contaminated supply complaint,62.2
+2026-10-03,1,2,IN-01192,3,P2,Missed collection complaint,63.2
+2026-10-03,2,2,IN-01193,7,P3,Garbage blackspot,
+2026-10-03,2,3,IN-01194,3,P1,Contaminated supply complaint,66.7
+2026-10-03,3,2,IN-01195,3,P1,Missed collection complaint,55.1
+2026-10-03,3,6,IN-01196,3,P2,Footage request,54.2
+2026-10-03,4,4,IN-01197,3,P3,Power outage,58.1
+2026-10-04,1,1,IN-01198,3,P3,Dust complaint,25.9
+2026-10-04,1,3,IN-01199,3,P3,Pipe burst,31.4
+2026-10-04,2,4,IN-01200,3,P2,Transformer failure,58.0
+2026-10-04,2,6,IN-01201,3,P2,Vandalised camera,33.2
+2026-10-04,3,1,IN-01202,7,P3,Dust complaint,
+2026-10-04,3,4,IN-01203,3,P1,Transformer failure,4.9
+2026-10-04,3,5,IN-01204,7,P3,Overwatering,
+2026-10-04,4,1,IN-01205,3,P3,Open burning,57.8
+2026-10-04,4,2,IN-01206,3,P2,Missed collection complaint,25.5
+2026-10-05,1,1,IN-01207,7,P3,Open burning,
+2026-10-05,1,6,IN-01208,7,P3,Vandalised camera,
+2026-10-05,2,3,IN-01209,5,P2,Contaminated supply complaint,
+2026-10-05,2,6,IN-01210,3,P3,Footage request,11.0
+2026-10-05,3,2,IN-01211,3,P3,Missed collection complaint,23.5
+2026-10-05,3,3,IN-01212,3,P3,Contaminated supply complaint,27.5
+2026-10-05,4,1,IN-01213,3,P3,Dust complaint,17.7
+2026-10-06,1,3,IN-01214,3,P3,Pipe burst,32.2
+2026-10-06,1,6,IN-01215,7,P3,Vandalised camera,
+2026-10-06,2,5,IN-01216,3,P2,Overwatering,68.1
+2026-10-06,2,6,IN-01217,3,P1,Footage request,6.1
+2026-10-06,3,1,IN-01218,3,P2,Open burning,6.4
+2026-10-06,3,4,IN-01219,7,P2,Transformer failure,
+2026-10-06,4,2,IN-01220,7,P3,Missed collection complaint,
+2026-10-07,1,3,IN-01221,3,P2,Pipe burst,36.1
+2026-10-07,2,3,IN-01222,3,P2,Pipe burst,48.6
+2026-10-07,2,4,IN-01223,3,P2,Power outage,30.7
+2026-10-07,2,5,IN-01224,7,P2,Overwatering,
+2026-10-07,2,6,IN-01225,3,P3,Vandalised camera,58.2
+2026-10-07,3,1,IN-01226,3,P3,Dust complaint,19.1
+2026-10-07,4,3,IN-01227,3,P3,Pipe burst,67.6
+2026-10-07,4,4,IN-01228,3,P3,Power outage,53.9
+2026-10-07,4,6,IN-01229,3,P1,Vandalised camera,8.9
+2026-10-08,1,6,IN-01230,7,P2,Vandalised camera,
+2026-10-08,2,2,IN-01231,3,P3,Missed collection complaint,34.9
+2026-10-08,2,3,IN-01232,3,P3,Pipe burst,27.1
+2026-10-08,2,5,IN-01233,3,P1,Sprinkler damage,35.0
+2026-10-08,3,3,IN-01234,3,P3,Contaminated supply complaint,20.6
+2026-10-08,3,4,IN-01235,5,P3,Transformer failure,
+2026-10-08,3,6,IN-01236,7,P3,Vandalised camera,
+2026-10-08,4,6,IN-01237,3,P2,Footage request,48.1
+2026-10-09,1,3,IN-01238,7,P2,Contaminated supply complaint,
+2026-10-09,1,5,IN-01239,3,P2,Sprinkler damage,53.8
+2026-10-09,2,2,IN-01240,7,P1,Garbage blackspot,
+2026-10-09,2,5,IN-01241,3,P3,Sprinkler damage,49.5
+2026-10-09,2,6,IN-01242,3,P3,Vandalised camera,52.6
+2026-10-09,3,1,IN-01243,3,P3,Open burning,16.5
+2026-10-09,3,6,IN-01244,5,P3,Vandalised camera,
+2026-10-09,4,1,IN-01245,3,P2,Dust complaint,9.4
+2026-10-09,4,4,IN-01246,3,P3,Power outage,40.0
+2026-10-10,1,2,IN-01247,7,P1,Garbage blackspot,
+2026-10-10,2,4,IN-01248,5,P3,Transformer failure,
+2026-10-10,3,3,IN-01249,5,P2,Contaminated supply complaint,
+2026-10-10,3,4,IN-01250,3,P3,Transformer failure,19.8
+2026-10-10,3,6,IN-01251,7,P3,Footage request,
+2026-10-10,4,3,IN-01252,7,P1,Contaminated supply complaint,
+2026-10-10,4,5,IN-01253,7,P3,Sprinkler damage,
+2026-10-10,4,6,IN-01254,3,P3,Footage request,59.3
+2026-10-11,1,4,IN-01255,3,P2,Power outage,40.3
+2026-10-11,2,1,IN-01256,5,P3,Open burning,
+2026-10-11,2,2,IN-01257,5,P2,Missed collection complaint,
+2026-10-11,2,3,IN-01258,5,P2,Pipe burst,
+2026-10-11,3,2,IN-01259,7,P2,Garbage blackspot,
+2026-10-11,4,2,IN-01260,5,P2,Missed collection complaint,
+2026-10-11,4,6,IN-01261,5,P3,Footage request,
+2026-10-12,1,5,IN-01262,5,P3,Sprinkler damage,
+2026-10-12,2,1,IN-01263,3,P3,Open burning,62.3
+2026-10-12,2,2,IN-01264,5,P2,Missed collection complaint,
+2026-10-12,2,4,IN-01265,7,P3,Power outage,
+2026-10-12,4,1,IN-01266,7,P3,Open burning,
+2026-10-12,4,3,IN-01267,5,P3,Pipe burst,
+2026-10-12,4,4,IN-01268,3,P1,Transformer failure,54.2
+2026-10-13,1,1,IN-01269,5,P1,Open burning,
+2026-10-13,1,2,IN-01270,7,P2,Missed collection complaint,
+2026-10-13,1,4,IN-01271,5,P3,Power outage,
+2026-10-13,1,5,IN-01272,7,P2,Sprinkler damage,
+2026-10-13,2,3,IN-01273,5,P3,Pipe burst,
+2026-10-13,3,1,IN-01274,7,P2,Open burning,
+2026-10-13,3,2,IN-01275,5,P3,Garbage blackspot,
+2026-10-13,3,3,IN-01276,5,P2,Pipe burst,
+2026-10-13,4,3,IN-01277,7,P1,Contaminated supply complaint,
+2026-10-13,4,4,IN-01278,7,P2,Power outage,
+2026-10-14,1,1,IN-01279,7,P3,Dust complaint,
+2026-10-14,1,2,IN-01280,7,P3,Garbage blackspot,
+2026-10-14,1,4,IN-01281,7,P1,Power outage,
+2026-10-14,2,3,IN-01282,5,P2,Contaminated supply complaint,
+2026-10-14,3,3,IN-01283,5,P3,Contaminated supply complaint,
+2026-10-14,3,4,IN-01284,5,P2,Power outage,
+2026-10-14,3,5,IN-01285,5,P2,Sprinkler damage,
+2026-10-14,4,1,IN-01286,3,P3,Open burning,47.5
+2026-10-15,1,4,IN-01287,7,P2,Transformer failure,
+2026-10-15,1,6,IN-01288,5,P3,Vandalised camera,
+2026-10-15,2,1,IN-01289,7,P3,Open burning,
+2026-10-15,2,2,IN-01290,5,P1,Missed collection complaint,
+2026-10-15,2,3,IN-01291,5,P3,Contaminated supply complaint,
+2026-10-15,2,6,IN-01292,5,P2,Vandalised camera,
+2026-10-15,3,2,IN-01293,7,P3,Missed collection complaint,
+2026-10-15,4,2,IN-01294,7,P3,Garbage blackspot,
+2026-10-15,4,6,IN-01295,5,P2,Footage request,
+2026-10-16,1,1,IN-01296,5,P2,Dust complaint,
+2026-10-16,3,3,IN-01297,3,P3,Contaminated supply complaint,19.5
+2026-10-16,4,1,IN-01298,5,P3,Open burning,

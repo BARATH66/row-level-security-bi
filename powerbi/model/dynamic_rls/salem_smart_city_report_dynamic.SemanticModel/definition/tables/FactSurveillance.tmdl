@@ -1,0 +1,106 @@
+table FactSurveillance
+	lineageTag: 955a3f9d-6213-5aae-9fd8-2d254e4274f2
+
+	measure 'Camera Uptime %' = DIVIDE(SUM(FactSurveillance[CamerasOnline]), SUM(FactSurveillance[CamerasTotal]))
+		formatString: 0.0%
+		displayFolder: City Surveillance
+		lineageTag: 3c9ecc09-8321-5777-81c4-f2c2e993bb29
+
+	measure 'Cameras Deployed' = DIVIDE(SUM(FactSurveillance[CamerasTotal]), DISTINCTCOUNT(FactSurveillance[Date]))
+		formatString: #,0
+		displayFolder: City Surveillance
+		lineageTag: bc8564c9-d4aa-51aa-85e5-8653678db3c6
+
+	measure 'Events Detected' = SUM(FactSurveillance[EventsDetected])
+		formatString: #,0
+		displayFolder: City Surveillance
+		lineageTag: a7b503a8-8a6d-5843-8b8c-3de9f534f284
+
+	measure 'Violations Detected' = SUM(FactSurveillance[Violations])
+		formatString: #,0
+		displayFolder: City Surveillance
+		lineageTag: 8667edda-7429-5755-90fc-d2a0817055de
+
+	measure 'Alerts Raised' = SUM(FactSurveillance[AlertsRaised])
+		formatString: #,0
+		displayFolder: City Surveillance
+		lineageTag: 5489aa18-2378-58c4-bb1f-afa4efa36feb
+
+	measure 'Avg Response (min)' = AVERAGE(FactSurveillance[AvgResponseMin])
+		formatString: 0.0
+		displayFolder: City Surveillance
+		lineageTag: d6282618-34e6-5cac-9bab-87e8d6745f96
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 4eeeb157-d5f4-5259-99d6-e4a620350d48
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TenantID
+		dataType: int64
+		isHidden
+		lineageTag: ec5f670a-52d3-53c4-8b87-4faedb112afa
+		summarizeBy: none
+		sourceColumn: TenantID
+
+	column CategoryKey
+		dataType: int64
+		isHidden
+		lineageTag: 3f621382-c5f2-50db-9dc3-0322c9d99a14
+		summarizeBy: none
+		sourceColumn: CategoryKey
+
+	column CameraType
+		dataType: string
+		lineageTag: ce847f77-abdf-5fca-9bda-5684b88031d0
+		summarizeBy: none
+		sourceColumn: CameraType
+
+	column CamerasTotal
+		dataType: int64
+		lineageTag: 85e02f10-cb21-5423-9743-300f45242372
+		sourceColumn: CamerasTotal
+
+	column CamerasOnline
+		dataType: int64
+		lineageTag: 2e2ce917-14d5-574d-9e36-b6225b286f22
+		sourceColumn: CamerasOnline
+
+	column EventsDetected
+		dataType: int64
+		lineageTag: 1895d0d6-0ea7-5c72-a1cc-cdd72961cee6
+		sourceColumn: EventsDetected
+
+	column Violations
+		dataType: int64
+		lineageTag: 95c04905-4d3c-541a-bed7-1c120bce679b
+		sourceColumn: Violations
+
+	column AlertsRaised
+		dataType: int64
+		lineageTag: 17685b94-a400-5e02-a299-0986d0f6b454
+		sourceColumn: AlertsRaised
+
+	column AvgResponseMin
+		dataType: double
+		formatString: 0.0
+		lineageTag: 036165e4-a29f-57c4-ae7f-9d1283bb9f01
+		sourceColumn: AvgResponseMin
+
+	partition FactSurveillance = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "FactSurveillance.csv"), [Delimiter=",", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"Date", type date}, {"TenantID", Int64.Type}, {"CategoryKey", Int64.Type}, {"CameraType", type text}, {"CamerasTotal", Int64.Type}, {"CamerasOnline", Int64.Type}, {"EventsDetected", Int64.Type}, {"Violations", Int64.Type}, {"AlertsRaised", Int64.Type}, {"AvgResponseMin", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,7 @@
+role Operator_CitySurveillance
+	modelPermission: read
+
+	tablePermission DimCategory = DimCategory[DomainCode] = "SUR"
+
+	annotation PBI_Id = fcb65002da3e45ea92f67cb1721fa1e3
+

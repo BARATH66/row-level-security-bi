@@ -1,0 +1,7 @@
+role Operator_WaterManagement
+	modelPermission: read
+
+	tablePermission DimCategory = DimCategory[DomainCode] = "WTR"
+
+	annotation PBI_Id = bc59217763e34b7ea211fe1ca4f9fc7e
+

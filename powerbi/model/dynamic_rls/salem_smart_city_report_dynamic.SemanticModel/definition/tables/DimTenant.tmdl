@@ -1,0 +1,69 @@
+table DimTenant
+	lineageTag: 6c31de5b-20b2-5b55-94fa-474da2c213c5
+
+	column TenantID
+		dataType: int64
+		lineageTag: f56d3868-8259-5ae7-8933-65240d09956c
+		summarizeBy: none
+		sourceColumn: TenantID
+
+	column TenantName
+		dataType: string
+		lineageTag: b9086942-77cd-5526-aecf-3cfb31b72041
+		summarizeBy: none
+		sourceColumn: TenantName
+
+	column ZoneNumber
+		dataType: int64
+		lineageTag: ccf29dc8-0e42-5b33-99a1-f9f1d1d24e1b
+		summarizeBy: none
+		sourceColumn: ZoneNumber
+
+	column City
+		dataType: string
+		lineageTag: bee4f386-3481-59dd-9ba6-aca3c13ca1b6
+		summarizeBy: none
+		sourceColumn: City
+
+	column District
+		dataType: string
+		lineageTag: 0fa55894-b541-5cea-b0f2-4829b5732f73
+		summarizeBy: none
+		sourceColumn: District
+
+	column State
+		dataType: string
+		lineageTag: 549b5c8c-99be-5fe3-9a01-581aa67a850e
+		summarizeBy: none
+		sourceColumn: State
+
+	column Wards
+		dataType: int64
+		formatString: 0
+		lineageTag: a80f130a-b78a-5bdd-9dbe-bb016a14e268
+		sourceColumn: Wards
+
+	column Population
+		dataType: int64
+		formatString: #,0
+		lineageTag: 56390722-b7a9-5b69-85e8-b57bb61959ad
+		sourceColumn: Population
+
+	column AreaSqKm
+		dataType: double
+		formatString: 0.0
+		lineageTag: eb263fc3-62e7-53d1-b237-439784386d72
+		sourceColumn: AreaSqKm
+
+	partition DimTenant = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "DimTenant.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"TenantID", Int64.Type}, {"TenantName", type text}, {"ZoneNumber", Int64.Type}, {"City", type text}, {"District", type text}, {"State", type text}, {"Wards", Int64.Type}, {"Population", Int64.Type}, {"AreaSqKm", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

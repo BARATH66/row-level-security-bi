@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "salem_smart_city_report_dynamic"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "58f38caa-e7cf-5f6e-baa4-c2560832bcf3"
+  }
+}

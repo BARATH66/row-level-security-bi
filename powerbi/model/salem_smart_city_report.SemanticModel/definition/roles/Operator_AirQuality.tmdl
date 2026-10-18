@@ -1,0 +1,7 @@
+role Operator_AirQuality
+	modelPermission: read
+
+	tablePermission DimCategory = DimCategory[DomainCode] = "AQ"
+
+	annotation PBI_Id = dd580cd997b7400187d35413d1f0659d
+

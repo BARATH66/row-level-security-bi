@@ -1,0 +1,7 @@
+role Operator_EnergyManagement
+	modelPermission: read
+
+	tablePermission DimCategory = DimCategory[DomainCode] = "ENG"
+
+	annotation PBI_Id = 84a1b386b26d407e8a7e4813d61565f4
+

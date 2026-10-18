@@ -1,0 +1,204 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 2148.9571586852421,
+            "y": 50.873513068116495
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "754ad9ec-880c-5365-849f-3a1089904cb3",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 1601.1153933330961,
+            "y": -50
+          },
+          "nodeIndex": "DimAlarm",
+          "nodeLineageTag": "ce469b49-37b3-5781-8583-03a8bc3c6748",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1090.307656946974,
+            "y": 514.46777770792687
+          },
+          "nodeIndex": "DimCategory",
+          "nodeLineageTag": "fc5d9ee5-be9e-5f89-bb9a-9681374dfb82",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 699.20199112238356,
+            "y": 509.50707973634451
+          },
+          "nodeIndex": "DimDate",
+          "nodeLineageTag": "bcee179e-adf7-5306-85d9-488238982d5a",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 252.96711356608762
+          },
+          "nodeIndex": "DimIncident",
+          "nodeLineageTag": "0f05d264-bb44-5fef-8933-382706d89b88",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 991.99673460695965,
+            "y": 1009.9246338554962
+          },
+          "nodeIndex": "DimTenant",
+          "nodeLineageTag": "6c31de5b-20b2-5b55-94fa-474da2c213c5",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 45.301928754225059,
+            "y": 1103.4664304504272
+          },
+          "nodeIndex": "FactAirQuality",
+          "nodeLineageTag": "e0b23778-dd29-55ef-955a-8e18eabf866b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1412.6854073010743,
+            "y": 295.71004432204217
+          },
+          "nodeIndex": "FactAlarm",
+          "nodeLineageTag": "3af3d91d-c213-58ef-947d-e3ad2a4c9a2a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1318.0434766091873,
+            "y": 1320.5510428716959
+          },
+          "nodeIndex": "FactEnergy",
+          "nodeLineageTag": "637714b9-7fa6-569b-9566-c1f309016ec1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 316.91606267457377,
+            "y": 440.40031200692789
+          },
+          "nodeIndex": "FactIncident",
+          "nodeLineageTag": "4778def7-393a-5c59-99b1-9152ec7acd07",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1890.2449464941524,
+            "y": 694.21786648388525
+          },
+          "nodeIndex": "FactIrrigation",
+          "nodeLineageTag": "0d1dedde-616c-5df4-81e9-1dc0571bdd84",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 856.465709983317,
+            "y": 53.112101958100808
+          },
+          "nodeIndex": "FactSurveillance",
+          "nodeLineageTag": "955a3f9d-6213-5aae-9fd8-2d254e4274f2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 647.62263628641529,
+            "y": 1321.1070324968223
+          },
+          "nodeIndex": "FactSWM",
+          "nodeLineageTag": "735172ab-f1b5-5ae5-92a7-dbbcaad7f27a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 1427.9655508237888,
+            "y": 959.46412151749439
+          },
+          "nodeIndex": "FactWater",
+          "nodeLineageTag": "40bc10a0-781b-51e7-a31b-2eb3d2520db9",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 12
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 50.025209303751637,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

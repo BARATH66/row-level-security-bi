@@ -1,0 +1,7 @@
+role Operator_SmartIrrigation
+	modelPermission: read
+
+	tablePermission DimCategory = DimCategory[DomainCode] = "IRR"
+
+	annotation PBI_Id = 880f724ae115452bbf37b6bbc584e5ad
+

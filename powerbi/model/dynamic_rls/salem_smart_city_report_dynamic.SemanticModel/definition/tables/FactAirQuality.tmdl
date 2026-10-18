@@ -1,0 +1,154 @@
+table FactAirQuality
+	lineageTag: e0b23778-dd29-55ef-955a-8e18eabf866b
+
+	measure 'Avg AQI' = AVERAGE(FactAirQuality[AQI])
+		formatString: 0
+		displayFolder: Air Quality
+		lineageTag: 943bb725-db68-56c3-92a2-cfc526875f57
+
+	measure 'Max AQI' = MAX(FactAirQuality[AQI])
+		formatString: 0
+		displayFolder: Air Quality
+		lineageTag: 6708aa1f-a35d-5a72-b294-b6a1a4538d47
+
+	measure 'Avg PM2.5' = AVERAGE(FactAirQuality[PM25])
+		formatString: 0.0
+		displayFolder: Air Quality
+		lineageTag: a79dee12-dc97-511d-8bfd-2e899e02f1d9
+
+	measure 'Avg PM10' = AVERAGE(FactAirQuality[PM10])
+		formatString: 0.0
+		displayFolder: Air Quality
+		lineageTag: 7a9adb72-7403-5334-a627-9fcf0cd287ac
+
+	measure 'Avg NO2' = AVERAGE(FactAirQuality[NO2])
+		formatString: 0.0
+		displayFolder: Air Quality
+		lineageTag: 45427077-c68d-5b4f-a909-bd2495d73ad7
+
+	measure 'Avg SO2' = AVERAGE(FactAirQuality[SO2])
+		formatString: 0.0
+		displayFolder: Air Quality
+		lineageTag: 51120e36-cd06-5508-a94f-15417ff92235
+
+	measure 'Avg Temperature' = AVERAGE(FactAirQuality[Temperature])
+		formatString: 0.0
+		displayFolder: Air Quality
+		lineageTag: 826962f9-7adc-5dde-9e6a-475a48d0bdb0
+
+	measure 'Avg Humidity' = AVERAGE(FactAirQuality[Humidity])
+		formatString: 0.0
+		displayFolder: Air Quality
+		lineageTag: 629ba083-bbdc-523f-aae3-1aceb2cc4f4d
+
+	measure Readings = COUNTROWS(FactAirQuality)
+		formatString: #,0
+		displayFolder: Air Quality
+		lineageTag: 0a415bf4-c55f-5e43-bddc-6455d4771196
+
+	measure 'Stations Reporting' = DISTINCTCOUNT(FactAirQuality[StationName])
+		formatString: 0
+		displayFolder: Air Quality
+		lineageTag: a02bcd92-cc4e-5c04-a406-deeb935981b1
+
+	measure 'Poor Air Readings %' = DIVIDE(CALCULATE(COUNTROWS(FactAirQuality), FactAirQuality[AQI] > 100), COUNTROWS(FactAirQuality))
+		formatString: 0.0%
+		displayFolder: Air Quality
+		lineageTag: 872fffea-3e39-55e6-8fbf-87b36eaeb394
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: e6d384b4-c75b-5cb0-ae84-2dca9ea14d95
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TenantID
+		dataType: int64
+		isHidden
+		lineageTag: 09a674fe-0b87-5801-aa03-fe9480ef5cd9
+		summarizeBy: none
+		sourceColumn: TenantID
+
+	column CategoryKey
+		dataType: int64
+		isHidden
+		lineageTag: 2c48e9d7-cd0b-5eab-97b4-ad4b68d8e2c4
+		summarizeBy: none
+		sourceColumn: CategoryKey
+
+	column StationName
+		dataType: string
+		lineageTag: 3e6a0678-1491-524d-8e8d-030acea8cff0
+		summarizeBy: none
+		sourceColumn: StationName
+
+	column PM25
+		dataType: double
+		formatString: 0.0
+		lineageTag: 22cb8af1-055f-5cdf-80dc-7a6773c045cc
+		sourceColumn: PM25
+
+	column PM10
+		dataType: double
+		formatString: 0.0
+		lineageTag: 044b7d4c-f8ce-58ea-a032-4367e593ce42
+		sourceColumn: PM10
+
+	column NO2
+		dataType: double
+		formatString: 0.0
+		lineageTag: a6b21881-67e1-5f6a-9381-d047b63817dc
+		sourceColumn: NO2
+
+	column SO2
+		dataType: double
+		formatString: 0.0
+		lineageTag: 5b7fdeb5-ea19-50cf-89ee-78cb5a048976
+		sourceColumn: SO2
+
+	column CO
+		dataType: double
+		formatString: 0.00
+		lineageTag: 46bf2305-47d8-5bfe-91df-55d58d855184
+		sourceColumn: CO
+
+	column AQI
+		dataType: int64
+		formatString: 0
+		lineageTag: 97e0d214-ef41-51e6-93a2-138982a0885f
+		sourceColumn: AQI
+
+	column AQIBand
+		dataType: string
+		lineageTag: 628d9e35-c46d-5b16-bab5-a891771f94bf
+		summarizeBy: none
+		sourceColumn: AQIBand
+
+	column Temperature
+		dataType: double
+		formatString: 0.0
+		lineageTag: 1b456962-88ec-59e8-a098-4bc12a3c598b
+		sourceColumn: Temperature
+
+	column Humidity
+		dataType: double
+		formatString: 0.0
+		lineageTag: 4f98f7dc-bbf2-5c4c-aaad-5ff483a817be
+		sourceColumn: Humidity
+
+	partition FactAirQuality = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "FactAirQuality.csv"), [Delimiter=",", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"Date", type date}, {"TenantID", Int64.Type}, {"CategoryKey", Int64.Type}, {"StationName", type text}, {"PM25", type number}, {"PM10", type number}, {"NO2", type number}, {"SO2", type number}, {"CO", type number}, {"AQI", Int64.Type}, {"AQIBand", type text}, {"Temperature", type number}, {"Humidity", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

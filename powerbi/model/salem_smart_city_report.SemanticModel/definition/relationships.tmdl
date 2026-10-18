@@ -1,0 +1,109 @@
+relationship 038e6961-8ca4-5d11-88eb-6be2ae1f94c2
+	fromColumn: FactAirQuality.Date
+	toColumn: DimDate.Date
+
+relationship 6e8c4434-1405-5fc3-8c45-bdf2629fa3f7
+	fromColumn: FactAirQuality.TenantID
+	toColumn: DimTenant.TenantID
+
+relationship b0e89a80-20a7-5347-a5c6-a032c240bd41
+	fromColumn: FactAirQuality.CategoryKey
+	toColumn: DimCategory.CategoryKey
+
+relationship 4dcf4c13-e1cc-518a-9757-112ab490344e
+	fromColumn: FactSWM.Date
+	toColumn: DimDate.Date
+
+relationship 4465fa8a-bf1b-5d62-a8d1-ad6b9392a74b
+	fromColumn: FactSWM.TenantID
+	toColumn: DimTenant.TenantID
+
+relationship 3c187a1e-c2e0-5c4d-b23b-5c0bf508ae4e
+	fromColumn: FactSWM.CategoryKey
+	toColumn: DimCategory.CategoryKey
+
+relationship 12e6f1f9-7b6b-5967-beab-be2685809199
+	fromColumn: FactWater.Date
+	toColumn: DimDate.Date
+
+relationship f56165d2-6ba0-5148-a387-532e9b516b59
+	fromColumn: FactWater.TenantID
+	toColumn: DimTenant.TenantID
+
+relationship bfaf8560-39f2-5956-9d05-a04a14fed180
+	fromColumn: FactWater.CategoryKey
+	toColumn: DimCategory.CategoryKey
+
+relationship e57ad61d-1e3d-5cc0-b169-2ab5ee748e15
+	fromColumn: FactEnergy.Date
+	toColumn: DimDate.Date
+
+relationship 790e7af4-53bf-5895-8bff-a8373ef551ab
+	fromColumn: FactEnergy.TenantID
+	toColumn: DimTenant.TenantID
+
+relationship 9835b939-b9fc-5be5-9f55-b4273a666118
+	fromColumn: FactEnergy.CategoryKey
+	toColumn: DimCategory.CategoryKey
+
+relationship c21d03fe-e236-54ed-8f1a-ef7acfe24372
+	fromColumn: FactIrrigation.Date
+	toColumn: DimDate.Date
+
+relationship a77ffc68-6b7a-5da0-95e2-99f028659091
+	fromColumn: FactIrrigation.TenantID
+	toColumn: DimTenant.TenantID
+
+relationship 713352ca-b209-5297-a77f-d020b8fc0922
+	fromColumn: FactIrrigation.CategoryKey
+	toColumn: DimCategory.CategoryKey
+
+relationship 348a10b4-2eb4-5918-b5b8-15d9f7a2baee
+	fromColumn: FactSurveillance.Date
+	toColumn: DimDate.Date
+
+relationship 926a0d60-b63c-5dcb-b825-fea5fe64994f
+	fromColumn: FactSurveillance.TenantID
+	toColumn: DimTenant.TenantID
+
+relationship 0d6ba46a-b297-5ec1-a30e-f923cad63702
+	fromColumn: FactSurveillance.CategoryKey
+	toColumn: DimCategory.CategoryKey
+
+relationship 2d121398-c31d-57ac-a0bb-adaf6fb25013
+	fromColumn: FactAlarm.Date
+	toColumn: DimDate.Date
+
+relationship 88459327-0b63-5644-8e06-299c5f3937b3
+	fromColumn: FactAlarm.TenantID
+	toColumn: DimTenant.TenantID
+
+relationship 948e989a-428f-598b-9afd-fc7120d75eab
+	fromColumn: FactAlarm.CategoryKey
+	toColumn: DimCategory.CategoryKey
+
+relationship 67232412-9277-58e7-9208-d31142248ec6
+	fromColumn: FactIncident.Date
+	toColumn: DimDate.Date
+
+relationship a12484c7-ad75-5ff3-9704-342f8f77724f
+	fromColumn: FactIncident.TenantID
+	toColumn: DimTenant.TenantID
+
+relationship 2de494c7-a032-530c-b525-fb8c0e3a083f
+	fromColumn: FactIncident.CategoryKey
+	toColumn: DimCategory.CategoryKey
+
+relationship 5dca7463-c5ae-5492-b7f3-3476f351e3eb
+	fromColumn: FactAlarm.AlarmStatusID
+	toColumn: DimAlarm.AlarmStatusID
+
+relationship 768c8b0b-404a-5655-b2da-37022bc11e32
+	fromColumn: FactIncident.IncidentStatusID
+	toColumn: DimIncident.IncidentStatusID
+
+relationship e9fbdd53-fb3a-4771-807f-afe8cf02ee89
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FactAlarm.RaisedAt
+	toColumn: LocalDateTable_165302fb-9bc9-4691-960e-ab0d1a17200b.Date
+

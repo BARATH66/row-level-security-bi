@@ -1,0 +1,21 @@
+-- DYNAMIC RLS: one role, driven by the SecurityUserAccess mapping table.
+-- role DynamicAccess
+
+-- Table filter on DimCategory:
+VAR u = USERPRINCIPALNAME()
+VAR allowed =
+    SELECTCOLUMNS(
+        FILTER(SecurityUserAccess, SecurityUserAccess[UserEmail] = u),
+        "d", SecurityUserAccess[DomainCode]
+    )
+RETURN
+    DimCategory[DomainCode] IN allowed || "ALL" IN allowed
+
+-- Table filter on SecurityUserAccess (a user can only read their own mapping rows):
+SecurityUserAccess[UserEmail] = USERPRINCIPALNAME()
+
+-- Behaviour:
+--   manager@...             -> {ALL}      -> all 6 DimCategory rows
+--   irrigation.operator@... -> {IRR}      -> 1 row
+--   shift.supervisor@...    -> {AQ, ENG}  -> 2 rows
+--   unknown user            -> {}         -> 0 rows (deny by default)

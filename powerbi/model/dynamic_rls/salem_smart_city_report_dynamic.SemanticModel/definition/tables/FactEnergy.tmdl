@@ -1,0 +1,120 @@
+table FactEnergy
+	lineageTag: 637714b9-7fa6-569b-9566-c1f309016ec1
+
+	measure 'Energy Consumed (MWh)' = DIVIDE(SUM(FactEnergy[ConsumptionKWh]), 1000)
+		formatString: #,0.0
+		displayFolder: Energy Management
+		lineageTag: 32f14c71-6553-5b9b-9bcd-13f83e826c25
+
+	measure 'Solar Generated (MWh)' = DIVIDE(SUM(FactEnergy[SolarKWh]), 1000)
+		formatString: #,0.0
+		displayFolder: Energy Management
+		lineageTag: c0e15053-fe8c-5ea3-9e39-8d1d2a958377
+
+	measure 'Solar Share %' = DIVIDE(SUM(FactEnergy[SolarKWh]), SUM(FactEnergy[ConsumptionKWh]))
+		formatString: 0.0%
+		displayFolder: Energy Management
+		lineageTag: 995f9ee8-d171-5edd-9905-8801b5f2e7d5
+
+	measure 'Peak Demand (MW)' = DIVIDE(MAX(FactEnergy[PeakDemandKW]), 1000)
+		formatString: 0.00
+		displayFolder: Energy Management
+		lineageTag: 0886d2b5-f4ab-589b-aa2c-612401f008d9
+
+	measure 'Avg Power Factor' = AVERAGE(FactEnergy[PowerFactor])
+		formatString: 0.000
+		displayFolder: Energy Management
+		lineageTag: ff289fd3-d929-5984-8a6c-e812d23b3d5d
+
+	measure 'Energy Cost (INR Lakh)' = DIVIDE(SUM(FactEnergy[EnergyCostINR]), 100000)
+		formatString: #,0.0
+		displayFolder: Energy Management
+		lineageTag: 6d6b61fc-e287-5e32-bebd-b67ca398d718
+
+	measure 'Street Lights On %' = DIVIDE(SUM(FactEnergy[LightsOn]), SUM(FactEnergy[LightsTotal]))
+		formatString: 0.0%
+		displayFolder: Energy Management
+		lineageTag: 52c59375-45f3-5b64-bb7c-e307d5166311
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 99500627-e185-58bc-bca2-4a2487837147
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TenantID
+		dataType: int64
+		isHidden
+		lineageTag: 9675c782-39ac-5003-8875-38e7dab0e5ca
+		summarizeBy: none
+		sourceColumn: TenantID
+
+	column CategoryKey
+		dataType: int64
+		isHidden
+		lineageTag: 0d90073a-219c-5e9e-8430-85e0a6d7b782
+		summarizeBy: none
+		sourceColumn: CategoryKey
+
+	column ConsumerClass
+		dataType: string
+		lineageTag: ad6c8c88-ed76-5302-91f5-6a86a03d6ebb
+		summarizeBy: none
+		sourceColumn: ConsumerClass
+
+	column ConsumptionKWh
+		dataType: double
+		formatString: #,0
+		lineageTag: 339f7988-c588-5173-ba61-393401d88a71
+		sourceColumn: ConsumptionKWh
+
+	column SolarKWh
+		dataType: double
+		formatString: #,0
+		lineageTag: 2e3be859-a307-5608-b509-63ed6d1c1fb2
+		sourceColumn: SolarKWh
+
+	column PeakDemandKW
+		dataType: double
+		formatString: #,0
+		lineageTag: c9e96d4f-db59-58af-b786-98abed57f546
+		sourceColumn: PeakDemandKW
+
+	column PowerFactor
+		dataType: double
+		formatString: 0.000
+		lineageTag: 0d10d315-275a-500f-a428-cd2a30afd097
+		sourceColumn: PowerFactor
+
+	column EnergyCostINR
+		dataType: double
+		formatString: #,0
+		lineageTag: 25764939-06c1-5b39-9806-f92062488305
+		sourceColumn: EnergyCostINR
+
+	column LightsOn
+		dataType: int64
+		lineageTag: a853a049-f7c6-5d89-ab2f-11de8b6bd401
+		sourceColumn: LightsOn
+
+	column LightsTotal
+		dataType: int64
+		lineageTag: c174e55f-ebfc-5efd-9fe8-b39e10662ef7
+		sourceColumn: LightsTotal
+
+	partition FactEnergy = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "FactEnergy.csv"), [Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"Date", type date}, {"TenantID", Int64.Type}, {"CategoryKey", Int64.Type}, {"ConsumerClass", type text}, {"ConsumptionKWh", type number}, {"SolarKWh", type number}, {"PeakDemandKW", type number}, {"PowerFactor", type number}, {"EnergyCostINR", type number}, {"LightsOn", Int64.Type}, {"LightsTotal", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

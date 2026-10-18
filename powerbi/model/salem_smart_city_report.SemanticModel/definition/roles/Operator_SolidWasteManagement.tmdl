@@ -1,0 +1,7 @@
+role Operator_SolidWasteManagement
+	modelPermission: read
+
+	tablePermission DimCategory = DimCategory[DomainCode] = "SWM"
+
+	annotation PBI_Id = 39f794a809e14f0f9790f34f926600af
+

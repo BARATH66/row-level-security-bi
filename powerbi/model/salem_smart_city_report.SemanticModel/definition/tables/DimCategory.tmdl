@@ -1,0 +1,59 @@
+table DimCategory
+	lineageTag: fc5d9ee5-be9e-5f89-bb9a-9681374dfb82
+
+	column CategoryKey
+		dataType: int64
+		lineageTag: e96554d8-6944-501e-b5b5-040ae1f82c72
+		summarizeBy: none
+		sourceColumn: CategoryKey
+
+	column DomainCode
+		dataType: string
+		lineageTag: c0f23e61-df07-54ea-994f-897ad4693e9f
+		summarizeBy: none
+		sourceColumn: DomainCode
+
+	column DomainName
+		dataType: string
+		lineageTag: da69a7f2-3bb5-5656-99c7-034f878703e4
+		summarizeBy: none
+		sourceColumn: DomainName
+		sortByColumn: SortOrder
+
+	column SortOrder
+		dataType: int64
+		isHidden
+		lineageTag: 1411b3ac-8533-5356-b8a3-b6fbe0eae842
+		summarizeBy: none
+		sourceColumn: SortOrder
+
+	column Department
+		dataType: string
+		lineageTag: 8e3bcb6b-9699-5ce2-933d-83f25e6aef7e
+		summarizeBy: none
+		sourceColumn: Department
+
+	column Description
+		dataType: string
+		lineageTag: 52799aac-a29b-5d52-9773-204940433517
+		summarizeBy: none
+		sourceColumn: Description
+
+	column ThemeColor
+		dataType: string
+		lineageTag: e377628d-a948-5bb7-bbf3-b5b3a2e6bf0d
+		summarizeBy: none
+		sourceColumn: ThemeColor
+
+	partition DimCategory = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "DimCategory.csv"), [Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"CategoryKey", Int64.Type}, {"DomainCode", type text}, {"DomainName", type text}, {"SortOrder", Int64.Type}, {"Department", type text}, {"Description", type text}, {"ThemeColor", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

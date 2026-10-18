@@ -1,0 +1,16 @@
+# Power BI Desktop local state
+**/.pbi/
+*.pbix
+*.pbit
+*.abf
+# Python
+__pycache__/
+*.pyc
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.claude/
+
+# Local-only generator scripts (kept on this machine, not published)
+powerbi/model/scripts/

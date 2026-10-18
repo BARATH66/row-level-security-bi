@@ -1,0 +1,22 @@
+-- STATIC RLS: one role per audience. Table filter expressions on DimCategory.
+-- DimCategory relates to every fact table, so one filter secures facts, alarms and incidents.
+
+-- role Manager                       (no table filter: sees every domain)
+
+-- role Operator_AirQuality
+DimCategory[DomainCode] = "AQ"
+
+-- role Operator_SolidWasteManagement
+DimCategory[DomainCode] = "SWM"
+
+-- role Operator_WaterManagement
+DimCategory[DomainCode] = "WTR"
+
+-- role Operator_EnergyManagement
+DimCategory[DomainCode] = "ENG"
+
+-- role Operator_SmartIrrigation
+DimCategory[DomainCode] = "IRR"
+
+-- role Operator_CitySurveillance
+DimCategory[DomainCode] = "SUR"

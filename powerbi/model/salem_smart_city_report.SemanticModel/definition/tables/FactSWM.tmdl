@@ -1,0 +1,124 @@
+table FactSWM
+	lineageTag: 735172ab-f1b5-5ae5-92a7-dbbcaad7f27a
+
+	measure 'Waste Collected (t)' = SUM(FactSWM[WasteTonnes])
+		formatString: #,0.0
+		displayFolder: Solid Waste Management
+		lineageTag: 01000cdb-adb4-5e06-bc84-ee498afe71fe
+
+	measure 'Waste Processed (t)' = SUM(FactSWM[ProcessedTonnes])
+		formatString: #,0.0
+		displayFolder: Solid Waste Management
+		lineageTag: d316693a-59f3-54dd-8386-a28717d2f71b
+
+	measure 'Processing Rate %' = DIVIDE([Waste Processed (t)], [Waste Collected (t)])
+		formatString: 0.0%
+		displayFolder: Solid Waste Management
+		lineageTag: 30ee0dff-22f0-5b3a-949c-c42aa7f85a41
+
+	measure 'Collection Efficiency %' = DIVIDE(SUM(FactSWM[CompletedPickups]), SUM(FactSWM[PlannedPickups]))
+		formatString: 0.0%
+		displayFolder: Solid Waste Management
+		lineageTag: 1acc0231-c137-5889-911d-e18e88c79c08
+
+	measure 'Pending Pickups' = SUM(FactSWM[PlannedPickups]) - SUM(FactSWM[CompletedPickups])
+		formatString: #,0
+		displayFolder: Solid Waste Management
+		lineageTag: bf61c5ee-9a94-50a9-a306-7f574915d8e9
+
+	measure 'Avg Bin Fill %' = DIVIDE(AVERAGE(FactSWM[AvgBinFillPct]), 100)
+		formatString: 0.0%
+		displayFolder: Solid Waste Management
+		lineageTag: 240fb62b-3fcc-5c00-841b-ab6b7372227c
+
+	measure 'Segregation %' = DIVIDE(AVERAGE(FactSWM[SegregationPct]), 100)
+		formatString: 0.0%
+		displayFolder: Solid Waste Management
+		lineageTag: afa54bf6-68c7-5074-a797-b35a53be1647
+
+	measure 'Avg Vehicles Deployed' = AVERAGE(FactSWM[VehiclesDeployed])
+		formatString: 0.0
+		displayFolder: Solid Waste Management
+		lineageTag: 8835e477-2632-5780-b276-5edd9830dad1
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 67a9bbae-be6f-50dd-90f1-276dc895eb3b
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TenantID
+		dataType: int64
+		isHidden
+		lineageTag: 54a2297e-7a25-58b6-af2e-6736f54c70f9
+		summarizeBy: none
+		sourceColumn: TenantID
+
+	column CategoryKey
+		dataType: int64
+		isHidden
+		lineageTag: 497abbf8-1204-55da-b558-83c4029008b9
+		summarizeBy: none
+		sourceColumn: CategoryKey
+
+	column WasteType
+		dataType: string
+		lineageTag: 06c44a54-1cc0-59c5-841c-93261e83d4b7
+		summarizeBy: none
+		sourceColumn: WasteType
+
+	column VehiclesDeployed
+		dataType: int64
+		lineageTag: f6982062-db4e-5a86-a052-ccf2def6243e
+		sourceColumn: VehiclesDeployed
+
+	column PlannedPickups
+		dataType: int64
+		lineageTag: 42e16b06-4d51-5f99-b8f7-90f6957e142a
+		sourceColumn: PlannedPickups
+
+	column CompletedPickups
+		dataType: int64
+		lineageTag: 404e13f0-5616-53cd-bb31-efb2025ac1ce
+		sourceColumn: CompletedPickups
+
+	column WasteTonnes
+		dataType: double
+		formatString: 0.00
+		lineageTag: 948dd2f2-e83e-5568-aa1c-6caebafa28e2
+		sourceColumn: WasteTonnes
+
+	column ProcessedTonnes
+		dataType: double
+		formatString: 0.00
+		lineageTag: a4f27775-e302-5961-a6b5-d7707c430307
+		sourceColumn: ProcessedTonnes
+
+	column AvgBinFillPct
+		dataType: double
+		formatString: 0.0
+		lineageTag: 5c933db1-d744-5758-a2dc-ad5ade1d896e
+		sourceColumn: AvgBinFillPct
+
+	column SegregationPct
+		dataType: double
+		formatString: 0.0
+		lineageTag: 2e3783eb-1aa8-5536-8e50-566675aafab5
+		sourceColumn: SegregationPct
+
+	partition FactSWM = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "FactSWM.csv"), [Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"Date", type date}, {"TenantID", Int64.Type}, {"CategoryKey", Int64.Type}, {"WasteType", type text}, {"VehiclesDeployed", Int64.Type}, {"PlannedPickups", Int64.Type}, {"CompletedPickups", Int64.Type}, {"WasteTonnes", type number}, {"ProcessedTonnes", type number}, {"AvgBinFillPct", type number}, {"SegregationPct", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

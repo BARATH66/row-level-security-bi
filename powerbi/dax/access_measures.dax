@@ -1,0 +1,24 @@
+-- Access-aware measures (table _Measures). They let the report react to who is viewing.
+
+-- RLS filters survive ALL(), so this is 6 for a manager and 1 for an operator.
+Visible Domains = COUNTROWS(ALL(DimCategory))
+
+Is Manager View = [Visible Domains] >= 6
+
+Access Message =
+    IF(
+        [Is Manager View],
+        "Manager view - all 6 city domains",
+        "Restricted - the Overview is available to managers only. Use your domain pages."
+    )
+
+-- Pattern used by every Overview card measure (24 of them):
+-- OV AQ Avg AQI =
+--     IF([Is Manager View], CALCULATE([Avg AQI], DimCategory[DomainCode] = "AQ"))
+
+-- Alarm and incident measures (status IDs come from DimAlarm / DimIncident):
+Open Alarms        = CALCULATE(COUNTROWS(FactAlarm), FactAlarm[AlarmStatusID] = 1)
+Abandoned Alarms   = CALCULATE(COUNTROWS(FactAlarm), FactAlarm[AlarmStatusID] = 2)
+Open Incidents     = CALCULATE(COUNTROWS(FactIncident), FactIncident[IncidentStatusID] = 5)
+In Progress Incidents = CALCULATE(COUNTROWS(FactIncident), FactIncident[IncidentStatusID] = 7)
+Closed Incidents   = CALCULATE(COUNTROWS(FactIncident), FactIncident[IncidentStatusID] = 3)

@@ -1,0 +1,42 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DataFolder", "DimDate", "DimTenant", "DimCategory", "DimAlarm", "DimIncident", "FactAirQuality", "FactSWM", "FactWater", "FactEnergy", "FactIrrigation", "FactSurveillance", "FactAlarm", "FactIncident", "_Measures"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DimDate
+ref table DimTenant
+ref table DimCategory
+ref table DimAlarm
+ref table DimIncident
+ref table FactAirQuality
+ref table FactSWM
+ref table FactWater
+ref table FactEnergy
+ref table FactIrrigation
+ref table FactSurveillance
+ref table FactAlarm
+ref table FactIncident
+ref table _Measures
+ref table DateTableTemplate_d69a1978-0678-4951-a03f-c3ea14499c40
+ref table LocalDateTable_165302fb-9bc9-4691-960e-ab0d1a17200b
+
+ref role Manager
+ref role Operator_AirQuality
+ref role Operator_SolidWasteManagement
+ref role Operator_WaterManagement
+ref role Operator_EnergyManagement
+ref role Operator_SmartIrrigation
+ref role Operator_CitySurveillance
+
+ref cultureInfo en-US
+

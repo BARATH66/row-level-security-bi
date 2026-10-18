@@ -1,0 +1,142 @@
+table FactWater
+	lineageTag: 40bc10a0-781b-51e7-a31b-2eb3d2520db9
+
+	measure 'Water Supplied (ML)' = DIVIDE(SUM(FactWater[SupplyKL]), 1000)
+		formatString: #,0.0
+		displayFolder: Water Management
+		lineageTag: ecc33927-1260-5df2-81e6-9fda2a2f2e9c
+
+	measure 'Water Consumed (ML)' = DIVIDE(SUM(FactWater[ConsumptionKL]), 1000)
+		formatString: #,0.0
+		displayFolder: Water Management
+		lineageTag: c96ad742-36c9-53df-a259-add29a50d76d
+
+	measure 'Non-Revenue Water %' = DIVIDE(SUM(FactWater[SupplyKL]) - SUM(FactWater[ConsumptionKL]), SUM(FactWater[SupplyKL]))
+		formatString: 0.0%
+		displayFolder: Water Management
+		lineageTag: b0dc2265-07b0-52d8-b7e2-1cff480c7b25
+
+	measure 'Leakage (KL)' = SUM(FactWater[LeakageKL])
+		formatString: #,0
+		displayFolder: Water Management
+		lineageTag: 9e0a9f3d-ac31-5756-9092-e63001710f6f
+
+	measure 'Avg Pressure (bar)' = AVERAGE(FactWater[PressureBar])
+		formatString: 0.00
+		displayFolder: Water Management
+		lineageTag: dac668c6-440f-5e4c-91d3-4093a47ae605
+
+	measure 'Avg Chlorine (mg/L)' = AVERAGE(FactWater[ChlorineMgL])
+		formatString: 0.00
+		displayFolder: Water Management
+		lineageTag: 8debad40-4bfa-5748-985e-ef96f7a55d4b
+
+	measure 'Avg Turbidity (NTU)' = AVERAGE(FactWater[TurbidityNTU])
+		formatString: 0.00
+		displayFolder: Water Management
+		lineageTag: 6349943b-4913-5d78-a33f-79c1bb27470b
+
+	measure 'Avg Reservoir Level %' = DIVIDE(AVERAGE(FactWater[ReservoirLevelPct]), 100)
+		formatString: 0.0%
+		displayFolder: Water Management
+		lineageTag: 5689fb54-dff8-5caa-88e5-437321a7f715
+
+	measure 'Quality Compliance %' = DIVIDE(SUM(FactWater[QualityTestsPassed]), SUM(FactWater[QualityTestsDone]))
+		formatString: 0.0%
+		displayFolder: Water Management
+		lineageTag: fc99a75d-8a1f-520c-9df6-9ab6266b74c1
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 544fc631-c89a-5595-a417-d3b374e0f7c6
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TenantID
+		dataType: int64
+		isHidden
+		lineageTag: 3fc1b6d6-2edc-58b6-a91a-4e55d8937308
+		summarizeBy: none
+		sourceColumn: TenantID
+
+	column CategoryKey
+		dataType: int64
+		isHidden
+		lineageTag: 98393ebe-5d5d-507e-b842-f154c289dc8c
+		summarizeBy: none
+		sourceColumn: CategoryKey
+
+	column SupplySource
+		dataType: string
+		lineageTag: 7311b339-d9f9-5f81-b439-025b0e70a9da
+		summarizeBy: none
+		sourceColumn: SupplySource
+
+	column SupplyKL
+		dataType: double
+		formatString: #,0
+		lineageTag: 0a1d1c99-306e-5b05-842d-54071c796217
+		sourceColumn: SupplyKL
+
+	column ConsumptionKL
+		dataType: double
+		formatString: #,0
+		lineageTag: 8da4f056-7263-5b5f-9185-21b083536e91
+		sourceColumn: ConsumptionKL
+
+	column LeakageKL
+		dataType: double
+		formatString: #,0
+		lineageTag: 8e98478d-5d48-5cf6-9c04-6ab7647d9746
+		sourceColumn: LeakageKL
+
+	column PressureBar
+		dataType: double
+		formatString: 0.00
+		lineageTag: ba249e02-2012-569c-9c36-ebd892885ddb
+		sourceColumn: PressureBar
+
+	column ChlorineMgL
+		dataType: double
+		formatString: 0.00
+		lineageTag: 05cd335e-605f-5fe6-832b-337aeaf0df59
+		sourceColumn: ChlorineMgL
+
+	column TurbidityNTU
+		dataType: double
+		formatString: 0.00
+		lineageTag: fde82be5-1ba3-5492-b94f-488cb8f0982d
+		sourceColumn: TurbidityNTU
+
+	column ReservoirLevelPct
+		dataType: double
+		formatString: 0.0
+		lineageTag: 125395e6-9cf8-5190-8844-74b21c5ff7e8
+		sourceColumn: ReservoirLevelPct
+
+	column QualityTestsDone
+		dataType: int64
+		lineageTag: 94cbc681-f8d4-5c30-b046-b13482cd9d96
+		sourceColumn: QualityTestsDone
+
+	column QualityTestsPassed
+		dataType: int64
+		lineageTag: a1bcd660-3b80-531f-8c5b-b2c0d4d3a929
+		sourceColumn: QualityTestsPassed
+
+	partition FactWater = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "FactWater.csv"), [Delimiter=",", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"Date", type date}, {"TenantID", Int64.Type}, {"CategoryKey", Int64.Type}, {"SupplySource", type text}, {"SupplyKL", type number}, {"ConsumptionKL", type number}, {"LeakageKL", type number}, {"PressureBar", type number}, {"ChlorineMgL", type number}, {"TurbidityNTU", type number}, {"ReservoirLevelPct", type number}, {"QualityTestsDone", Int64.Type}, {"QualityTestsPassed", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

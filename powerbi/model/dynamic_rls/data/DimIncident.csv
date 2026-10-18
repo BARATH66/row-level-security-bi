@@ -1,0 +1,4 @@
+IncidentStatusID,IncidentStatus,Meaning
+5,Open,"Incident logged, not yet assigned"
+3,Closed,Incident resolved and closed
+7,In Progress,Incident assigned and being worked

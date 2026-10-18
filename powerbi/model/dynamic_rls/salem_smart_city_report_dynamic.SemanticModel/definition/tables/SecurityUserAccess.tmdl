@@ -1,0 +1,40 @@
+table SecurityUserAccess
+	isHidden
+	lineageTag: 23cef05e-969f-5031-bf24-f9f6fe4a463c
+
+	column UserEmail
+		dataType: string
+		lineageTag: 91768e86-7be5-5f07-9377-12cc1da10783
+		summarizeBy: none
+		sourceColumn: UserEmail
+
+	column DisplayName
+		dataType: string
+		lineageTag: 9a24ae62-8712-5671-bfa3-090a73830353
+		summarizeBy: none
+		sourceColumn: DisplayName
+
+	column DomainCode
+		dataType: string
+		lineageTag: 3d35735b-f633-516d-ba77-f40acb38dbd2
+		summarizeBy: none
+		sourceColumn: DomainCode
+
+	column AccessLevel
+		dataType: string
+		lineageTag: 1f6b34ea-5c8b-545e-ba8c-4cc86a61b951
+		summarizeBy: none
+		sourceColumn: AccessLevel
+
+	partition SecurityUserAccess = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "SecurityUserAccess.csv"), [Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"UserEmail", type text}, {"DisplayName", type text}, {"DomainCode", type text}, {"AccessLevel", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,166 @@
+table _Measures
+	lineageTag: 754ad9ec-880c-5365-849f-3a1089904cb3
+
+	/// Domains the signed-in user can see. RLS filters survive ALL(), so managers get 6 and each operator gets 1.
+	measure 'Visible Domains' = COUNTROWS(ALL(DimCategory))
+		formatString: 0
+		displayFolder: Access
+		lineageTag: cec4ca67-9f80-5fe3-9dbb-ce06a8a689f3
+
+	/// TRUE for the Manager role (and in Desktop with no role applied).
+	measure 'Is Manager View' = [Visible Domains] >= 6
+		displayFolder: Access
+		lineageTag: 5286011b-a2f1-5d23-857b-a490af11727c
+
+	measure 'Access Message' = IF([Is Manager View], "Manager view - all 6 city domains", "Restricted - the Overview is available to managers only. Use your domain pages.")
+		displayFolder: Access
+		lineageTag: eda00506-a115-532a-9914-4cebce76c4eb
+
+	measure 'Total Open Alarms (City)' = IF([Is Manager View], [Open Alarms])
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: ad170bc0-0eb7-5c17-98e2-24ff8e92f6d9
+
+	measure 'Total Open Incidents (City)' = IF([Is Manager View], [Open Incidents] + [In Progress Incidents])
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: 72fd31e6-f64d-5689-a895-f1f7749d874c
+
+	measure 'OV AQ Avg AQI' = IF([Is Manager View], CALCULATE([Avg AQI], DimCategory[DomainCode] = "AQ"))
+		formatString: 0
+		displayFolder: Overview
+		lineageTag: a703699c-3807-5b81-9287-ae1c2633ba83
+
+	measure 'OV AQ Poor Air Readings %' = IF([Is Manager View], CALCULATE([Poor Air Readings %], DimCategory[DomainCode] = "AQ"))
+		formatString: 0.0%
+		displayFolder: Overview
+		lineageTag: a83a6c2d-4399-5e9d-b198-948893c090c4
+
+	measure 'OV AQ Open Alarms' = IF([Is Manager View], CALCULATE([Open Alarms], DimCategory[DomainCode] = "AQ"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: ff8599f7-ab4f-5f57-9bdf-5c690e2c9696
+
+	measure 'OV AQ Open Incidents' = IF([Is Manager View], CALCULATE([Open Incidents] + [In Progress Incidents], DimCategory[DomainCode] = "AQ"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: 03bb7719-942f-5e4b-bb3a-2be58e4c64ff
+
+	measure 'OV SWM Waste Collected (t)' = IF([Is Manager View], CALCULATE([Waste Collected (t)], DimCategory[DomainCode] = "SWM"))
+		formatString: #,0.0
+		displayFolder: Overview
+		lineageTag: 3a5a593c-3799-5e78-8f1d-8e1c9c3ae5ff
+
+	measure 'OV SWM Collection Efficiency %' = IF([Is Manager View], CALCULATE([Collection Efficiency %], DimCategory[DomainCode] = "SWM"))
+		formatString: 0.0%
+		displayFolder: Overview
+		lineageTag: e8b666d4-6f14-5c59-b705-1ed1849c42f5
+
+	measure 'OV SWM Open Alarms' = IF([Is Manager View], CALCULATE([Open Alarms], DimCategory[DomainCode] = "SWM"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: f3a13163-d065-501e-bc68-5981f7ab6366
+
+	measure 'OV SWM Open Incidents' = IF([Is Manager View], CALCULATE([Open Incidents] + [In Progress Incidents], DimCategory[DomainCode] = "SWM"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: 86d23c88-a33f-56b4-8770-fb36c38f6865
+
+	measure 'OV WTR Water Supplied (ML)' = IF([Is Manager View], CALCULATE([Water Supplied (ML)], DimCategory[DomainCode] = "WTR"))
+		formatString: #,0.0
+		displayFolder: Overview
+		lineageTag: 9b50050a-a4ca-5992-9acc-9165df3092f5
+
+	measure 'OV WTR Non-Revenue Water %' = IF([Is Manager View], CALCULATE([Non-Revenue Water %], DimCategory[DomainCode] = "WTR"))
+		formatString: 0.0%
+		displayFolder: Overview
+		lineageTag: 74ddcbdb-4bcd-5272-9bcc-bdbb2b6a1842
+
+	measure 'OV WTR Open Alarms' = IF([Is Manager View], CALCULATE([Open Alarms], DimCategory[DomainCode] = "WTR"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: bb21637f-417a-59a8-b91b-f99a24bb468a
+
+	measure 'OV WTR Open Incidents' = IF([Is Manager View], CALCULATE([Open Incidents] + [In Progress Incidents], DimCategory[DomainCode] = "WTR"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: 0b7eea38-dfa7-5435-a2f8-d83e3e0cea5f
+
+	measure 'OV ENG Energy Consumed (MWh)' = IF([Is Manager View], CALCULATE([Energy Consumed (MWh)], DimCategory[DomainCode] = "ENG"))
+		formatString: #,0.0
+		displayFolder: Overview
+		lineageTag: 5860caf1-43ba-5906-abff-8b37fd6fee29
+
+	measure 'OV ENG Solar Share %' = IF([Is Manager View], CALCULATE([Solar Share %], DimCategory[DomainCode] = "ENG"))
+		formatString: 0.0%
+		displayFolder: Overview
+		lineageTag: 5d0943f2-6d58-5958-838b-24a9c1d1472d
+
+	measure 'OV ENG Open Alarms' = IF([Is Manager View], CALCULATE([Open Alarms], DimCategory[DomainCode] = "ENG"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: f95fdee9-1151-5f5d-838f-01a8806ae1a4
+
+	measure 'OV ENG Open Incidents' = IF([Is Manager View], CALCULATE([Open Incidents] + [In Progress Incidents], DimCategory[DomainCode] = "ENG"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: b2f3988b-b9e5-57da-b648-c2c84b8a94b8
+
+	measure 'OV IRR Water Used (KL)' = IF([Is Manager View], CALCULATE([Water Used (KL)], DimCategory[DomainCode] = "IRR"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: 927c8efd-e8c4-5ca9-a83d-c50dde7c1f9d
+
+	measure 'OV IRR Avg Soil Moisture %' = IF([Is Manager View], CALCULATE([Avg Soil Moisture %], DimCategory[DomainCode] = "IRR"))
+		formatString: 0.0%
+		displayFolder: Overview
+		lineageTag: a81c17cf-8645-57fc-b045-f8ace357f55c
+
+	measure 'OV IRR Open Alarms' = IF([Is Manager View], CALCULATE([Open Alarms], DimCategory[DomainCode] = "IRR"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: f0f84b4a-a23a-5159-ad54-652f639de841
+
+	measure 'OV IRR Open Incidents' = IF([Is Manager View], CALCULATE([Open Incidents] + [In Progress Incidents], DimCategory[DomainCode] = "IRR"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: 82cf0866-5c63-5051-a47c-6bd43ab39a26
+
+	measure 'OV SUR Camera Uptime %' = IF([Is Manager View], CALCULATE([Camera Uptime %], DimCategory[DomainCode] = "SUR"))
+		formatString: 0.0%
+		displayFolder: Overview
+		lineageTag: 752a503e-569e-5bec-8100-068e1448bb1a
+
+	measure 'OV SUR Events Detected' = IF([Is Manager View], CALCULATE([Events Detected], DimCategory[DomainCode] = "SUR"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: 6bec43d9-9049-5185-b4ba-e7256c4a886e
+
+	measure 'OV SUR Open Alarms' = IF([Is Manager View], CALCULATE([Open Alarms], DimCategory[DomainCode] = "SUR"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: 3298b81f-7e89-521c-ba14-24a99fafe9b4
+
+	measure 'OV SUR Open Incidents' = IF([Is Manager View], CALCULATE([Open Incidents] + [In Progress Incidents], DimCategory[DomainCode] = "SUR"))
+		formatString: #,0
+		displayFolder: Overview
+		lineageTag: 2ae7e0d0-849a-5ac6-83ff-9a4e2bf4e550
+
+	column Placeholder
+		dataType: int64
+		isHidden
+		lineageTag: 60e8826f-0f39-557e-a0d3-f98c8e05e5ab
+		summarizeBy: none
+		sourceColumn: Placeholder
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = #table({"Placeholder"}, {{1}}),
+				    Typed = Table.TransformColumnTypes(Source, {{"Placeholder", Int64.Type}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

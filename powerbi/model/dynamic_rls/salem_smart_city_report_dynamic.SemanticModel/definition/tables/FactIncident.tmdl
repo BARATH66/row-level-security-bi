@@ -1,0 +1,105 @@
+table FactIncident
+	lineageTag: 4778def7-393a-5c59-99b1-9152ec7acd07
+
+	measure 'Total Incidents' = COUNTROWS(FactIncident)
+		formatString: #,0
+		displayFolder: Incidents
+		lineageTag: 389a2ca3-a402-55b9-be87-25232b37234f
+
+	measure 'Open Incidents' = CALCULATE(COUNTROWS(FactIncident), FactIncident[IncidentStatusID] = 5)
+		formatString: #,0
+		displayFolder: Incidents
+		lineageTag: 7a636767-828d-544a-9384-fe6a0f600fed
+
+	measure 'In Progress Incidents' = CALCULATE(COUNTROWS(FactIncident), FactIncident[IncidentStatusID] = 7)
+		formatString: #,0
+		displayFolder: Incidents
+		lineageTag: 4fc65d12-8ff6-56c2-8b65-97ea26f98ae7
+
+	measure 'Closed Incidents' = CALCULATE(COUNTROWS(FactIncident), FactIncident[IncidentStatusID] = 3)
+		formatString: #,0
+		displayFolder: Incidents
+		lineageTag: a1d208e6-294e-577a-9036-bebe88cd1c54
+
+	measure 'Closure Rate %' = DIVIDE([Closed Incidents], [Total Incidents])
+		formatString: 0.0%
+		displayFolder: Incidents
+		lineageTag: 7ff00154-81a5-5291-acba-151938635d8b
+
+	measure 'Avg Resolution (hrs)' = AVERAGE(FactIncident[ResolutionHours])
+		formatString: 0.0
+		displayFolder: Incidents
+		lineageTag: 346c4638-e02a-5f9a-b1a4-7ff3182f933d
+
+	measure 'P1 Incidents' = CALCULATE(COUNTROWS(FactIncident), FactIncident[Priority] = "P1")
+		formatString: #,0
+		displayFolder: Incidents
+		lineageTag: 52e25f22-4c27-5a25-b3f4-01f2d6a27914
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: a4d851d8-c11a-5c47-8593-2f7d931fd772
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TenantID
+		dataType: int64
+		isHidden
+		lineageTag: 895d15eb-b564-5d92-9254-409efaf5090a
+		summarizeBy: none
+		sourceColumn: TenantID
+
+	column CategoryKey
+		dataType: int64
+		isHidden
+		lineageTag: 2b1645bb-a067-5e07-8b67-faefeef1f67e
+		summarizeBy: none
+		sourceColumn: CategoryKey
+
+	column IncidentID
+		dataType: string
+		lineageTag: efcaabcd-c319-5872-9c41-aeffc8e582d2
+		summarizeBy: none
+		sourceColumn: IncidentID
+
+	column IncidentStatusID
+		dataType: int64
+		isHidden
+		lineageTag: d829f53e-8817-5b20-bcde-4d50ca36c9d0
+		summarizeBy: none
+		sourceColumn: IncidentStatusID
+
+	column Priority
+		dataType: string
+		lineageTag: 93d606ec-ac6d-5a64-bf48-857600015f01
+		summarizeBy: none
+		sourceColumn: Priority
+
+	column IncidentType
+		dataType: string
+		lineageTag: 552c18ce-f0d0-5876-b400-f4a3b597c596
+		summarizeBy: none
+		sourceColumn: IncidentType
+
+	column ResolutionHours
+		dataType: double
+		formatString: 0.0
+		lineageTag: fa3ab10b-4161-5c57-8b5f-8d597f555462
+		sourceColumn: ResolutionHours
+
+	partition FactIncident = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "FactIncident.csv"), [Delimiter=",", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"Date", type date}, {"TenantID", Int64.Type}, {"CategoryKey", Int64.Type}, {"IncidentID", type text}, {"IncidentStatusID", Int64.Type}, {"Priority", type text}, {"IncidentType", type text}, {"ResolutionHours", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

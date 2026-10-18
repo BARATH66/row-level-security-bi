@@ -1,0 +1,34 @@
+table DimIncident
+	lineageTag: 0f05d264-bb44-5fef-8933-382706d89b88
+
+	column IncidentStatusID
+		dataType: int64
+		lineageTag: 5e1e0a18-292e-5b23-9f7f-257eaa762f63
+		summarizeBy: none
+		sourceColumn: IncidentStatusID
+
+	column IncidentStatus
+		dataType: string
+		lineageTag: cb005ebc-7352-58fc-adef-0c98949ea178
+		summarizeBy: none
+		sourceColumn: IncidentStatus
+		sortByColumn: IncidentStatusID
+
+	column Meaning
+		dataType: string
+		lineageTag: 3fd80249-1ae0-59c1-9431-8a433ac96fff
+		summarizeBy: none
+		sourceColumn: Meaning
+
+	partition DimIncident = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "DimIncident.csv"), [Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"IncidentStatusID", Int64.Type}, {"IncidentStatus", type text}, {"Meaning", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

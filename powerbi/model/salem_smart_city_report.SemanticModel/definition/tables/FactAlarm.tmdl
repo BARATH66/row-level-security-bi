@@ -1,0 +1,107 @@
+table FactAlarm
+	lineageTag: 3af3d91d-c213-58ef-947d-e3ad2a4c9a2a
+
+	measure 'Total Alarms' = COUNTROWS(FactAlarm)
+		formatString: #,0
+		displayFolder: Alarms
+		lineageTag: d7857710-bd41-5a57-b5e3-5cc7f762a45e
+
+	measure 'Open Alarms' = CALCULATE(COUNTROWS(FactAlarm), FactAlarm[AlarmStatusID] = 1)
+		formatString: #,0
+		displayFolder: Alarms
+		lineageTag: ed15c7d5-ab79-5644-9b30-0615d1b0a957
+
+	measure 'Abandoned Alarms' = CALCULATE(COUNTROWS(FactAlarm), FactAlarm[AlarmStatusID] = 2)
+		formatString: #,0
+		displayFolder: Alarms
+		lineageTag: 7372862e-73ee-58c9-8023-9b475c84b543
+
+	measure 'Critical Open Alarms' = CALCULATE(COUNTROWS(FactAlarm), FactAlarm[AlarmStatusID] = 1, FactAlarm[Severity] = "Critical")
+		formatString: #,0
+		displayFolder: Alarms
+		lineageTag: 794ec2e7-5ed5-56db-9e50-e73c21032fd7
+
+	measure 'Open Alarm %' = DIVIDE([Open Alarms], [Total Alarms])
+		formatString: 0.0%
+		displayFolder: Alarms
+		lineageTag: fdfc08e1-5958-5b30-8384-d9ef5f869a76
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: b158e730-c5c0-57e6-a032-d3d8c73d2636
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TenantID
+		dataType: int64
+		isHidden
+		lineageTag: 2243562e-a518-58b8-b18e-95b127ed8344
+		summarizeBy: none
+		sourceColumn: TenantID
+
+	column CategoryKey
+		dataType: int64
+		isHidden
+		lineageTag: 635abd5b-648c-59b3-8b37-4889de522d52
+		summarizeBy: none
+		sourceColumn: CategoryKey
+
+	column AlarmID
+		dataType: string
+		lineageTag: 31a6b620-c92d-5528-a773-e1dab2e8ca62
+		summarizeBy: none
+		sourceColumn: AlarmID
+
+	column AlarmStatusID
+		dataType: int64
+		isHidden
+		lineageTag: ff31939b-c923-517d-a638-c94e825371db
+		summarizeBy: none
+		sourceColumn: AlarmStatusID
+
+	column Severity
+		dataType: string
+		lineageTag: 0c279225-b490-58fc-91d4-8053d1456ee5
+		summarizeBy: none
+		sourceColumn: Severity
+
+	column AlarmType
+		dataType: string
+		lineageTag: 88859fae-ddcd-5f39-acb9-8d5f0324360c
+		summarizeBy: none
+		sourceColumn: AlarmType
+
+	column DeviceID
+		dataType: string
+		lineageTag: 09a14a11-1be5-584a-b6df-b3fccca63e7f
+		summarizeBy: none
+		sourceColumn: DeviceID
+
+	column RaisedAt
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 057cc161-b15f-5845-95b9-661432146d69
+		summarizeBy: none
+		sourceColumn: RaisedAt
+
+		variation Variation
+			isDefault
+			relationship: e9fbdd53-fb3a-4771-807f-afe8cf02ee89
+			defaultHierarchy: LocalDateTable_165302fb-9bc9-4691-960e-ab0d1a17200b.'Date Hierarchy'
+
+	partition FactAlarm = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "FactAlarm.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"Date", type date}, {"TenantID", Int64.Type}, {"CategoryKey", Int64.Type}, {"AlarmID", type text}, {"AlarmStatusID", Int64.Type}, {"Severity", type text}, {"AlarmType", type text}, {"DeviceID", type text}, {"RaisedAt", type datetime}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

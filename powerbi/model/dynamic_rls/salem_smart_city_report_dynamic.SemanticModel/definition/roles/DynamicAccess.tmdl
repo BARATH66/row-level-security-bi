@@ -1,0 +1,13 @@
+role DynamicAccess
+	modelPermission: read
+
+	tablePermission DimCategory = ```
+			VAR u = USERPRINCIPALNAME() 
+			VAR allowed = SELECTCOLUMNS(FILTER(SecurityUserAccess, SecurityUserAccess[UserEmail] = u), "d", SecurityUserAccess[DomainCode]) 
+			RETURN DimCategory[DomainCode] IN allowed || "ALL" IN allowed
+			```
+
+	tablePermission SecurityUserAccess = SecurityUserAccess[UserEmail] = USERPRINCIPALNAME()
+
+	annotation PBI_Id = c576692b9fd940f1a8e0ff33d4a250ab
+

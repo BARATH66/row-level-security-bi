@@ -1,0 +1,34 @@
+table DimAlarm
+	lineageTag: ce469b49-37b3-5781-8583-03a8bc3c6748
+
+	column AlarmStatusID
+		dataType: int64
+		lineageTag: 78856295-65c2-5381-88f4-048c25620c8a
+		summarizeBy: none
+		sourceColumn: AlarmStatusID
+
+	column AlarmStatus
+		dataType: string
+		lineageTag: d297a8b3-389d-5b98-a865-f8a19550084d
+		summarizeBy: none
+		sourceColumn: AlarmStatus
+		sortByColumn: AlarmStatusID
+
+	column Meaning
+		dataType: string
+		lineageTag: a414c459-ec48-5298-be28-0c32c7555315
+		summarizeBy: none
+		sourceColumn: Meaning
+
+	partition DimAlarm = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "DimAlarm.csv"), [Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"AlarmStatusID", Int64.Type}, {"AlarmStatus", type text}, {"Meaning", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

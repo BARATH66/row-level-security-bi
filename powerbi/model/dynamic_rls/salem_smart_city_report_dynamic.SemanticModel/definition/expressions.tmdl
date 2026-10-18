@@ -1,0 +1,5 @@
+expression DataFolder = "C:\Documents\personal\projects\row-level-security-bi\powerbi\model\dynamic_rls\data\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: fed2f892-e43c-5a7a-81ab-ade7d5821a4b
+
+	annotation PBI_ResultType = Text
+

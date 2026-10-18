@@ -1,0 +1,3 @@
+AlarmStatusID,AlarmStatus,Meaning
+1,Open,Alarm raised and still active
+2,Abandoned,Alarm lapsed without acknowledgement or action

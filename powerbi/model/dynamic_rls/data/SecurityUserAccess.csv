@@ -1,0 +1,11 @@
+UserEmail,DisplayName,DomainCode,AccessLevel
+manager@salem-smartcity.example,City Manager,ALL,Manager
+deputy.manager@salem-smartcity.example,Deputy Commissioner,ALL,Manager
+air.operator@salem-smartcity.example,Air Quality Operator,AQ,Operator
+swm.operator@salem-smartcity.example,SWM Operator,SWM,Operator
+water.operator@salem-smartcity.example,Water Operator,WTR,Operator
+energy.operator@salem-smartcity.example,Energy Operator,ENG,Operator
+irrigation.operator@salem-smartcity.example,Irrigation Operator,IRR,Operator
+surveillance.operator@salem-smartcity.example,Surveillance Operator,SUR,Operator
+shift.supervisor@salem-smartcity.example,Shift Supervisor,AQ,Operator
+shift.supervisor@salem-smartcity.example,Shift Supervisor,ENG,Operator

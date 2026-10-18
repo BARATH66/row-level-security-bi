@@ -1,0 +1,119 @@
+table FactIrrigation
+	lineageTag: 0d1dedde-616c-5df4-81e9-1dc0571bdd84
+
+	measure 'Avg Soil Moisture %' = DIVIDE(AVERAGE(FactIrrigation[SoilMoisturePct]), 100)
+		formatString: 0.0%
+		displayFolder: Smart Irrigation
+		lineageTag: dfeaba4f-62bd-544a-bde2-1684ebe1a9cd
+
+	measure 'Water Used (KL)' = SUM(FactIrrigation[WaterUsedKL])
+		formatString: #,0
+		displayFolder: Smart Irrigation
+		lineageTag: 82e2c9a6-84e1-55c5-bd4a-46bc97b0d9d5
+
+	measure 'Water Saved %' = DIVIDE(SUM(FactIrrigation[ScheduledKL]) - SUM(FactIrrigation[WaterUsedKL]), SUM(FactIrrigation[ScheduledKL]))
+		formatString: 0.0%
+		displayFolder: Smart Irrigation
+		lineageTag: 0d065776-4a64-528d-8b58-69fe4c614876
+
+	measure 'Avg Daily Rainfall (mm)' = AVERAGE(FactIrrigation[RainfallMM])
+		formatString: 0.0
+		displayFolder: Smart Irrigation
+		lineageTag: f7e21e9b-f0b2-57ab-8c9e-315190f235ac
+
+	measure 'Valve Runtime (hrs)' = DIVIDE(SUM(FactIrrigation[ValveRuntimeMin]), 60)
+		formatString: #,0
+		displayFolder: Smart Irrigation
+		lineageTag: d76ce5a7-f079-58c9-8b3f-2f7ed1524051
+
+	measure 'Valves Active %' = DIVIDE(SUM(FactIrrigation[ValvesActive]), SUM(FactIrrigation[ValvesTotal]))
+		formatString: 0.0%
+		displayFolder: Smart Irrigation
+		lineageTag: 483d5e24-c1af-5e80-8972-f9f50a89d6ea
+
+	measure 'Stressed Zone-Days' = CALCULATE(COUNTROWS(FactIrrigation), FactIrrigation[SoilMoisturePct] < 30)
+		formatString: #,0
+		displayFolder: Smart Irrigation
+		lineageTag: 865f7ea3-521b-5ff9-b7e4-2d2985adf4eb
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: e35fa6a1-fb68-5ffa-8d17-238f08deaab9
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TenantID
+		dataType: int64
+		isHidden
+		lineageTag: 5c86c8d5-ad3a-597a-80e4-323d631c8108
+		summarizeBy: none
+		sourceColumn: TenantID
+
+	column CategoryKey
+		dataType: int64
+		isHidden
+		lineageTag: eea0ae7d-7ba8-5999-89ee-4c6689077b90
+		summarizeBy: none
+		sourceColumn: CategoryKey
+
+	column ZoneType
+		dataType: string
+		lineageTag: d7bb4ede-69ac-56b6-ad64-4061be14eeeb
+		summarizeBy: none
+		sourceColumn: ZoneType
+
+	column SoilMoisturePct
+		dataType: double
+		formatString: 0.0
+		lineageTag: 1a99adf2-f699-5448-b853-11571b56a2b9
+		sourceColumn: SoilMoisturePct
+
+	column WaterUsedKL
+		dataType: double
+		formatString: #,0.0
+		lineageTag: db780e68-6b28-585b-a6b9-cc40b2ef3bd2
+		sourceColumn: WaterUsedKL
+
+	column ScheduledKL
+		dataType: double
+		formatString: #,0.0
+		lineageTag: add77171-df38-5c2a-ad0c-16797c8e5364
+		sourceColumn: ScheduledKL
+
+	column RainfallMM
+		dataType: double
+		formatString: 0.0
+		lineageTag: 3dc6395c-aa21-5639-8945-42a8daadc464
+		sourceColumn: RainfallMM
+
+	column ValveRuntimeMin
+		dataType: int64
+		lineageTag: b3191574-bc62-5304-8350-51a0d9ae0db4
+		sourceColumn: ValveRuntimeMin
+
+	column ValvesActive
+		dataType: int64
+		lineageTag: d0592374-d1ff-536f-a35f-dee7e3289d73
+		sourceColumn: ValvesActive
+
+	column ValvesTotal
+		dataType: int64
+		lineageTag: cfc8512b-107b-5c9c-ba8b-5f85aa89972c
+		sourceColumn: ValvesTotal
+
+	partition FactIrrigation = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "FactIrrigation.csv"), [Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"Date", type date}, {"TenantID", Int64.Type}, {"CategoryKey", Int64.Type}, {"ZoneType", type text}, {"SoilMoisturePct", type number}, {"WaterUsedKL", type number}, {"ScheduledKL", type number}, {"RainfallMM", type number}, {"ValveRuntimeMin", Int64.Type}, {"ValvesActive", Int64.Type}, {"ValvesTotal", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+
